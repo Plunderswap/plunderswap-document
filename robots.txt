@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://docs.plunderswap.com/sitemap.xml.gz

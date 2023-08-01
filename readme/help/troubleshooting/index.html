@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744213490534">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Troubleshooting Errors</title>
+    <meta name="title" content="Troubleshooting Errors">
+    <meta name="description" content="Common error messages. Use the sidebar ➡️to jump to the error you're seeing.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://docs.plunderswap.com/readme/help/troubleshooting/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.plunderswap.com/readme/help/troubleshooting/">
+    <meta property="og:title" content="Troubleshooting Errors">
+    <meta property="og:description" content="Common error messages. Use the sidebar ➡️to jump to the error you're seeing.">
+    <meta property="og:image" content="https://docs.plunderswap.com/.gitbook/assets/troubleshooting-header.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://docs.plunderswap.com/readme/help/troubleshooting/">
+    <meta property="twitter:title" content="Troubleshooting Errors">
+    <meta property="twitter:description" content="Common error messages. Use the sidebar ➡️to jump to the error you're seeing.">
+    <meta property="twitter:image" content="https://docs.plunderswap.com/.gitbook/assets/troubleshooting-header.png">
+
+    <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="../../../resources/css/retype.css?v=3.1.0.744213490534" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.744213490534" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.744213490534" data-turbo-eval="false" defer></script>
+</head>
+<body>
+    <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="docs-sidebar-toggle"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="docs-site-logo" href="../../../" class="flex items-center leading-snug text-2xl">
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Plunderswap</span>
+                        </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://retype.com/guides/getting-started/">Getting Started</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-gray-400 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 dark:placeholder-dark-400" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="docs-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <!-- Render this div, if config.showSidebarFilter is `true` -->
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://retype.com/guides/getting-started/">Getting Started</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="docs-markdown" id="docs-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="docs-sidebar-right-toggle"></div>
+                
+                                <!-- Page content  -->
+<doc-anchor-target id="troubleshooting-errors" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting-errors">#</doc-anchor-trigger>
+        <span>Troubleshooting Errors</span>
+    </h1>
+</doc-anchor-target>
+<p><figure class="content-center">
+    <img src="../../../.gitbook/assets/troubleshooting-header.png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Sometimes you may find yourself facing a problem that doesn&#x27;t have a clear solution. These troubleshooting tips may help you solve problems you run into.</p>
+<doc-anchor-target id="issues-on-the-exchange">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#issues-on-the-exchange">#</doc-anchor-trigger>
+        <span><strong>Issues on the Exchange</strong></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="insufficient_output_amount">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#insufficient_output_amount">#</doc-anchor-trigger>
+        <span><strong>INSUFFICIENT_OUTPUT_AMOUNT</strong></span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>The transaction cannot succeed due to error: PancakeRouter: INSUFFICIENT_OUTPUT_AMOUNT. This is probably an issue with one of the tokens you are swapping.</p>
+<p>the transaction cannot succeed due to error: execution reverted: pancakerouter: insufficient_output_amount.</p>
+</blockquote>
+<p>You&#x27;re trying to swap tokens, but your slippage tolerance is too low or liquidity is too low.</p>
+<doc-tabs>
+<doc-tab v-cloak id="solution">
+<template #title>Solution</template>
+<ol>
+<li>Refresh your page and try again later.</li>
+<li>Try trading a smaller amount at one time.</li>
+<li>Increase your slippage tolerance:
+<ol>
+<li>Tap the settings icon on the liquidity page.</li>
+<li>Increase your slippage tolerance a little and try again. <img src="../../../.gitbook/assets/image-(9)-(4)-(2)-(1)-(1)-(1)-(1)-(1)-(1)-(1)-(3).png" alt="" /></li>
+</ol>
+</li>
+<li>Lastly, try inputting an amount with fewer decimal places.</li>
+</ol>
+</doc-tab>
+<doc-tab v-cloak id="reason">
+<template #title>Reason</template>
+<p><strong>This usually happens when trading tokens with low liquidity.</strong></p>
+<p>That means there isn&#x27;t enough of one of the tokens you&#x27;re trying to swap in the Liquidity Pool: it&#x27;s probably a small-cap token that few people are trading.</p>
+<p>However, there&#x27;s also the chance that you&#x27;re trying to trade a scam token which cannot be sold. In this case, PancakeSwap isn&#x27;t able to block a token or return funds.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="insufficient_a_amount-or-insufficient_b_amount">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#insufficient_a_amount-or-insufficient_b_amount">#</doc-anchor-trigger>
+        <span><strong>INSUFFICIENT_A_AMOUNT or INSUFFICIENT_B_AMOUNT</strong></span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>Fail with error &#x27;PancakeRouter: INSUFFICIENT_A_AMOUNT&#x27;<br />
+or<br />
+Fail with error &#x27;PancakeRouter: INSUFFICIENT_B_AMOUNT&#x27;</p>
+</blockquote>
+<p>You&#x27;re trying to add/remove liquidity from a liquidity pool (LP), but there isn&#x27;t enough of one of the two tokens in the pair.</p>
+<doc-tabs>
+<doc-tab v-cloak id="solution">
+<template #title>Solution</template>
+<p><strong>Refresh your page and try again, or try again later.</strong></p>
+<p>Still doesn&#x27;t work?</p>
+<ol>
+<li>Tap the settings icon on the liquidity page.</li>
+<li>Increase your slippage tolerance a little and try again.</li>
+</ol>
+<p><figure class="content-center">
+    <img src="../../../.gitbook/assets/image-(9)-(4)-(2)-(1)-(1)-(1)-(1)-(1)-(1)-(1)-(4).png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+</doc-tab>
+<doc-tab v-cloak id="reason">
+<template #title>Reason</template>
+<p>The error is caused by trying to add or remove liquidity for a liquidity pool (LP) with an insufficient amount of token A or token B (one of the tokens in the pair).</p>
+<p>It might be the case that prices are updating too fast when and your slippage tolerance is too low.</p>
+<p><figure class="content-center">
+    <img src="https://lh5.googleusercontent.com/T1KMtz2ILDVHljGw1iLbIv0W1KVl7qXL8zU2nLFHkUvDb5oMw9mpUzzBwWmIBz15XDsxZ5w7wsaqAwCs_pxdobz_kY_7BhcZhYtpqWuQGFs23DZq98-SVInlfsS07WzxFPLIYXHt" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p><figure class="content-center">
+    <img src="https://lh5.googleusercontent.com/7aspaCCvDjzxbJxngqwgeq737LB3OUNcAs592QqlEkyrAOTfKsrt_FAwpEylaIJhff5ZcYlzB_r0v1JZwfj3j8Ah6jlUbRoMrAqVfTb3cwDI7B1i5HJtZSQOsTPrv7l7SaclC3BV" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+</doc-tab>
+<doc-tab v-cloak id="solution-for-nerds">
+<template #title>Solution for nerds</template>
+<p>OK, so you&#x27;re really determined to fix this. We really don&#x27;t recommend doing this unless you know what you&#x27;re doing.</p>
+<p>There currently isn&#x27;t a simple way to solve this issue from the PancakeSwap website: you&#x27;ll need to interact with the contract directly. You can add liquidity directly via the Router contract, while setting amountAMin to a small amount, then withdrawing all liquidity.</p>
+<doc-anchor-target id="approve-the-lp-contract">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#approve-the-lp-contract">#</doc-anchor-trigger>
+        <span><strong>Approve the LP contract</strong></span>
+    </h4>
+</doc-anchor-target>
+<p>Head to the contract of the LP token you&#x27;re trying to approve.<br />
+For example, here&#x27;s the ETH/WBNB pair: <a href="https://bscscan.com/address/0x70d8929d04b60af4fb9b58713ebcf18765ade422">https://bscscan.com/address/0x70d8929d04b60af4fb9b58713ebcf18765ade422</a></p>
+<ol>
+<li>Select <strong>Write Contract</strong>, then <strong>Connect to Web3</strong> and connect your wallet. <img src="https://lh6.googleusercontent.com/-_sNkO1gcOOJXkduDEUzbExKE2mNxBOR0f86Lpp3BBuPbIcmAHsfuvpF-hKqRn4oID5QzdGkk_1dTHkPuCmE50vpNNZxEqoM5nPmE_12k3-8Q8YYoRYqJ_VGjxJ03YPRuVQ1O5ME" alt="" /></li>
+<li>In <strong>section &quot;1. approve&quot;,</strong> approve the LP token for the router by entering
+<ol>
+<li>spender (address): enter the contract address of the LP token you&#x27;re trying to interact with</li>
+<li>value (uint256): -1</li>
+</ol>
+</li>
+</ol>
+<doc-anchor-target id="query-balanceof">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#query-balanceof">#</doc-anchor-trigger>
+        <span>Query &quot;balanceOf&quot;</span>
+    </h4>
+</doc-anchor-target>
+<ol>
+<li>Switch to <strong>Read Contract.</strong></li>
+<li>In <strong>5. balanceOf</strong>, input your wallet address and hit <strong>Query</strong>.</li>
+<li>Keep track of the number that&#x27;s exported. It shows your balance within the LP in the uint256 format, which you&#x27;ll need in the next step.</li>
+</ol>
+<p><figure class="content-center">
+    <img src="../../../.gitbook/assets/image-(7)-(1)-(1).png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="add-or-remove-liquidity">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#add-or-remove-liquidity">#</doc-anchor-trigger>
+        <span>Add or Remove Liquidity</span>
+    </h4>
+</doc-anchor-target>
+<p>Head to the router contract: <a href="https://bscscan.com/address/0x05ff2b0db69458a0750badebc4f9e13add608c7f#writeContract">https://bscscan.com/address/0x05ff2b0db69458a0750badebc4f9e13add608c7f#writeContract</a></p>
+<ol>
+<li>Select <strong>Write Contract</strong> and <strong>Connect to Web3</strong> as above.</li>
+<li>Find <strong>addLiquidity</strong> or <strong>removeLiquidity</strong> (whichever one you&#x27;re trying to do)</li>
+<li>Enter the token addresses of both of the tokens in the LP.</li>
+<li>In <strong>liquidity (uint256),</strong> enter the uint256 number which you got from &quot;balanceOf&quot; above.</li>
+<li>Set a low <strong>amountAMin</strong> or <strong>amountBMin</strong>: try 1 for both.</li>
+<li>Add your wallet address in <strong>to (address)</strong>.</li>
+<li>Deadline must be an epoch time greater than the time the tx is executed.</li>
+</ol>
+<p><figure class="content-center">
+    <img src="../../../.gitbook/assets/image-(5)-(1)-(1)-(1).png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p>This can cause very high slippage, and can cause the user to lose some funds if frontrun</p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="pancakerouter-expired">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pancakerouter-expired">#</doc-anchor-trigger>
+        <span>PancakeRouter: EXPIRED</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>The transaction cannot succeed due to error: PancakeRouter: EXPIRED. This is probably an issue with one of the tokens you are swapping.</p>
+</blockquote>
+<p>Try again, but confirm (sign and broadcast) the transaction as soon as you generate it.</p>
+<p>This happened because you started making a transaction, but you didn&#x27;t sign and broadcast it until it was past the deadline. That means you didn&#x27;t hit &quot;Confirm&quot; quickly enough.</p>
+<doc-anchor-target id="pancake-k">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pancake-k">#</doc-anchor-trigger>
+        <span>Pancake: K</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>The transaction cannot succeed due to error: Pancake: K. This is probably an issue with one of the tokens you are swapping.</p>
+</blockquote>
+<p>Try modifying the amount on “To” field. Therefore putting &quot;(estimated)&quot; symbol on “From”. Then initiate the swap immediately.</p>
+<p><figure class="content-center">
+    <img src="../../../.gitbook/assets/pancake-k-solution-(2).png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>This usually happen when you are trying to swap a token with its own fee.</p>
+<doc-anchor-target id="pancake-transfer_failed">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pancake-transfer_failed">#</doc-anchor-trigger>
+        <span>Pancake: TRANSFER_FAILED</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>The transaction cannot succeed due to error: execution reverted: Pancake: TRANSFER_FAILED.</p>
+</blockquote>
+<p>Make sure you have 30% more tokens in your wallet than you intend to trade, or try to trade a lower amount. If you want to sell the maximum possible, try 70% or 69% instead of 100%.<br />
+Caused by the design of Restorative Rebase tokens like tDoge or tBTC.<br />
+<a href="https://btcst.medium.com/stp-8-restorative-rebase-b4fbbdfd96c">Understand how restorative rebase tokens work</a>.</p>
+<p>Another possible cause of this issue is the malicious token issuer just suspended the trading for their token. Or they made selling action only possible for selected wallet addresses. Please always do your own research to avoid any potential fraud. If the token you are trying to swap but failed with this error code is coming from an airdrop, that is most likely a scam. Please do not perform any token approval or follow any links, your fund may be at risk if you try to do so.</p>
+<doc-anchor-target id="transaction-cannot-succeed">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#transaction-cannot-succeed">#</doc-anchor-trigger>
+        <span>Transaction cannot succeed</span>
+    </h3>
+</doc-anchor-target>
+<p>Try trading a smaller amount, or increase slippage tolerance via the settings icon and try again. This is caused by low liquidity.</p>
+<doc-anchor-target id="price-impact-too-high">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#price-impact-too-high">#</doc-anchor-trigger>
+        <span><strong>Price Impact too High</strong></span>
+    </h3>
+</doc-anchor-target>
+<p>Try trading a smaller amount, or increase slippage tolerance via the settings icon and try again. This is caused by low liquidity.</p>
+<doc-anchor-target id="estimategas-failed">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#estimategas-failed">#</doc-anchor-trigger>
+        <span>estimateGas failed</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>This transaction would fail. Please contact support</p>
+</blockquote>
+<doc-tabs>
+<doc-tab v-cloak id="solution">
+<template #title>Solution</template>
+<p><strong>If you got this error while removing liquidity from a BNB pair:</strong></p>
+<p>Please select &quot;Receive WBNB&quot; and retry.</p>
+<p><strong>If you got this error while trying to swap:</strong></p>
+<p>Please contact the project team of the token you&#x27;re trying to swap. **** This issue must be resolved by the project team.</p>
+</doc-tab>
+<doc-tab v-cloak id="reason">
+<template #title>Reason</template>
+<p><strong>This issue (while swapping) is caused by tokens which have hard-coded the V1 PancakeSwap router into their contract.</strong></p>
+<p>While this practice is ill-advised at best, the reason for these projects having done this appears to be due to their tokenomics, in which each purchase sends a % of the token to LPs.</p>
+<p>The projects affected will likely not work with the V2 router: they will most likely need to create new versions of their tokens pointing to our new router address, and migrate any existing token holders to their new token.</p>
+<p>We recommend that any projects which created such tokens should also make efforts to prevent their users from adding them to V2 LP.</p>
+<p>The up-to-date router address is <a href="https://bscscan.com/address/0x10ED43C718714eb63d5aA57B78B54704E256024E">https://bscscan.com/address/0x10ED43C718714eb63d5aA57B78B54704E256024E</a></p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="cannot-read-property-tohexstring-of-undefined">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#cannot-read-property-tohexstring-of-undefined">#</doc-anchor-trigger>
+        <span>Cannot read property &#x27;toHexString&#x27; of undefined</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>&quot;Unknown error: &quot;Cannot read property &#x27;toHexString&#x27; of undefined&quot;</p>
+</blockquote>
+<p>When trying to swap tokens, the transaction fails and this error message is displayed. This error has been reported on mobile devices using Trust Wallet.</p>
+<doc-tabs>
+<doc-tab v-cloak id="solution">
+<template #title>Solution</template>
+<ol>
+<li>Attempt the transaction again with increased slippage allowance.</li>
+<li>If 1. does not resolve your problem, consider using another wallet such as SafePal for your transaction.</li>
+</ol>
+</doc-tab>
+<doc-tab v-cloak id="reason">
+<template #title>Reason</template>
+<p><strong>This usually happens when trading tokens with insufficient slippage allowance on Trust Wallet.</strong></p>
+<p>The exact details of the problem are still being investigated.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="execution-reverted-transferhelper-transfer_from_failed">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#execution-reverted-transferhelper-transfer_from_failed">#</doc-anchor-trigger>
+        <span><strong>Execution reverted: TransferHelper: TRANSFER_FROM_FAILED.</strong></span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>The transaction cannot succeed due to error: execution reverted: TransferHelper: TRANSFER_FROM_FAILED.</p>
+</blockquote>
+<p>When trying to swap tokens, the transaction fails and this error message is displayed. This error has been reported across platforms.</p>
+<doc-tabs>
+<doc-tab v-cloak id="solution">
+<template #title>Solution</template>
+<ol>
+<li>Check to make sure you have sufficient funds available.</li>
+<li>Ensure you have given the contract allowance to spend the amount of funds you&#x27;re attempting to trade with.</li>
+</ol>
+</doc-tab>
+<doc-tab v-cloak id="reason">
+<template #title>Reason</template>
+<p>This error happens when trading tokens with insufficient allowance, or when a wallet has insufficient funds.<br />
+If you&#x27;re trading tokens with Restorative Rebase like tau assets tDoge or tBTC, make sure you understand how they work first with this <a href="https://btcst.medium.com/stp-8-restorative-rebase-b4fbbdfd96c">guide to Rebase tokens</a>.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="issues-with-farms">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#issues-with-farms">#</doc-anchor-trigger>
+        <span><strong>Issues with Farms</strong></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="fail-with-error-ds-math-sub-underflow">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fail-with-error-ds-math-sub-underflow">#</doc-anchor-trigger>
+        <span>Fail with error &#x27;ds-math-sub-underflow&#x27;</span>
+    </h3>
+</doc-anchor-target>
+<p>You&#x27;ve run out of allowance of your LP token allowance to the MasterChef contract.</p>
+<p><strong>Use token approval manager like unrekt or BscScan to</strong> </p>
+<doc-anchor-target id="issues-with-syrup-pools">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#issues-with-syrup-pools">#</doc-anchor-trigger>
+        <span><strong>Issues with Syrup Pools</strong></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="bep20-burn-amount-exceeds-balance">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bep20-burn-amount-exceeds-balance">#</doc-anchor-trigger>
+        <span>BEP20: burn amount exceeds balance</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>Fail with error &#x27;BEP20: burn amount exceeds balance&#x27;</p>
+</blockquote>
+<p>You don&#x27;t have enough SYRUP in your wallet to unstake from the CAKE-CAKE pool.</p>
+<p><strong>Get at least as much SYRUP as the amount of CAKE that you’re trying to unstake.</strong></p>
+<ol>
+<li>Buy SYRUP on the exchange. If you want to unstake 100 CAKE, you need at least 100 SYRUP.</li>
+<li>Try unstaking again.</li>
+</ol>
+<p>If that still fails, you can perform an “emergencyWithdraw” from the contract directly to unstake your staked tokens.</p>
+<ol>
+<li>Go to: <a href="https://bscscan.com/address/0x73feaa1eE314F8c655E354234017bE2193C9E24E#writeContract">https://bscscan.com/address/0x73feaa1eE314F8c655E354234017bE2193C9E24E#writeContract</a></li>
+<li>Click <strong>“Connect to Web3”</strong> and connect your wallet. <img src="https://lh6.googleusercontent.com/-_sNkO1gcOOJXkduDEUzbExKE2mNxBOR0f86Lpp3BBuPbIcmAHsfuvpF-hKqRn4oID5QzdGkk_1dTHkPuCmE50vpNNZxEqoM5nPmE_12k3-8Q8YYoRYqJ_VGjxJ03YPRuVQ1O5ME" alt="" /></li>
+<li>In section <strong>“4. emergencyWithdraw”</strong>, enter &quot;0&quot; and click “Write”.</li>
+</ol>
+<p>This will unstake your staked tokens and lose any uncollected CAKE yield.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p><strong>This will lose any yield that you haven’t harvested yet.</strong></p>
+        </div>
+    </div>
+</div>
+<p>To stop this happening again, <strong>don’t sell your SYRUP.</strong> You still need it to unstake from the “Stake CAKE Earn CAKE” pool.</p>
+<p>This error has happened because you have sold or transferred SYRUP tokens. SYRUP is minted in a 1:1 ratio to CAKE when you stake in the CAKE-CAKE Syrup Pool. SYRUP must be burned at a 1:1 ratio to CAKE when calling leaveStaking (unstaking your CAKE from the pool), so if you don&#x27;t have enough, you can&#x27;t unstake from the pool.</p>
+<figure>
+    <div class="relative w-full mb-6 overflow-hidden pt-9/16">
+        <iframe class="w-full h-full border-0 absolute inset-0" src="https://dashboard.tenderly.co/tx/binance/0x754e18ceea82acac256b49c2b7a81260f7f86dd5e56ee2e3cc1b6ac864c29a8e" allowfullscreen></iframe>
+    </div>
+</figure>
+<doc-anchor-target id="out-of-gas-error">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#out-of-gas-error">#</doc-anchor-trigger>
+        <span>Out of Gas error</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>Warning! Error encountered during contract execution [out of gas]</p>
+</blockquote>
+<p>You have set a low gas limit when trying to make a transaction.</p>
+<doc-tabs>
+<doc-tab v-cloak id="solution">
+<template #title>Solution</template>
+<p>Try manually increasing the <strong>gas limit</strong> (not gas price!) in your wallet before signing the transaction.</p>
+<p>A limit of 200000 is usually enough.</p>
+<p><figure class="content-center">
+    <img src="../../../.gitbook/assets/image-(2)-(1)-(1)-(1).png" alt="">
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>The above example is from Metamask; check your wallet&#x27;s documentation if you aren&#x27;t sure how to adjust the gas limit.</p>
+</doc-tab>
+<doc-tab v-cloak id="reason">
+<template #title>Reason</template>
+<p>Basically, your wallet (Metamask, Trust Wallet, etc.) can&#x27;t finish what it&#x27;s trying to do.</p>
+<p>Your wallet estimates that the gas limit is too low, so the function call runs out of gas before the function call is finished.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="bep20-transfer-amount-exceeds-allowance">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bep20-transfer-amount-exceeds-allowance">#</doc-anchor-trigger>
+        <span>BEP20: transfer amount exceeds allowance</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>Fail with error &#x27;BEP20: transfer amount exceeds allowance&#x27;</p>
+</blockquote>
+<doc-tabs>
+<doc-tab v-cloak id="solution">
+<template #title>Solution</template>
+<ol>
+<li>Use Unrekt.net to revoke approval for the smart contract you&#x27;re trying to interact with</li>
+<li>Approve the contract again, without setting a limit on spend allowance</li>
+<li>Try interacting with the contract again.</li>
+</ol>
+</doc-tab>
+<doc-tab v-cloak id="reason">
+<template #title>Reason</template>
+<p>This happens when you set a limit on your spend allowance when you first approved the contract, then try to swap more than the limit.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="bep20-transfer-amount-exceeds-balance">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bep20-transfer-amount-exceeds-balance">#</doc-anchor-trigger>
+        <span>BEP20: transfer amount exceeds balance</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>Fail with error &#x27;BEP20: transfer amount exceeds balance&#x27;</p>
+</blockquote>
+<p>You&#x27;re probably trying to unstake from a Syrup Pool with low rewards in it. Solution below.</p>
+<p>If not, you may be trying to send tokens that you don&#x27;t have in your wallet (for example, trying to send a token that is already assigned to a pending transaction). In this case, just make sure you have the tokens you&#x27;re trying to use.</p>
+<doc-tabs>
+<doc-tab v-cloak id="solution">
+<template #title>Solution</template>
+<p>Firstly,<a href="../../../contact-us/telegram/"> let the team know</a> which pool you&#x27;re trying to unstake from, so they can top up the rewards. If you&#x27;re in a hurry to unstake and you don&#x27;t mind losing your pending yield, try an emergencyWithdraw:</p>
+<p>You can perform an “emergencyWithdraw” from the contract directly to unstake your staked tokens.</p>
+<ol>
+<li>Find the contract address of the Syrup Pool you&#x27;re trying to unstake from. You can find it in your wallet&#x27;s transaction log.</li>
+<li>Go to <a href="https://bscscan.com/address/0x73feaa1eE314F8c655E354234017bE2193C9E24E#writeContract">https://bscscan.com/</a> and in the search bar, enter the contract address.</li>
+<li>Select <strong>Write Contract.</strong></li>
+<li>Click <strong>“Connect to Web3”</strong> and connect your wallet.<img src="https://lh6.googleusercontent.com/-_sNkO1gcOOJXkduDEUzbExKE2mNxBOR0f86Lpp3BBuPbIcmAHsfuvpF-hKqRn4oID5QzdGkk_1dTHkPuCmE50vpNNZxEqoM5nPmE_12k3-8Q8YYoRYqJ_VGjxJ03YPRuVQ1O5ME" alt="" /></li>
+<li>In section <strong>“3. emergencyWithdraw”,</strong> and click “Write”.</li>
+</ol>
+<p>This will unstake your staked tokens and lose any uncollected yield.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+<p><strong>This will lose any yield that you haven’t harvested yet.</strong></p>
+        </div>
+    </div>
+</div>
+</doc-tab>
+<doc-tab v-cloak id="reason">
+<template #title>Reason</template>
+<p>This error tends to appear when you&#x27;re trying to unstake from an old Syrup Pool, but there aren&#x27;t enough rewards in the pool left for you to harvest when withdrawing. This causes the transaction to fail.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="issues-with-prediction">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#issues-with-prediction">#</doc-anchor-trigger>
+        <span><strong>Issues with Prediction</strong></span>
+    </h2>
+</doc-anchor-target>
+<p>Check <a href="../../products/prediction/prediction-troubleshooting.md" title="mention">prediction-troubleshooting.md</a></p>
+<doc-anchor-target id="other-issues">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#other-issues">#</doc-anchor-trigger>
+        <span><strong>Other issues</strong></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="provider-error">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#provider-error">#</doc-anchor-trigger>
+        <span>Provider Error</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>Provider Error<br />
+No provider was found</p>
+</blockquote>
+<p>This happens when you try to connect via a browser extension like MetaMask or Binance Chain Wallet, but you haven’t installed the extension.</p>
+<doc-tabs>
+<doc-tab v-cloak id="solution">
+<template #title>Solution</template>
+<p>Install the official browser extension to connect, or read our guide on <a href="https://docs.pancakeswap.finance/get-started/connection-guide">how to connect a wallet to PancakeSwap</a>.</p>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="unsupported-chain-id">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#unsupported-chain-id">#</doc-anchor-trigger>
+        <span>Unsupported Chain ID</span>
+    </h3>
+</doc-anchor-target>
+<p>Switch your chain to BNB Smart Chain. Check your wallet&#x27;s documentation for a guide if you need help.</p>
+<doc-anchor-target id="already-processing-eth_requestaccounts-please-wait">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#already-processing-eth_requestaccounts-please-wait">#</doc-anchor-trigger>
+        <span>Already processing eth_requestAccounts. Please wait.</span>
+    </h3>
+</doc-anchor-target>
+<p>Make sure you are signed in to your wallet app and it&#x27;s connected to BNB Smart Chain.</p>
+<doc-anchor-target id="issues-buying-safemoon-and-similar-tokens">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#issues-buying-safemoon-and-similar-tokens">#</doc-anchor-trigger>
+        <span>Issues buying SAFEMOON and similar tokens</span>
+    </h3>
+</doc-anchor-target>
+<p>To trade SAFEMOON, you must click on the settings icon and <strong>set your slippage tolerance to 12% or more.</strong><br />
+This is because <strong>SafeMoon taxes a 10% fee on each transaction</strong>:</p>
+<ul>
+<li>5% fee = redistributed to all existing holders</li>
+<li>5% fee = used to add liquidity</li>
+</ul>
+<p>This is also why you might not receive as much of the token as you expect when you purchase.<br />
+Read more on <a href="https://community.trustwallet.com/t/how-to-buy-safemoon/155742">How to Buy Safe Moon</a>.</p>
+<doc-anchor-target id="internal-json-rpc-errors">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#internal-json-rpc-errors">#</doc-anchor-trigger>
+        <span>Internal JSON-RPC errors</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>&quot;MetaMask - RPC Error: Internal JSON-RPC error. estimateGas failed removeLiquidityETHWithPermitSupportingFeeOnTransferTokens estimateGas failed removeLiquidityETHWithPermit &quot;</p>
+</blockquote>
+<p>Happens when trying to remove liquidity on some tokens via Metamask. Root cause is still unknown. Try using an alternative wallet.</p>
+<blockquote>
+<p>Internal JSON-RPC error. { &quot;code&quot;: -32000, &quot;message&quot;: &quot;insufficient funds for transfer&quot; } - Please try again.</p>
+</blockquote>
+<p>You don&#x27;t have enough BNB to pay for the transaction fees. You need more BEP-20 network BNB in your wallet.</p>
+<doc-anchor-target id="error-ethjs-query">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#error-ethjs-query">#</doc-anchor-trigger>
+        <span>Error: [ethjs-query]</span>
+    </h3>
+</doc-anchor-target>
+<blockquote>
+<p>Error: [ethjs-query] while formatting outputs from RPC &#x27;{&quot;value&quot;:{&quot;code&quot;:-32603,&quot;data&quot;:{&quot;code&quot;:-32000,&quot;message&quot;:&quot;transaction underpriced&quot;}}}&quot;</p>
+</blockquote>
+<p>Increase the gas limit for the transaction in your wallet. Check your wallet&#x27;s documentation to learn how to increase gas limit.</p>
+<blockquote>
+<p>Swap failed: Error: [ethjs-query] while formatting outputs from RPC &#x27;{&quot;value&quot;:{&quot;code&quot;:-32603,&quot;data&quot;:{&quot;code&quot;:-32603,&quot;message&quot;:&quot;handle request error&quot;}}}&#x27;</p>
+</blockquote>
+<p>Cause unclear. Try these steps before trying again:</p>
+<ol>
+<li>Increase gas limit</li>
+<li>Increase slippage</li>
+<li>Clear cache</li>
+</ol>
+<doc-anchor-target id="issues-with-profile">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#issues-with-profile">#</doc-anchor-trigger>
+        <span><strong>Issues with Profile</strong></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="oops-we-couldnt-find-any-pancake-collectibles-in-your-wallet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#oops-we-couldnt-find-any-pancake-collectibles-in-your-wallet">#</doc-anchor-trigger>
+        <span>Oops! We couldn&#x27;t find any Pancake Collectibles in your wallet.</span>
+    </h3>
+</doc-anchor-target>
+<p>We&#x27;re investigating the logic behind this issue. Meanwhile please try the workaround.</p>
+<doc-tabs>
+<doc-tab v-cloak id="workaround-1">
+<template #title>Workaround 1</template>
+<ol>
+<li>Go to “Collectible” page, then come back to profile page.<br />
+If you can’t find the link, go to <a href="https://pancakeswap.finance/collectibles">https://pancakeswap.finance/collectibles</a> directly.</li>
+<li>Retry profile creation.</li>
+</ol>
+</doc-tab>
+<doc-tab v-cloak id="workaround-2">
+<template #title>Workaround 2</template>
+<p>Change the environment.</p>
+<ul>
+<li>Clear the cache and retry.</li>
+<li>Retry on different browser.</li>
+<li>Retry on different wallet apps.</li>
+<li>Retry on the different network (switch between Wi-Fi and cellular)</li>
+</ul>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="checking-username-keeps-spinning">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#checking-username-keeps-spinning">#</doc-anchor-trigger>
+        <span>Checking username keeps spinning</span>
+    </h3>
+</doc-anchor-target>
+<p>There are two possible causes.</p>
+<ol>
+<li>You have multiple wallets installed on the browser.</li>
+<li>Network issue.</li>
+</ol>
+<doc-tabs>
+<doc-tab v-cloak id="solution-1">
+<template #title>Solution 1</template>
+<p>Root cause: You have multiple wallets installed on the browser.<br />
+<br />
+It may make a conflict between wallets. This is out of PancakeSwap&#x27;s control and we can do nothing.</p>
+<ol>
+<li>Have only single wallet installed on browser, remove the others.</li>
+<li>Reconnect the wallet and retry setting username again.</li>
+</ol>
+</doc-tab>
+<doc-tab v-cloak id="solution-2">
+<template #title>Solution 2</template>
+<p>Root cause: Network is unstable.</p>
+<p>You have to retry.</p>
+<ol>
+<li>Delete whatever has been entered in the text field completely.</li>
+<li>Re-type username, then please wait for seconds.</li>
+<li>If it doesn’t work, reload the page and retry again.</li>
+</ol>
+</doc-tab>
+</doc-tabs>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer class="clear-both">
+                            
+                                <nav class="flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../readme/help/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Click Here for Help</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../readme/help/faq/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">General FAQ</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between">
+                                <div>
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2023. All rights reserved.</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="docs-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Troubleshooting Errors", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+</body>
+</html>

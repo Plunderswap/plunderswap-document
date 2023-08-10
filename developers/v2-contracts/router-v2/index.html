@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744992077434">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744993113958">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../.gitbook/assets/favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.1.0.744992077434" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.1.0.744993113958" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.744992077434" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.744993113958" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.744992077434" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.744993113958" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -216,7 +216,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
     </h3>
 </doc-anchor-target>
 <p><code v-pre>function WETH() external pure returns (address);</code></p>
-<p>Returns the canonical address for <a href="https://bscscan.com/address/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c">Binance: WBNB token</a> (WETH being a vestige from Ethereum network origins).</p>
+<p>Returns the canonical address for <a href="https://bscscan.com/address/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c">Binance: WZIL token</a> (WETH being a vestige from Ethereum network origins).</p>
 <doc-anchor-target id="factory">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#factory">#</doc-anchor-trigger>
@@ -300,7 +300,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
   uint deadline
 ) external returns (uint amountA, uint amountB, uint liquidity);</code></pre>
 </doc-codeblock></div>
-<p>Adds liquidity to a BEP20⇄BEP20 pool.</p>
+<p>Adds liquidity to a ERC-20/ZRC-2⇄ERC-20/ZRC-2 pool.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -370,7 +370,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
   uint deadline
 ) external payable returns (uint amountToken, uint amountETH, uint liquidity);</code></pre>
 </doc-codeblock></div>
-<p>Adds liquidity to a BEP20⇄WBNB pool.</p>
+<p>Adds liquidity to a ERC-20/ZRC-2⇄WZIL pool.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -384,7 +384,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
 <tr>
 <td>addLiquidityETH</td>
 <td><code v-pre>uint</code></td>
-<td>The payable amount in BNB.</td>
+<td>The payable amount in ZIL.</td>
 </tr>
 <tr>
 <td>token</td>
@@ -404,7 +404,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
 <tr>
 <td>amountETHMin</td>
 <td><code v-pre>uint</code></td>
-<td>The minimum amount of BNB to provide (slippage impact).</td>
+<td>The minimum amount of ZIL to provide (slippage impact).</td>
 </tr>
 <tr>
 <td>to</td>
@@ -436,7 +436,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
   uint deadline
 ) external returns (uint amountA, uint amountB);</code></pre>
 </doc-codeblock></div>
-<p>Removes liquidity from a BEP20⇄BEP20 pool.</p>
+<p>Removes liquidity from a ERC-20/ZRC-2⇄ERC-20/ZRC-2 pool.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -501,7 +501,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
   uint deadline
 ) external returns (uint amountToken, uint amountETH);</code></pre>
 </doc-codeblock></div>
-<p>Removes liquidity from a BEP20⇄WBNB pool.</p>
+<p>Removes liquidity from a ERC-20/ZRC-2⇄WZIL pool.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -530,7 +530,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
 <tr>
 <td>amountETHMin</td>
 <td><code v-pre>uint</code></td>
-<td>The minimum amount of BNB to remove (slippage impact).</td>
+<td>The minimum amount of ZIL to remove (slippage impact).</td>
 </tr>
 <tr>
 <td>to</td>
@@ -561,7 +561,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
   uint deadline
 ) external returns (uint amountETH);</code></pre>
 </doc-codeblock></div>
-<p>Removes liquidity from a BEP20⇄WBNB for tokens that take a fee on transfer.</p>
+<p>Removes liquidity from a ERC-20/ZRC-2⇄WZIL for tokens that take a fee on transfer.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -590,7 +590,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
 <tr>
 <td>amountETHMin</td>
 <td><code v-pre>uint</code></td>
-<td>The minimum amount of BNB to remove (slippage impact).</td>
+<td>The minimum amount of ZIL to remove (slippage impact).</td>
 </tr>
 <tr>
 <td>to</td>
@@ -622,7 +622,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
   bool approveMax, uint8 v, bytes32 r, bytes32 s
 ) external returns (uint amountToken, uint amountETH);</code></pre>
 </doc-codeblock></div>
-<p>Removes liquidity from a BEP20⇄WBNB and receives BNB, without pre-approval, via permit.</p>
+<p>Removes liquidity from a ERC-20/ZRC-2⇄WZIL and receives ZIL, without pre-approval, via permit.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -651,7 +651,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
 <tr>
 <td>amountETHMin</td>
 <td><code v-pre>uint</code></td>
-<td>The minimum amount of BNB to remove (slippage impact).</td>
+<td>The minimum amount of ZIL to remove (slippage impact).</td>
 </tr>
 <tr>
 <td>to</td>
@@ -703,7 +703,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
   bool approveMax, uint8 v, bytes32 r, bytes32 s
 ) external returns (uint amountETH);</code></pre>
 </doc-codeblock></div>
-<p>Removes liquidity from a BEP20⇄WBNB and receives BNB via permit for tokens that take a fee on transfer.</p>
+<p>Removes liquidity from a ERC-20/ZRC-2⇄WZIL and receives ZIL via permit for tokens that take a fee on transfer.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -732,7 +732,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
 <tr>
 <td>amountETHMin</td>
 <td><code v-pre>uint</code></td>
-<td>The minimum amount of BNB to remove (slippage impact).</td>
+<td>The minimum amount of ZIL to remove (slippage impact).</td>
 </tr>
 <tr>
 <td>to</td>
@@ -785,7 +785,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
   bool approveMax, uint8 v, bytes32 r, bytes32 s
 ) external returns (uint amountA, uint amountB);</code></pre>
 </doc-codeblock></div>
-<p>Removes liquidity from a BEP20⇄BEP20, without pre-approval, via permit.</p>
+<p>Removes liquidity from a ERC-20/ZRC-2⇄ERC-20/ZRC-2, without pre-approval, via permit.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -819,7 +819,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
 <tr>
 <td>amountETHMin</td>
 <td><code v-pre>uint</code></td>
-<td>The minimum amount of BNB to remove (slippage impact).</td>
+<td>The minimum amount of ZIL to remove (slippage impact).</td>
 </tr>
 <tr>
 <td>to</td>
@@ -866,7 +866,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
   payable
   returns (uint[] memory amounts);</code></pre>
 </doc-codeblock></div>
-<p>Receive an exact amount of output tokens for as little BNB as possible.</p>
+<p>Receive an exact amount of output tokens for as little ZIL as possible.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -880,7 +880,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
 <tr>
 <td>swapETHForExactTokens</td>
 <td><code v-pre>uint</code></td>
-<td>Payable BNB amount.</td>
+<td>Payable ZIL amount.</td>
 </tr>
 <tr>
 <td>amountOut</td>
@@ -917,7 +917,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
   payable
   returns (uint[] memory amounts);</code></pre>
 </doc-codeblock></div>
-<p>Receive as many output tokens as possible for an exact amount of BNB.</p>
+<p>Receive as many output tokens as possible for an exact amount of ZIL.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -931,7 +931,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
 <tr>
 <td>swapExactETHForTokens</td>
 <td><code v-pre>uint</code></td>
-<td>Payable BNB amount.</td>
+<td>Payable ZIL amount.</td>
 </tr>
 <tr>
 <td>amountOutMin</td>
@@ -970,7 +970,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
   uint deadline
 ) external payable;</code></pre>
 </doc-codeblock></div>
-<p>Receive as many output tokens as possible for an exact amount of BNB. Supports tokens that take a fee on transfer.</p>
+<p>Receive as many output tokens as possible for an exact amount of ZIL. Supports tokens that take a fee on transfer.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -984,7 +984,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
 <tr>
 <td>swapExactETHForTokensSupportingFeeOnTransferTokens</td>
 <td><code v-pre>uint</code></td>
-<td>Payable BNB amount.</td>
+<td>Payable ZIL amount.</td>
 </tr>
 <tr>
 <td>amountOutMin</td>
@@ -1020,7 +1020,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
   external
   returns (uint[] memory amounts);</code></pre>
 </doc-codeblock></div>
-<p>Receive as much BNB as possible for an exact amount of input tokens.</p>
+<p>Receive as much ZIL as possible for an exact amount of input tokens.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -1074,7 +1074,7 @@ View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704
   uint deadline
 ) external;</code></pre>
 </doc-codeblock></div>
-<p>Receive as much BNB as possible for an exact amount of tokens. Supports tokens that take a fee on transfer.</p>
+<p>Receive as much ZIL as possible for an exact amount of tokens. Supports tokens that take a fee on transfer.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>

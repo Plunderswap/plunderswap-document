@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744992077434">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744993113958">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -11,7 +11,6 @@
     <!-- Primary Meta Tags -->
     <title>FAQ</title>
     <meta name="title" content="FAQ">
-    <meta name="description" content="No.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.PlunderSwap.com/products/plunderswap-exchange/faq/">
@@ -20,22 +19,20 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.PlunderSwap.com/products/plunderswap-exchange/faq/">
     <meta property="og:title" content="FAQ">
-    <meta property="og:description" content="No.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.PlunderSwap.com/products/plunderswap-exchange/faq/">
     <meta property="twitter:title" content="FAQ">
-    <meta property="twitter:description" content="No.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../.gitbook/assets/favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.1.0.744992077434" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.1.0.744993113958" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.744992077434" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.744993113958" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.744992077434" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.744993113958" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -175,60 +172,6 @@
         <span>FAQ</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="swap">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#swap">#</doc-anchor-trigger>
-        <span>Swap</span>
-    </h2>
-</doc-anchor-target>
-<doc-anchor-target id="are-lp-fee-rewards-automatically-compounded-like-exchange-v2">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#are-lp-fee-rewards-automatically-compounded-like-exchange-v2">#</doc-anchor-trigger>
-        <span>Are LP fee rewards automatically compounded like Exchange v2?</span>
-    </h3>
-</doc-anchor-target>
-<p>No.</p>
-<p>In Exchange v3 you will need to claim trading fee rewards manually. You may do that on the position detail page. You may find all your v3 liquidity positions on the liquidity page.</p>
-<doc-anchor-target id="what-affects-lp-apr">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#what-affects-lp-apr">#</doc-anchor-trigger>
-        <span>What affects LP APR?</span>
-    </h3>
-</doc-anchor-target>
-<p>In Exchange v3, LP fee reward APR could vary between liquidity positions. It is based on the following factors:</p>
-<ul>
-<li>Trading volume<br />
-- more volume generates more fee rewards</li>
-<li>Liquidity pair fee tier<br />
-- higher fee tier generates more fee rewards from individual trades</li>
-<li>The number of tokens deposited<br />
-- more token in the position translates to a larger relative share against the total active liquidity, which gets more trading fee rewards from trades</li>
-<li>The selected price range<br />
-- smaller price range allows a higher concentration for the same amount of token deposited, which translates to a larger relative share against the total active liquidity, and gets more trading fee rewards from trades</li>
-<li>The amount of liquidity currently active<br />
-- if there are more users who deposit and concentrate their liquidity with the same range as you, you will earn less trading fee due to a smaller relative share against the total</li>
-<li>Whether the liquidity position is active<br />
-- only active liquidity positions will earn trading fee rewards</li>
-</ul>
-<doc-anchor-target id="can-i-provide-v2-liquidity">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#can-i-provide-v2-liquidity">#</doc-anchor-trigger>
-        <span>Can I provide v2 liquidity?</span>
-    </h3>
-</doc-anchor-target>
-<p>Providing v2 liquidity is no longer advisable. We recommend using v3 liquidity to take advantage of the new features to improve efficiency.</p>
-<p>If you want to proceed with adding v2 liquidity:</p>
-<ul>
-<li>If the token pair does not have a v3 pool, or it has more liquidity in v2 than the largest pool in v3. A “Add V2 Liquidity” will appear. Simply click to switch to adding v2 liquidity</li>
-<li>Alternatively, use <code v-pre>/v2</code> in the URL to always use v2 liquidity provisioning</li>
-</ul>
-<doc-anchor-target id="how-to-manage-stable-lp-and-legacy-v2-lp">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#how-to-manage-stable-lp-and-legacy-v2-lp">#</doc-anchor-trigger>
-        <span>How to manage stable LP, and legacy v2 LP?</span>
-    </h3>
-</doc-anchor-target>
-<p>You can manage them as usual by going to the <a href="https://PlunderSwap.finance/liquidity">Liquidity</a> page.</p>
 
                                 
                                 <!-- Required only on API pages -->

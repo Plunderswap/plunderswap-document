@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744992077434">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744993113958">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -33,11 +33,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../.gitbook/assets/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.1.0.744992077434" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.1.0.744993113958" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.1.0.744992077434" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.1.0.744993113958" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.1.0.744992077434" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.1.0.744993113958" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -275,7 +275,7 @@ Fail with error &#x27;PlunderSwapRouter: INSUFFICIENT_B_AMOUNT&#x27;</p>
     </h4>
 </doc-anchor-target>
 <p>Head to the contract of the LP token you&#x27;re trying to approve.<br />
-For example, here&#x27;s the ETH/WBNB pair: <a href="https://bscscan.com/address/0x70d8929d04b60af4fb9b58713ebcf18765ade422">https://bscscan.com/address/0x70d8929d04b60af4fb9b58713ebcf18765ade422</a></p>
+For example, here&#x27;s the ETH/WZIL pair: <a href="https://bscscan.com/address/0x70d8929d04b60af4fb9b58713ebcf18765ade422">https://bscscan.com/address/0x70d8929d04b60af4fb9b58713ebcf18765ade422</a></p>
 <ol>
 <li>Select <strong>Write Contract</strong>, then <strong>Connect to Web3</strong> and connect your wallet. <img src="https://lh6.googleusercontent.com/-_sNkO1gcOOJXkduDEUzbExKE2mNxBOR0f86Lpp3BBuPbIcmAHsfuvpF-hKqRn4oID5QzdGkk_1dTHkPuCmE50vpNNZxEqoM5nPmE_12k3-8Q8YYoRYqJ_VGjxJ03YPRuVQ1O5ME" alt="" /></li>
 <li>In <strong>section &quot;1. approve&quot;,</strong> approve the LP token for the router by entering
@@ -406,8 +406,8 @@ Caused by the design of Restorative Rebase tokens like tDoge or tBTC.<br />
 <doc-tabs>
 <doc-tab v-cloak id="solution">
 <template #title>Solution</template>
-<p><strong>If you got this error while removing liquidity from a BNB pair:</strong></p>
-<p>Please select &quot;Receive WBNB&quot; and retry.</p>
+<p><strong>If you got this error while removing liquidity from a ZIL pair:</strong></p>
+<p>Please select &quot;Receive WZIL&quot; and retry.</p>
 <p><strong>If you got this error while trying to swap:</strong></p>
 <p>Please contact the project team of the token you&#x27;re trying to swap. **** This issue must be resolved by the project team.</p>
 </doc-tab>
@@ -516,14 +516,14 @@ If you&#x27;re trading tokens with Restorative Rebase like tau assets tDoge or t
 <p>Your wallet estimates that the gas limit is too low, so the function call runs out of gas before the function call is finished.</p>
 </doc-tab>
 </doc-tabs>
-<doc-anchor-target id="bep20-transfer-amount-exceeds-allowance">
+<doc-anchor-target id="erc-20zrc-2-transfer-amount-exceeds-allowance">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#bep20-transfer-amount-exceeds-allowance">#</doc-anchor-trigger>
-        <span>BEP20: transfer amount exceeds allowance</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#erc-20zrc-2-transfer-amount-exceeds-allowance">#</doc-anchor-trigger>
+        <span>ERC-20/ZRC-2: transfer amount exceeds allowance</span>
     </h3>
 </doc-anchor-target>
 <blockquote>
-<p>Fail with error &#x27;BEP20: transfer amount exceeds allowance&#x27;</p>
+<p>Fail with error &#x27;ERC-20/ZRC-2: transfer amount exceeds allowance&#x27;</p>
 </blockquote>
 <doc-tabs>
 <doc-tab v-cloak id="solution">
@@ -539,14 +539,14 @@ If you&#x27;re trading tokens with Restorative Rebase like tau assets tDoge or t
 <p>This happens when you set a limit on your spend allowance when you first approved the contract, then try to swap more than the limit.</p>
 </doc-tab>
 </doc-tabs>
-<doc-anchor-target id="bep20-transfer-amount-exceeds-balance">
+<doc-anchor-target id="erc-20zrc-2-transfer-amount-exceeds-balance">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#bep20-transfer-amount-exceeds-balance">#</doc-anchor-trigger>
-        <span>BEP20: transfer amount exceeds balance</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#erc-20zrc-2-transfer-amount-exceeds-balance">#</doc-anchor-trigger>
+        <span>ERC-20/ZRC-2: transfer amount exceeds balance</span>
     </h3>
 </doc-anchor-target>
 <blockquote>
-<p>Fail with error &#x27;BEP20: transfer amount exceeds balance&#x27;</p>
+<p>Fail with error &#x27;ERC-20/ZRC-2: transfer amount exceeds balance&#x27;</p>
 </blockquote>
 <p>You&#x27;re probably trying to unstake from a Syrup Pool with low rewards in it. Solution below.</p>
 <p>If not, you may be trying to send tokens that you don&#x27;t have in your wallet (for example, trying to send a token that is already assigned to a pending transaction). In this case, just make sure you have the tokens you&#x27;re trying to use.</p>
@@ -614,14 +614,14 @@ No provider was found</p>
         <span>Unsupported Chain ID</span>
     </h3>
 </doc-anchor-target>
-<p>Switch your chain to BNB Smart Chain. Check your wallet&#x27;s documentation for a guide if you need help.</p>
+<p>Switch your chain to ZIL EVM. Check your wallet&#x27;s documentation for a guide if you need help.</p>
 <doc-anchor-target id="already-processing-eth_requestaccounts-please-wait">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#already-processing-eth_requestaccounts-please-wait">#</doc-anchor-trigger>
         <span>Already processing eth_requestAccounts. Please wait.</span>
     </h3>
 </doc-anchor-target>
-<p>Make sure you are signed in to your wallet app and it&#x27;s connected to BNB Smart Chain.</p>
+<p>Make sure you are signed in to your wallet app and it&#x27;s connected to ZIL EVM.</p>
 <doc-anchor-target id="issues-buying-safemoon-and-similar-tokens">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#issues-buying-safemoon-and-similar-tokens">#</doc-anchor-trigger>
@@ -649,7 +649,7 @@ Read more on <a href="https://community.trustwallet.com/t/how-to-buy-safemoon/15
 <blockquote>
 <p>Internal JSON-RPC error. { &quot;code&quot;: -32000, &quot;message&quot;: &quot;insufficient funds for transfer&quot; } - Please try again.</p>
 </blockquote>
-<p>You don&#x27;t have enough BNB to pay for the transaction fees. You need more BEP-20 network BNB in your wallet.</p>
+<p>You don&#x27;t have enough ZIL to pay for the transaction fees. You need more BEP-20 network ZIL in your wallet.</p>
 <doc-anchor-target id="error-ethjs-query">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#error-ethjs-query">#</doc-anchor-trigger>

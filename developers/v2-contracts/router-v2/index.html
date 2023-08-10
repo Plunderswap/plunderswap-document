@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744990120027">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744991290911">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../.gitbook/assets/favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.1.0.744990120027" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.1.0.744991290911" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.744990120027" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.744991290911" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.744990120027" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.744991290911" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -198,20 +198,11 @@ For more in-depth information on the core contract logic, read the <a href="http
         <span>Contract info</span>
     </h2>
 </doc-anchor-target>
-<p><strong>Contract name:</strong> PancakeRouter</p>
-<p>View <a href="https://github.com/PlunderSwap/pancake-smart-contracts/blob/master/projects/exchange-protocol/contracts/PancakeRouter.sol">PancakeRouter.sol on GitHub</a>.</p>
-<p><strong>Binance smart chain</strong><br />
+<p><strong>Contract name:</strong> PlunderSwapRouter</p>
+<p>View <a href="https://github.com/PlunderSwap/PlunderSwap-smart-contracts/blob/master/projects/exchange-protocol/contracts/PlunderSwapRouter.sol">PlunderSwapRouter.sol on GitHub</a>.</p>
+<p><strong>ZIL EVM</strong><br />
 Contract address**:** 0x10ED43C718714eb63d5aA57B78B54704E256024E<br />
 View the <a href="https://bscscan.com/address/0x10ed43c718714eb63d5aa57b78b54704e256024e">PlunderSwap: Router v2 contract on BscScan</a>.</p>
-<p><strong>Ethereum mainnet</strong><br />
-Contract address**:** 0xEfF92A263d31888d860bD50809A8D171709b7b1c<br />
-View the <a href="https://etherscan.io/address/0xEfF92A263d31888d860bD50809A8D171709b7b1c">PlunderSwap: Router v2 contract on Etherscan</a>.</p>
-<p><strong>zkEVM</strong><br />
-Contract address**:** 0x8cFe327CEc66d1C090Dd72bd0FF11d690C33a2Eb<br />
-View the <a href="https://zkevm.polygonscan.com/address/0x8cFe327CEc66d1C090Dd72bd0FF11d690C33a2Eb#code">PlunderSwap: Router v2 contract on zkEVM</a></p>
-<p><strong>zkSync</strong><br />
-Contract address**:** 0x5aEaF2883FBf30f3D62471154eDa3C0c1b05942d<br />
-View the <a href="https://explorer.zksync.io/address/0x5aEaF2883FBf30f3D62471154eDa3C0c1b05942d">PlunderSwap: Router v2 contract on zkSync</a></p>
 <doc-anchor-target id="read-functions">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#read-functions">#</doc-anchor-trigger>
@@ -233,7 +224,7 @@ View the <a href="https://explorer.zksync.io/address/0x5aEaF2883FBf30f3D62471154
     </h3>
 </doc-anchor-target>
 <p><code v-pre>function factory() external pure returns (address);</code></p>
-<p>Returns the canonical address for <a href="https://bscscan.com/address/0xca143ce32fe78f1f7019d7d551a6402fc5350c73">PancakeFactory</a>.</p>
+<p>Returns the canonical address for <a href="https://bscscan.com/address/0xca143ce32fe78f1f7019d7d551a6402fc5350c73">PlunderSwapFactory</a>.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -1341,12 +1332,12 @@ View the <a href="https://explorer.zksync.io/address/0x5aEaF2883FBf30f3D62471154
     </h2>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">import '@uniswap/v2-core/contracts/interfaces/IPancakeRouter.sol';</code></pre>
+<pre class="language-none"><code v-pre class="language-none">import '@uniswap/v2-core/contracts/interfaces/IPlunderSwapRouter.sol';</code></pre>
 </doc-codeblock></div>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">pragma solidity &gt;=0.6.2;
 
-interface IPancakeRouter01 {
+interface IPlunderSwapRouter01 {
     function factory() external pure returns (address);
     function WETH() external pure returns (address);
 
@@ -1440,11 +1431,11 @@ interface IPancakeRouter01 {
     function getAmountsIn(uint amountOut, address[] calldata path) external view returns (uint[] memory amounts);
 }
 
-// File: contracts\interfaces\IPancakeRouter02.sol
+// File: contracts\interfaces\IPlunderSwapRouter02.sol
 
 pragma solidity &gt;=0.6.2;
 
-interface IPancakeRouter02 is IPancakeRouter01 {
+interface IPlunderSwapRouter02 is IPlunderSwapRouter01 {
     function removeLiquidityETHSupportingFeeOnTransferTokens(
         address token,
         uint liquidity,

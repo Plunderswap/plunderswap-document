@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744990120027">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744991290911">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../.gitbook/assets/favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.1.0.744990120027" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.1.0.744991290911" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.744990120027" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.1.0.744991290911" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.744990120027" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.1.0.744991290911" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -198,20 +198,11 @@ For more in-depth information on the core contract logic, read the <a href="http
         <span>Contract info</span>
     </h2>
 </doc-anchor-target>
-<p><strong>Contract name:</strong> PancakeFactory</p>
-<p>View <a href="https://github.com/PlunderSwap/pancake-contracts/blob/master/projects/exchange-protocol/contracts/PancakeFactory.sol">PancakeFactory.sol on GitHub</a>.</p>
+<p><strong>Contract name:</strong> PlunderSwapFactory</p>
+<p>View <a href="https://github.com/PlunderSwap/PlunderSwap-contracts/blob/master/projects/exchange-protocol/contracts/PlunderSwapFactory.sol">PlunderSwapFactory.sol on GitHub</a>.</p>
 <p><strong>Binance smart chain</strong><br />
 Contract address**:** 0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73<br />
 View the <a href="https://bscscan.com/address/0xca143ce32fe78f1f7019d7d551a6402fc5350c73">PlunderSwap: Factory v2 contract on BscScan</a>.</p>
-<p><strong>Ethereum mainnet</strong><br />
-Contract address**:** 0x1097053Fd2ea711dad45caCcc45EfF7548fCB362<br />
-View the <a href="https://etherscan.io/address/0x1097053Fd2ea711dad45caCcc45EfF7548fCB362">PlunderSwap: Factory v2 contract on Etherscan</a>.</p>
-<p><strong>zkEVM</strong><br />
-Contract address**:** 0x02a84c1b3BBD7401a5f7fa98a384EBC70bB5749E<br />
-View the <a href="https://zkevm.polygonscan.com/address/0x02a84c1b3BBD7401a5f7fa98a384EBC70bB5749E">PlunderSwap: Factory v2 contract on zkEVM</a></p>
-<p><strong>zkSync</strong><br />
-Contract address**:** 0xd03D8D566183F0086d8D09A84E1e30b58Dd5619d<br />
-View the <a href="https://explorer.zksync.io/address/0xd03D8D566183F0086d8D09A84E1e30b58Dd5619d">PlunderSwap: Factory v2 contract on zkSync</a></p>
 <doc-anchor-target id="read-functions">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#read-functions">#</doc-anchor-trigger>
@@ -315,13 +306,13 @@ View the <a href="https://explorer.zksync.io/address/0xd03D8D566183F0086d8D09A84
     </h2>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">import '@uniswap/v2-core/contracts/interfaces/IPancakeFactory.sol';</code></pre>
+<pre class="language-none"><code v-pre class="language-none">import '@uniswap/v2-core/contracts/interfaces/IPlunderSwapFactory.sol';</code></pre>
 </doc-codeblock></div>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">pragma solidity =0.5.16;
 
 
-interface IPancakeFactory {
+interface IPlunderSwapFactory {
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
 
     function feeTo() external view returns (address);

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744990120027">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744991290911">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -33,11 +33,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../.gitbook/assets/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.1.0.744990120027" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.1.0.744991290911" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.1.0.744990120027" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.1.0.744991290911" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.1.0.744990120027" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.1.0.744991290911" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -196,8 +196,8 @@
     </h3>
 </doc-anchor-target>
 <blockquote>
-<p>The transaction cannot succeed due to error: PancakeRouter: INSUFFICIENT_OUTPUT_AMOUNT. This is probably an issue with one of the tokens you are swapping.</p>
-<p>the transaction cannot succeed due to error: execution reverted: pancakerouter: insufficient_output_amount.</p>
+<p>The transaction cannot succeed due to error: PlunderSwapRouter: INSUFFICIENT_OUTPUT_AMOUNT. This is probably an issue with one of the tokens you are swapping.</p>
+<p>the transaction cannot succeed due to error: execution reverted: PlunderSwaprouter: insufficient_output_amount.</p>
 </blockquote>
 <p>You&#x27;re trying to swap tokens, but your slippage tolerance is too low or liquidity is too low.</p>
 <doc-tabs>
@@ -229,9 +229,9 @@
     </h3>
 </doc-anchor-target>
 <blockquote>
-<p>Fail with error &#x27;PancakeRouter: INSUFFICIENT_A_AMOUNT&#x27;<br />
+<p>Fail with error &#x27;PlunderSwapRouter: INSUFFICIENT_A_AMOUNT&#x27;<br />
 or<br />
-Fail with error &#x27;PancakeRouter: INSUFFICIENT_B_AMOUNT&#x27;</p>
+Fail with error &#x27;PlunderSwapRouter: INSUFFICIENT_B_AMOUNT&#x27;</p>
 </blockquote>
 <p>You&#x27;re trying to add/remove liquidity from a liquidity pool (LP), but there isn&#x27;t enough of one of the two tokens in the pair.</p>
 <doc-tabs>
@@ -340,41 +340,41 @@ For example, here&#x27;s the ETH/WBNB pair: <a href="https://bscscan.com/address
 </div>
 </doc-tab>
 </doc-tabs>
-<doc-anchor-target id="pancakerouter-expired">
+<doc-anchor-target id="plunderswaprouter-expired">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#pancakerouter-expired">#</doc-anchor-trigger>
-        <span>PancakeRouter: EXPIRED</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#plunderswaprouter-expired">#</doc-anchor-trigger>
+        <span>PlunderSwapRouter: EXPIRED</span>
     </h3>
 </doc-anchor-target>
 <blockquote>
-<p>The transaction cannot succeed due to error: PancakeRouter: EXPIRED. This is probably an issue with one of the tokens you are swapping.</p>
+<p>The transaction cannot succeed due to error: PlunderSwapRouter: EXPIRED. This is probably an issue with one of the tokens you are swapping.</p>
 </blockquote>
 <p>Try again, but confirm (sign and broadcast) the transaction as soon as you generate it.</p>
 <p>This happened because you started making a transaction, but you didn&#x27;t sign and broadcast it until it was past the deadline. That means you didn&#x27;t hit &quot;Confirm&quot; quickly enough.</p>
-<doc-anchor-target id="pancake-k">
+<doc-anchor-target id="plunderswap-k">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#pancake-k">#</doc-anchor-trigger>
-        <span>Pancake: K</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#plunderswap-k">#</doc-anchor-trigger>
+        <span>PlunderSwap: K</span>
     </h3>
 </doc-anchor-target>
 <blockquote>
-<p>The transaction cannot succeed due to error: Pancake: K. This is probably an issue with one of the tokens you are swapping.</p>
+<p>The transaction cannot succeed due to error: PlunderSwap: K. This is probably an issue with one of the tokens you are swapping.</p>
 </blockquote>
 <p>Try modifying the amount on “To” field. Therefore putting &quot;(estimated)&quot; symbol on “From”. Then initiate the swap immediately.</p>
 <p><figure class="content-center">
-    <img src="../../.gitbook/assets/pancake-k-solution-(2).png" alt="">
+    <img src="../../.gitbook/assets/plunderswap-k-solution-(2).png" alt="">
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
 <p>This usually happen when you are trying to swap a token with its own fee.</p>
-<doc-anchor-target id="pancake-transfer_failed">
+<doc-anchor-target id="plunderswap-transfer_failed">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#pancake-transfer_failed">#</doc-anchor-trigger>
-        <span>Pancake: TRANSFER_FAILED</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#plunderswap-transfer_failed">#</doc-anchor-trigger>
+        <span>PlunderSwap: TRANSFER_FAILED</span>
     </h3>
 </doc-anchor-target>
 <blockquote>
-<p>The transaction cannot succeed due to error: execution reverted: Pancake: TRANSFER_FAILED.</p>
+<p>The transaction cannot succeed due to error: execution reverted: PlunderSwap: TRANSFER_FAILED.</p>
 </blockquote>
 <p>Make sure you have 30% more tokens in your wallet than you intend to trade, or try to trade a lower amount. If you want to sell the maximum possible, try 70% or 69% instead of 100%.<br />
 Caused by the design of Restorative Rebase tokens like tDoge or tBTC.<br />
@@ -715,10 +715,10 @@ Read more on <a href="https://community.trustwallet.com/t/how-to-buy-safemoon/15
         <span><strong>Issues with Profile</strong></span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="oops-we-couldnt-find-any-pancake-collectibles-in-your-wallet">
+<doc-anchor-target id="oops-we-couldnt-find-any-plunderswap-collectibles-in-your-wallet">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#oops-we-couldnt-find-any-pancake-collectibles-in-your-wallet">#</doc-anchor-trigger>
-        <span>Oops! We couldn&#x27;t find any Pancake Collectibles in your wallet.</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#oops-we-couldnt-find-any-plunderswap-collectibles-in-your-wallet">#</doc-anchor-trigger>
+        <span>Oops! We couldn&#x27;t find any PlunderSwap Collectibles in your wallet.</span>
     </h3>
 </doc-anchor-target>
 <p>We&#x27;re investigating the logic behind this issue. Meanwhile please try the workaround.</p>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744986867281">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744987823131">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -14,29 +14,29 @@
     <meta name="description" content="Common error messages. Use the sidebar ➡️to jump to the error you're seeing.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.plunderswap.com/help/troubleshooting/">
+    <link rel="canonical" href="https://docs.PlunderSwap.com/help/troubleshooting/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.plunderswap.com/help/troubleshooting/">
+    <meta property="og:url" content="https://docs.PlunderSwap.com/help/troubleshooting/">
     <meta property="og:title" content="Troubleshooting Errors">
     <meta property="og:description" content="Common error messages. Use the sidebar ➡️to jump to the error you're seeing.">
     <meta property="og:image" content="https://lh5.googleusercontent.com/T1KMtz2ILDVHljGw1iLbIv0W1KVl7qXL8zU2nLFHkUvDb5oMw9mpUzzBwWmIBz15XDsxZ5w7wsaqAwCs_pxdobz_kY_7BhcZhYtpqWuQGFs23DZq98-SVInlfsS07WzxFPLIYXHt">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.plunderswap.com/help/troubleshooting/">
+    <meta property="twitter:url" content="https://docs.PlunderSwap.com/help/troubleshooting/">
     <meta property="twitter:title" content="Troubleshooting Errors">
     <meta property="twitter:description" content="Common error messages. Use the sidebar ➡️to jump to the error you're seeing.">
     <meta property="twitter:image" content="https://lh5.googleusercontent.com/T1KMtz2ILDVHljGw1iLbIv0W1KVl7qXL8zU2nLFHkUvDb5oMw9mpUzzBwWmIBz15XDsxZ5w7wsaqAwCs_pxdobz_kY_7BhcZhYtpqWuQGFs23DZq98-SVInlfsS07WzxFPLIYXHt">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.1.0.744986867281" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.1.0.744987823131" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.1.0.744986867281" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.1.0.744987823131" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.1.0.744986867281" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.1.0.744987823131" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -56,7 +56,7 @@
                                 <img class="max-h-10 dark:hidden md:inline-block" src="../../.gitbook/assets/plunder_logo.svg">
                                 <img class="max-h-10 hidden dark:inline-block" src="../../.gitbook/assets/plunder_logo.svg">
                             </span>
-                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Plunderswap</span>
+                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">PlunderSwap</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
                     </div>
         
@@ -218,7 +218,7 @@
 <template #title>Reason</template>
 <p><strong>This usually happens when trading tokens with low liquidity.</strong></p>
 <p>That means there isn&#x27;t enough of one of the tokens you&#x27;re trying to swap in the Liquidity Pool: it&#x27;s probably a small-cap token that few people are trading.</p>
-<p>However, there&#x27;s also the chance that you&#x27;re trying to trade a scam token which cannot be sold. In this case, PancakeSwap isn&#x27;t able to block a token or return funds.</p>
+<p>However, there&#x27;s also the chance that you&#x27;re trying to trade a scam token which cannot be sold. In this case, PlunderSwap isn&#x27;t able to block a token or return funds.</p>
 </doc-tab>
 </doc-tabs>
 <doc-anchor-target id="insufficient_a_amount-or-insufficient_b_amount">
@@ -266,7 +266,7 @@ Fail with error &#x27;PancakeRouter: INSUFFICIENT_B_AMOUNT&#x27;</p>
 <doc-tab v-cloak id="solution-for-nerds">
 <template #title>Solution for nerds</template>
 <p>OK, so you&#x27;re really determined to fix this. We really don&#x27;t recommend doing this unless you know what you&#x27;re doing.</p>
-<p>There currently isn&#x27;t a simple way to solve this issue from the PancakeSwap website: you&#x27;ll need to interact with the contract directly. You can add liquidity directly via the Router contract, while setting amountAMin to a small amount, then withdrawing all liquidity.</p>
+<p>There currently isn&#x27;t a simple way to solve this issue from the PlunderSwap website: you&#x27;ll need to interact with the contract directly. You can add liquidity directly via the Router contract, while setting amountAMin to a small amount, then withdrawing all liquidity.</p>
 <doc-anchor-target id="approve-the-lp-contract">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#approve-the-lp-contract">#</doc-anchor-trigger>
@@ -412,7 +412,7 @@ Caused by the design of Restorative Rebase tokens like tDoge or tBTC.<br />
 </doc-tab>
 <doc-tab v-cloak id="reason">
 <template #title>Reason</template>
-<p><strong>This issue (while swapping) is caused by tokens which have hard-coded the V1 PancakeSwap router into their contract.</strong></p>
+<p><strong>This issue (while swapping) is caused by tokens which have hard-coded the V1 PlunderSwap router into their contract.</strong></p>
 <p>While this practice is ill-advised at best, the reason for these projects having done this appears to be due to their tokenomics, in which each purchase sends a % of the token to LPs.</p>
 <p>The projects affected will likely not work with the V2 router: they will most likely need to create new versions of their tokens pointing to our new router address, and migrate any existing token holders to their new token.</p>
 <p>We recommend that any projects which created such tokens should also make efforts to prevent their users from adding them to V2 LP.</p>
@@ -644,7 +644,7 @@ No provider was found</p>
 <doc-tabs>
 <doc-tab v-cloak id="solution">
 <template #title>Solution</template>
-<p>Install the official browser extension to connect, or read our guide on <a href="https://docs.pancakeswap.finance/get-started/connection-guide">how to connect a wallet to PancakeSwap</a>.</p>
+<p>Install the official browser extension to connect, or read our guide on <a href="https://docs.PlunderSwap.finance/get-started/connection-guide">how to connect a wallet to PlunderSwap</a>.</p>
 </doc-tab>
 </doc-tabs>
 <doc-anchor-target id="unsupported-chain-id">
@@ -726,7 +726,7 @@ Read more on <a href="https://community.trustwallet.com/t/how-to-buy-safemoon/15
 <template #title>Workaround 1</template>
 <ol>
 <li>Go to “Collectible” page, then come back to profile page.<br />
-If you can’t find the link, go to <a href="https://pancakeswap.finance/collectibles">https://pancakeswap.finance/collectibles</a> directly.</li>
+If you can’t find the link, go to <a href="https://PlunderSwap.finance/collectibles">https://PlunderSwap.finance/collectibles</a> directly.</li>
 <li>Retry profile creation.</li>
 </ol>
 </doc-tab>
@@ -757,7 +757,7 @@ If you can’t find the link, go to <a href="https://pancakeswap.finance/collect
 <template #title>Solution 1</template>
 <p>Root cause: You have multiple wallets installed on the browser.<br />
 <br />
-It may make a conflict between wallets. This is out of PancakeSwap&#x27;s control and we can do nothing.</p>
+It may make a conflict between wallets. This is out of PlunderSwap&#x27;s control and we can do nothing.</p>
 <ol>
 <li>Have only single wallet installed on browser, remove the others.</li>
 <li>Reconnect the wallet and retry setting username again.</li>

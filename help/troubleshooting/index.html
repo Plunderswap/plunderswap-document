@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745047508898">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.745195915534">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -33,11 +33,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../.gitbook/assets/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.1.0.745047508898" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.1.0.745195915534" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.1.0.745047508898" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.1.0.745195915534" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.1.0.745047508898" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.1.0.745195915534" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -375,56 +375,6 @@ Caused by the design of Restorative Rebase tokens like tDoge or tBTC.<br />
     </h3>
 </doc-anchor-target>
 <p>Try trading a smaller amount, or increase slippage tolerance via the settings icon and try again. This is caused by low liquidity.</p>
-<doc-anchor-target id="estimategas-failed">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#estimategas-failed">#</doc-anchor-trigger>
-        <span>estimateGas failed</span>
-    </h3>
-</doc-anchor-target>
-<blockquote>
-<p>This transaction would fail. Please contact support</p>
-</blockquote>
-<doc-tabs>
-<doc-tab v-cloak id="solution">
-<template #title>Solution</template>
-<p><strong>If you got this error while removing liquidity from a ZIL pair:</strong></p>
-<p>Please select &quot;Receive WZIL&quot; and retry.</p>
-<p><strong>If you got this error while trying to swap:</strong></p>
-<p>Please contact the project team of the token you&#x27;re trying to swap. **** This issue must be resolved by the project team.</p>
-</doc-tab>
-<doc-tab v-cloak id="reason">
-<template #title>Reason</template>
-<p><strong>This issue (while swapping) is caused by tokens which have hard-coded the V1 PlunderSwap router into their contract.</strong></p>
-<p>While this practice is ill-advised at best, the reason for these projects having done this appears to be due to their tokenomics, in which each purchase sends a % of the token to LPs.</p>
-<p>The projects affected will likely not work with the V2 router: they will most likely need to create new versions of their tokens pointing to our new router address, and migrate any existing token holders to their new token.</p>
-<p>We recommend that any projects which created such tokens should also make efforts to prevent their users from adding them to V2 LP.</p>
-<p>The up-to-date router address is <a href="https://bscscan.com/address/0x10ED43C718714eb63d5aA57B78B54704E256024E">https://bscscan.com/address/0x10ED43C718714eb63d5aA57B78B54704E256024E</a></p>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="cannot-read-property-tohexstring-of-undefined">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#cannot-read-property-tohexstring-of-undefined">#</doc-anchor-trigger>
-        <span>Cannot read property &#x27;toHexString&#x27; of undefined</span>
-    </h3>
-</doc-anchor-target>
-<blockquote>
-<p>&quot;Unknown error: &quot;Cannot read property &#x27;toHexString&#x27; of undefined&quot;</p>
-</blockquote>
-<p>When trying to swap tokens, the transaction fails and this error message is displayed. This error has been reported on mobile devices using Trust Wallet.</p>
-<doc-tabs>
-<doc-tab v-cloak id="solution">
-<template #title>Solution</template>
-<ol>
-<li>Attempt the transaction again with increased slippage allowance.</li>
-<li>If 1. does not resolve your problem, consider using another wallet such as SafePal for your transaction.</li>
-</ol>
-</doc-tab>
-<doc-tab v-cloak id="reason">
-<template #title>Reason</template>
-<p><strong>This usually happens when trading tokens with insufficient slippage allowance on Trust Wallet.</strong></p>
-<p>The exact details of the problem are still being investigated.</p>
-</doc-tab>
-</doc-tabs>
 <doc-anchor-target id="execution-reverted-transferhelper-transfer_from_failed">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#execution-reverted-transferhelper-transfer_from_failed">#</doc-anchor-trigger>
@@ -445,8 +395,7 @@ Caused by the design of Restorative Rebase tokens like tDoge or tBTC.<br />
 </doc-tab>
 <doc-tab v-cloak id="reason">
 <template #title>Reason</template>
-<p>This error happens when trading tokens with insufficient allowance, or when a wallet has insufficient funds.<br />
-If you&#x27;re trading tokens with Restorative Rebase like tau assets tDoge or tBTC, make sure you understand how they work first with this <a href="https://btcst.medium.com/stp-8-restorative-rebase-b4fbbdfd96c">guide to Rebase tokens</a>.</p>
+<p>This error happens when trading tokens with insufficient allowance, or when a wallet has insufficient funds.\</p>
 </doc-tab>
 </doc-tabs>
 <doc-anchor-target id="issues-with-farms">
@@ -461,111 +410,8 @@ If you&#x27;re trading tokens with Restorative Rebase like tau assets tDoge or t
         <span>Fail with error &#x27;ds-math-sub-underflow&#x27;</span>
     </h3>
 </doc-anchor-target>
-<p>You&#x27;ve run out of allowance of your LP token allowance to the MasterChef contract.</p>
+<p>You&#x27;ve run out of allowance of your LP token allowance to the contract.</p>
 <p><strong>Use token approval manager like unrekt or BscScan to</strong> </p>
-<doc-anchor-target id="issues-with-syrup-pools">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#issues-with-syrup-pools">#</doc-anchor-trigger>
-        <span><strong>Issues with Syrup Pools</strong></span>
-    </h2>
-</doc-anchor-target>
-<doc-anchor-target id="out-of-gas-error">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#out-of-gas-error">#</doc-anchor-trigger>
-        <span>Out of Gas error</span>
-    </h3>
-</doc-anchor-target>
-<blockquote>
-<p>Warning! Error encountered during contract execution [out of gas]</p>
-</blockquote>
-<p>You have set a low gas limit when trying to make a transaction.</p>
-<doc-tabs>
-<doc-tab v-cloak id="solution">
-<template #title>Solution</template>
-<p>Try manually increasing the <strong>gas limit</strong> (not gas price!) in your wallet before signing the transaction.</p>
-<p>A limit of 200000 is usually enough.</p>
-<p><figure class="content-center">
-    <img src="../../.gitbook/assets/image-(2)-(1)-(1)-(1).png" alt="">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p>The above example is from Metamask; check your wallet&#x27;s documentation if you aren&#x27;t sure how to adjust the gas limit.</p>
-</doc-tab>
-<doc-tab v-cloak id="reason">
-<template #title>Reason</template>
-<p>Basically, your wallet (Metamask, Trust Wallet, etc.) can&#x27;t finish what it&#x27;s trying to do.</p>
-<p>Your wallet estimates that the gas limit is too low, so the function call runs out of gas before the function call is finished.</p>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="erc-20zrc-2-transfer-amount-exceeds-allowance">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#erc-20zrc-2-transfer-amount-exceeds-allowance">#</doc-anchor-trigger>
-        <span>ERC-20/ZRC-2: transfer amount exceeds allowance</span>
-    </h3>
-</doc-anchor-target>
-<blockquote>
-<p>Fail with error &#x27;ERC-20/ZRC-2: transfer amount exceeds allowance&#x27;</p>
-</blockquote>
-<doc-tabs>
-<doc-tab v-cloak id="solution">
-<template #title>Solution</template>
-<ol>
-<li>Use Unrekt.net to revoke approval for the smart contract you&#x27;re trying to interact with</li>
-<li>Approve the contract again, without setting a limit on spend allowance</li>
-<li>Try interacting with the contract again.</li>
-</ol>
-</doc-tab>
-<doc-tab v-cloak id="reason">
-<template #title>Reason</template>
-<p>This happens when you set a limit on your spend allowance when you first approved the contract, then try to swap more than the limit.</p>
-</doc-tab>
-</doc-tabs>
-<doc-anchor-target id="erc-20zrc-2-transfer-amount-exceeds-balance">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#erc-20zrc-2-transfer-amount-exceeds-balance">#</doc-anchor-trigger>
-        <span>ERC-20/ZRC-2: transfer amount exceeds balance</span>
-    </h3>
-</doc-anchor-target>
-<blockquote>
-<p>Fail with error &#x27;ERC-20/ZRC-2: transfer amount exceeds balance&#x27;</p>
-</blockquote>
-<p>You&#x27;re probably trying to unstake from a Syrup Pool with low rewards in it. Solution below.</p>
-<p>If not, you may be trying to send tokens that you don&#x27;t have in your wallet (for example, trying to send a token that is already assigned to a pending transaction). In this case, just make sure you have the tokens you&#x27;re trying to use.</p>
-<doc-tabs>
-<doc-tab v-cloak id="solution">
-<template #title>Solution</template>
-<p>Firstly,<a href="../../contact-us/communities.md"> let the team know</a> which pool you&#x27;re trying to unstake from, so they can top up the rewards. If you&#x27;re in a hurry to unstake and you don&#x27;t mind losing your pending yield, try an emergencyWithdraw:</p>
-<p>You can perform an “emergencyWithdraw” from the contract directly to unstake your staked tokens.</p>
-<ol>
-<li>Find the contract address of the Syrup Pool you&#x27;re trying to unstake from. You can find it in your wallet&#x27;s transaction log.</li>
-<li>Go to <a href="https://bscscan.com/address/0x73feaa1eE314F8c655E354234017bE2193C9E24E#writeContract">https://bscscan.com/</a> and in the search bar, enter the contract address.</li>
-<li>Select <strong>Write Contract.</strong></li>
-<li>Click <strong>“Connect to Web3”</strong> and connect your wallet.<img src="https://lh6.googleusercontent.com/-_sNkO1gcOOJXkduDEUzbExKE2mNxBOR0f86Lpp3BBuPbIcmAHsfuvpF-hKqRn4oID5QzdGkk_1dTHkPuCmE50vpNNZxEqoM5nPmE_12k3-8Q8YYoRYqJ_VGjxJ03YPRuVQ1O5ME" alt="" /></li>
-<li>In section <strong>“3. emergencyWithdraw”,</strong> and click “Write”.</li>
-</ol>
-<p>This will unstake your staked tokens and lose any uncollected yield.</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
-                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p><strong>This will lose any yield that you haven’t harvested yet.</strong></p>
-        </div>
-    </div>
-</div>
-</doc-tab>
-<doc-tab v-cloak id="reason">
-<template #title>Reason</template>
-<p>This error tends to appear when you&#x27;re trying to unstake from an old Syrup Pool, but there aren&#x27;t enough rewards in the pool left for you to harvest when withdrawing. This causes the transaction to fail.</p>
-</doc-tab>
-</doc-tabs>
 <doc-anchor-target id="other-issues">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#other-issues">#</doc-anchor-trigger>
@@ -582,7 +428,7 @@ If you&#x27;re trading tokens with Restorative Rebase like tau assets tDoge or t
 <p>Provider Error<br />
 No provider was found</p>
 </blockquote>
-<p>This happens when you try to connect via a browser extension like MetaMask or Binance Chain Wallet, but you haven’t installed the extension.</p>
+<p>This happens when you try to connect via a browser extension like MetaMask, but you haven’t installed the extension.</p>
 <doc-tabs>
 <doc-tab v-cloak id="solution">
 <template #title>Solution</template>
@@ -595,7 +441,7 @@ No provider was found</p>
         <span>Unsupported Chain ID</span>
     </h3>
 </doc-anchor-target>
-<p>Switch your chain to ZIL EVM. Check your wallet&#x27;s documentation for a guide if you need help.</p>
+<p>Switch your chain to Zilliqa EVM. Check your wallet&#x27;s documentation for a guide if you need help.</p>
 <doc-anchor-target id="already-processing-eth_requestaccounts-please-wait">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#already-processing-eth_requestaccounts-please-wait">#</doc-anchor-trigger>
@@ -603,20 +449,6 @@ No provider was found</p>
     </h3>
 </doc-anchor-target>
 <p>Make sure you are signed in to your wallet app and it&#x27;s connected to ZIL EVM.</p>
-<doc-anchor-target id="issues-buying-safemoon-and-similar-tokens">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#issues-buying-safemoon-and-similar-tokens">#</doc-anchor-trigger>
-        <span>Issues buying SAFEMOON and similar tokens</span>
-    </h3>
-</doc-anchor-target>
-<p>To trade SAFEMOON, you must click on the settings icon and <strong>set your slippage tolerance to 12% or more.</strong><br />
-This is because <strong>SafeMoon taxes a 10% fee on each transaction</strong>:</p>
-<ul>
-<li>5% fee = redistributed to all existing holders</li>
-<li>5% fee = used to add liquidity</li>
-</ul>
-<p>This is also why you might not receive as much of the token as you expect when you purchase.<br />
-Read more on <a href="https://community.trustwallet.com/t/how-to-buy-safemoon/155742">How to Buy Safe Moon</a>.</p>
 <doc-anchor-target id="internal-json-rpc-errors">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#internal-json-rpc-errors">#</doc-anchor-trigger>
@@ -630,7 +462,7 @@ Read more on <a href="https://community.trustwallet.com/t/how-to-buy-safemoon/15
 <blockquote>
 <p>Internal JSON-RPC error. { &quot;code&quot;: -32000, &quot;message&quot;: &quot;insufficient funds for transfer&quot; } - Please try again.</p>
 </blockquote>
-<p>You don&#x27;t have enough ZIL to pay for the transaction fees. You need more BEP-20 network ZIL in your wallet.</p>
+<p>You don&#x27;t have enough ZIL to pay for the transaction fees. You need more ZIL in your wallet.</p>
 <doc-anchor-target id="error-ethjs-query">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#error-ethjs-query">#</doc-anchor-trigger>
@@ -650,45 +482,6 @@ Read more on <a href="https://community.trustwallet.com/t/how-to-buy-safemoon/15
 <li>Increase slippage</li>
 <li>Clear cache</li>
 </ol>
-<doc-anchor-target id="issues-with-profile">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#issues-with-profile">#</doc-anchor-trigger>
-        <span><strong>Issues with Profile</strong></span>
-    </h2>
-</doc-anchor-target>
-<doc-anchor-target id="checking-username-keeps-spinning">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#checking-username-keeps-spinning">#</doc-anchor-trigger>
-        <span>Checking username keeps spinning</span>
-    </h3>
-</doc-anchor-target>
-<p>There are two possible causes.</p>
-<ol>
-<li>You have multiple wallets installed on the browser.</li>
-<li>Network issue.</li>
-</ol>
-<doc-tabs>
-<doc-tab v-cloak id="solution-1">
-<template #title>Solution 1</template>
-<p>Root cause: You have multiple wallets installed on the browser.<br />
-<br />
-It may make a conflict between wallets. This is out of PlunderSwap&#x27;s control and we can do nothing.</p>
-<ol>
-<li>Have only single wallet installed on browser, remove the others.</li>
-<li>Reconnect the wallet and retry setting username again.</li>
-</ol>
-</doc-tab>
-<doc-tab v-cloak id="solution-2">
-<template #title>Solution 2</template>
-<p>Root cause: Network is unstable.</p>
-<p>You have to retry.</p>
-<ol>
-<li>Delete whatever has been entered in the text field completely.</li>
-<li>Re-type username, then please wait for seconds.</li>
-<li>If it doesn’t work, reload the page and retry again.</li>
-</ol>
-</doc-tab>
-</doc-tabs>
 
                                 
                                 <!-- Required only on API pages -->

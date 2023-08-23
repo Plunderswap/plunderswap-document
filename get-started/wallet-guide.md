@@ -53,7 +53,7 @@ MetaMask is a very popular browser-based wallet plugin that supports ERC-20/ZRC-
 * Additional steps needed to use with Zilliqa EVM and PlunderSwap
 * Extra information and settings may confuse beginners
 
-[!button target="blank" text="**Download MetaMask**"](https://metamask.io/download.html)\
+[!button target="blank" text="**Download MetaMask**"](https://metamask.io/download.html)
 
 [**MetaMask Setup Guide**](https://docs.plunderswap.com/get-started/connection-guide)
 

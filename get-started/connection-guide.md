@@ -110,7 +110,7 @@ To connect MetaMask to PlunderSwap follow the steps below.
 
 ### Resources
 
-[**Download MetaMask**](https://metamask.io/download.html) (Automatically detects browser)\
+[**Download MetaMask**](https://metamask.io/download.html) (Automatically detects browser)
 {% endtab %}
 {% endtabs %}
 

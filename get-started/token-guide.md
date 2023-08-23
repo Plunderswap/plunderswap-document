@@ -4,7 +4,7 @@
 
 The native tokens of ZIL EVM (ZILEVM) are **ERC-20**.
 
-NOTE: **ZRC-2** (Native ZIL Tokens) are supported via a proxy contract - Read more [!button target="blank" text="Here"](https://blog.zilliqa.com/zilliqa-evm-now-supports-fungible-scilla-tokens/)\
+NOTE: **ZRC-2** (Native ZIL Tokens) are supported via a proxy contract - Read more [!button target="blank" text="Here"](https://blog.zilliqa.com/zilliqa-evm-now-supports-fungible-scilla-tokens/)
 
 To do most things on ZIL EVM, you will need to pay gas, which comes in the form of ZIL.
 

@@ -1,0 +1,10 @@
+input: .
+output: .retype
+url: https://docs.PlunderSwap.com
+branding:
+  title: PlunderSwap
+  label: Docs
+  logo: .gitbook/assets/Plunder_logo_1.svg
+footer:
+  copyright: "&copy; Copyright {{ year }}. All rights reserved."
+favicon: .gitbook/assets/favicon.png

@@ -7,3 +7,7 @@
 
 ### [Social Communities](communities.md)
 
+### Legal
+#### [Privacy Policy](privacy-policy.md)
+
+#### [Terms and Conditions](terms.md)

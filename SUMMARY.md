@@ -24,3 +24,4 @@
   * [Social Accounts & Communities](contact-us/communities.md)
   * [Brand & Logos](contact-us/brand.md)
   * [Privacy Policy](contact-us/privacy-policy.md)
+  * [Terms and Conditions](contact-us/terms.md)

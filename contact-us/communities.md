@@ -16,7 +16,7 @@ Here you'll find a list of PlunderSwaps's official Social media channels and com
 
 The below is the only link for our discord server!
 
-[https://discord.gg/PlunderSwap](https://discord.gg/UH7VK5at)
+[https://discord.gg/vDvhGQazBz](https://discord.gg/vDvhGQazBz)
 
 ## 💬 Telegram
 

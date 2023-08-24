@@ -53,7 +53,7 @@ To connect MetaMask to PlunderSwap follow the steps below.
 ![](<../../.gitbook/assets/image (76).png>)
 
 1. Type "PlunderSwap" into the search field and start the search. The top result will be the PlunderSwap exchange. Tap to enter it.
-2. You wallet will ask you to connect. Tap **Connect** to connect to PlunderSwap.
+2. Your wallet will ask you to connect. Tap **Connect** to connect to PlunderSwap.
 
 ![](<../../.gitbook/assets/image1.png>)
 
@@ -71,6 +71,12 @@ To connect MetaMask to PlunderSwap follow the steps below.
 ![](<../../.gitbook/assets/image (33) (3) (4) (5) (1) (1) (1) (1) (1) (1) (1) (4).png>)
 
 ### Chrome and Firefox
+
+{% hint style="info" %}
+**As an alternative to putting the networks in manually - try 
+- for Zilliqa EVM Testnet - https://chainlist.org/chain/33101
+- for Zilliqa EVM Mainnet - https://chainlist.org/chain/32769**
+{% endhint %}
 
 1. Open MetaMask and click on the **network selector** at the top. By default it will show "Ethereum Mainnet". Scroll down and click **Custom RPC**.
 

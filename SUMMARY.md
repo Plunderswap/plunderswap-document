@@ -13,6 +13,7 @@
   * [How to Add/Remove Liquidity](products/plunderswap-exchange/liquidity-guide.md)
   * [Try it out in TestNet!](products/plunderswap-exchange/give-testnet-a-try.md)
 * [Developers](developers/README.md)
+    * [ZRC2 Proxy Contracts](developers/zrc2-proxy-contracts/README.md)
     * [Factory v2](developers/v2-contracts/factory-v2.md)
     * [Router v2](developers/v2-contracts/router-v2.md)
 * [Help](help/README.md)

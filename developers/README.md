@@ -5,6 +5,9 @@
 
 # Smart Contracts (Zilliqa EVM)
 
+## ZRC2 Proxy Contracts
+See Here - [**HERE**](https://docs.plunderswap.com/developers/zrc2-proxy-contracts)
+
 ## Main contracts
 
 The following links will take you to the EVMX page for PlunderSwap's main smart contracts.

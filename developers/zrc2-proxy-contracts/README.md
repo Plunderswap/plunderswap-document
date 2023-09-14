@@ -2,7 +2,11 @@
 ---
 ![](../../.gitbook/assets/Developers.png)
 ---
-These are officially created by the PlunderSwap team, or been officially vetted by us.  Any other proxies with tokens listed HAVE if not in this list HAVE NOT BEEN VETTED.
+These are officially created by the PlunderSwap team, or been officially vetted by us.  
+
+{% hint style="danger" %}
+Any other proxies with tokens NOT in this list HAVE NOT BEEN VETTED.
+{% endhint %}
 
 ## Testnet contracts
 Token Name - ZRCToken\

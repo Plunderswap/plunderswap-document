@@ -37,6 +37,10 @@ Whenever there is an official airdrop on PlunderSwap it will be announced along 
 
 Please remember anyone can airdrop tokens to PlunderSwap users since every transaction is public on EVMX. Be sure to do your own research when it comes to non-official airdrops. To protect your funds, we recommend you don't use a smart contract you don't understand from a source you don't trust.
 
+## PUZZLE
+
+“Arghh Swashbucklers! Listen close to this riddle bold, A word that speaks of mending, a tale of old: After stormy seas and battles fierce and wild, 'Tis what ye do to make yer ship beguile. When the hull be battered, the sails be torn, And the mast be shattered, look not forlorn. With hammer, nail, and sweat that's true, Ye undertake a task that sailors do. What be this word that tells of strife and skill, To mend and fix, to make all right and still? Answer true, ye scallywags, don't be shy, What word befitting this riddle do ye spy?”
+
 ## Where can I view smart contracts?
 
 Learn how to find smart contracts on our [Finding Contracts page](https://docs.plunderswap.com/developers/smart-contracts).

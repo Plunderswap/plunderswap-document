@@ -1,4 +1,7 @@
 # PlunderSwap Inc. Terms of Service
+
+![](../.gitbook/assets/tuna1.png)
+
 ## Last modified:  August 22, 2023
 
 These Terms of Service (the "Agreement") explain the terms and conditions by which you may access and use the Products provided by PlunderSwap Inc. (referred to herein as "PlunderSwap Inc",  “PlunderSwap”, "we", "our", or "us").  The Products shall include, but shall not necessarily be limited to, (a)  https://www.plunderswap.com,, a website-hosted user interface (the "Interface" or "App"), (b) an aggregator of various third-party non-fungible token ("NFT") marketplaces (the "NFT Marketplace Aggregator") and (‎c) our mobile wallet application (the "PlunderSwap Wallet"). You must read this Agreement carefully as it governs your use of the Products. By accessing or using any of the Products, you signify that you have read, understand, and agree to be bound by this Agreement in its entirety. If you do not agree, you are not authorized to access or use any of our Products and should not use our Products.
@@ -11,6 +14,9 @@ NOTICE:
 
 This Agreement contains important information, including a binding arbitration provision and a class action waiver, both of which impact your rights as to how disputes are resolved. Our Products are only available to you — and you should only access any of our Products — if you agree completely with these terms.
 ## 1. Our Products
+
+![](../.gitbook/assets/tuna2.png)
+
 ### 1.1 The Interface
 The Interface provides a web or mobile-based means of access to (a) a decentralized protocol on various public blockchains, including but not limited to Zilliqa, that allows users to trade certain compatible digital assets (the "PlunderSwap protocol" or the "Protocol"); and (b) the NFT Marketplace Aggregator. 
 

@@ -53,4 +53,4 @@ Viewblock link - [Link](https://viewblock.io/zilliqa/address/zil19j33tapjje2xzng
 
 Token Ticker - stZIL\
 EVM Contract - 0x097C26F8A93009fd9d98561384b5014D64ae17C2\
-Viewblock link - [Link](https://viewblock.io/zilliqa/address/zil1umc54ly88xjw4599gtq860le0qvsuwuj72s246)\
+Viewblock link - [Link](https://viewblock.io/zilliqa/address/zil1umc54ly88xjw4599gtq860le0qvsuwuj72s246)

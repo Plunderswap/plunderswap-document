@@ -37,6 +37,12 @@ Whenever there is an official airdrop on PlunderSwap it will be announced along 
 
 Please remember anyone can airdrop tokens to PlunderSwap users since every transaction is public on EVMX. Be sure to do your own research when it comes to non-official airdrops. To protect your funds, we recommend you don't use a smart contract you don't understand from a source you don't trust.
 
+## I keep getting error etaMask - RPC Error: Request of type 'wallet_requestPermissions' already pending for origin https://plunderswap.com/. 
+
+If you see this error, its likely you haven'y approved plunderswap.com to your wallet.  This can be resolved with the following steps;
+1) If you manually open the extension via MetaMask icon toolbar, and accept the request.
+2) If you are running multiple addons for Metamask (like Metamask flask) you might find they fight over the connection request.  have a look in all addons and approved the connection.
+
 ## Where can I view smart contracts?
 
 Learn how to find smart contracts on our [Finding Contracts page](https://docs.plunderswap.com/developers/smart-contracts).

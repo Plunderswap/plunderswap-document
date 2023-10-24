@@ -12,7 +12,7 @@ In return for adding liquidity, you'll receive trading fees for that pair.
 
 In this example, we will add liquidity using ZIL and USDC.
 
-1. Visit the [Liquidity](https://dev.plunderswap.com/liquidity) page.
+1. Visit the [Liquidity](https://plunderswap.com/liquidity) page.
 
 ![](../../.gitbook/assets/image15.png)
 
@@ -40,7 +40,7 @@ In this example, we will add liquidity using ZIL and USDC.
 
 To remove liquidity.
 
-1\. Visit the [Liquidity page](https://dev.plunderswap.com/liquidity)**.**
+1\. Visit the [Liquidity page](https://plunderswap.com/liquidity)**.**
 
 2\. Click on the pair you want to remove liquidity from under “Your Liquidity".
 

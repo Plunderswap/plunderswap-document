@@ -11,9 +11,9 @@ For more in-depth information on the core contract logic, read the [Uniswap v2 C
 
 View [PlunderSwapFactory.sol on GitHub](https://github.com/Plunderswap/plunderswap-core/blob/master/contracts/PlunderFactory.sol).
 
-**Zilliqa EVM Testnet**\
-Contract address**:** 0xb8077386e4245835A7A26c7CaEb983f6e646d3d4\
-View the [PlunderSwap (Zilliqa EVM Testnet): Factory v2](https://evmx-dev.zilliqa.com/contract/0xb8077386e4245835A7A26c7CaEb983f6e646d3d4?tab=transactions)
+**Zilliqa EVM MainNet**\
+* [Factory](https://evmx.zilliqa.com/contract/0xb8077386e4245835A7A26c7CaEb983f6e646d3d4?tab=transactions)
+
 ## Read functions
 
 ### getPair

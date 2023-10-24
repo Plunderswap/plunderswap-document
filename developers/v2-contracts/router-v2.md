@@ -11,9 +11,8 @@ For more in-depth information on the core contract logic, read the [Uniswap v2 C
 
 View [PlunderSwapRouter.sol on GitHub](https://github.com/Plunderswap/plunderswap-core/blob/master/contracts/PlunderRouter.sol).
 
-**Zilliqa EVM Testnet**\
-Contract address**:** 0x1562efbB92BEAb2720105D14569E6bad5E764aea\
-View the [PlunderSwap (Zilliqa EVM Testnet): Router v2](https://evmx-dev.zilliqa.com/contract/0x1562efbB92BEAb2720105D14569E6bad5E764aea?tab=transactions)
+**Zilliqa EVM Mainnet**\
+* [Router](https://evmx.zilliqa.com/contract/0x1562efbB92BEAb2720105D14569E6bad5E764aea?tab=transactions)
 
 
 ## Read functions

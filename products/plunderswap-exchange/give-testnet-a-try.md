@@ -14,7 +14,7 @@ There are a few things you will need to do to test us out!
 - then, get yourself some test ZILs from Zilliqas Faucet - [!button target="blank" text="**Zilliqa Testnet Faucet**"](https://dev-wallet.zilliqa.com/faucet?network=testnet)
 
 ### Then, onto the plundering!!
-- Click Here to give it a test! [!button target="blank" text="**Plunderswap TestNet**"](https://dev.plunderswap.com/?chainId=33101)
+- Click Here to give it a test! [!button target="blank" text="**Plunderswap TestNet**"](https://plunderswap.com/?chainId=33101)
 
 - Made sure in the top right, the dropdown is selected for Zilliqa Testnet, then click 'Connect Wallet'
 

@@ -9,6 +9,9 @@
 See Here - [**HERE**](https://docs.plunderswap.com/developers/zrc2-proxy-contracts)
 
 ## Main contracts
+View [GitHub - https://github.com/Plunderswap/plunderswap-core/](https://github.com/Plunderswap/plunderswap-core/) for all Contracts.
+All contracts are verified on [https://sourcify.dev/#/lookup](https://sourcify.dev/#/lookup).  Ziliqas new block explorer (Otterscan, coming soon to mainnet), will also take data from sourcify.
+
 ### Mainnet 
 * [Factory](https://evmx.zilliqa.com/contract/0xb8077386e4245835A7A26c7CaEb983f6e646d3d4?tab=transactions)
 * [Router](https://evmx.zilliqa.com/contract/0x1562efbB92BEAb2720105D14569E6bad5E764aea?tab=transactions)

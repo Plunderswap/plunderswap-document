@@ -10,6 +10,10 @@ These are officially created by the PlunderSwap team, or been officially vetted 
 Any other proxies with tokens NOT in this list HAVE NOT BEEN VETTED.
 {% endhint %}
 
+## Github for ZRC2Proxies
+Github link - [https://github.com/Plunderswap/zrc2proxy](https://github.com/Plunderswap/zrc2proxy)
+All contracts are verified on [https://sourcify.dev/#/lookup](https://sourcify.dev/#/lookup).  Ziliqas new block explorer (Otterscan, coming soon to mainnet), will also take data from sourcify.
+
 ## Testnet contracts
 
 | Token | EVM Proxy                                                                                                                      | Scilla                                                                                                                                        |

@@ -10,6 +10,7 @@ For more in-depth information on the core contract logic, read the [Uniswap v2 C
 **Contract name:** PlunderSwapRouter
 
 View [PlunderSwapRouter.sol on GitHub](https://github.com/Plunderswap/plunderswap-core/blob/master/contracts/PlunderRouter.sol).
+All contracts are verified on [https://sourcify.dev/#/lookup](https://sourcify.dev/#/lookup).  Ziliqas new block explorer (Otterscan, coming soon to mainnet), will also take data from sourcify.
 
 **Zilliqa EVM Mainnet**\
 * [Router](https://evmx.zilliqa.com/contract/0x1562efbB92BEAb2720105D14569E6bad5E764aea?tab=transactions)

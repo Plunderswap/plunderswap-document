@@ -1,6 +1,6 @@
 # Table of contents
 
-* [PlunderSwap](README.md)
+* [PlunderSwap](WELCOME.md)
 * [Get Started](get-started/README.md)
   * [Create a Wallet](get-started/wallet-guide.md)
   * [Get ZIL Tokens](get-started/token-guide.md)

@@ -29,6 +29,10 @@ NOTE: For a helpful video explaining this process above, see HERE
 
 6. Choose the Token you wish to send, the amount, then click Next.  In this example, im sending 10 ZIL.  Click Next.
 
+!!!warning Warning
+If you are transferring any token apart from ZIL, ensure you change the GasLimit to 400,000 (At the moment, there is a bug with scilla contracts and Gas Estimation.  Unfort for now, need to set this manually.  If you use the default gas limit, the transaction will fail!)
+!!!
+
 ![](../../.gitbook/assets/TFEVM6.png)
 
 7. You will get a confirmation screen as per the below, check over the details, and click Confirm.

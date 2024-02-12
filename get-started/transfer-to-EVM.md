@@ -32,4 +32,4 @@ We have built a nice easy, functional way to transfer ZIL and other ZRC2 tokens 
 
 If you dont want to use our awesome transfer tool, you dont have to - here is a video showing you how to transfer yourself by grabbing your Zil EVM compatible address for metamask..
 
-[!button target="blank" text="**Youtube How To Send Funds From ZilPay to MetaMask**"](https://www.youtube.com/watch?v=UCPx-8vehKE)
+[!embed](https://www.youtube.com/watch?v=UCPx-8vehKE)

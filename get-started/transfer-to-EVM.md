@@ -4,9 +4,7 @@
 
 We have built a nice easy, functional way to transfer ZIL and other ZRC2 tokens from your Zilpay wallet to your Zil EVM wallet!
 
-[!button target="blank" text="**Plunderswap Transfer**"](https://plunderswap.com/transfer)
-
-1. Go to the Plunderswap Transfer Page and connect your Metamask Wallet (Top Right Connect Wallet Button) as well as your Zilpay Wallet (with the Connect Zilpay wallet)
+1. Go to the Plunderswap Transfer Page [**HERE**](https://plunderswap.com/transfer) and connect your Metamask Wallet (Top Right Connect Wallet Button) as well as your Zilpay Wallet (with the Connect Zilpay wallet)
 
 ![](<../../.gitbook/assets/TTEVM1.png>)
 ![](<../../.gitbook/assets/TTEVM2.png>)

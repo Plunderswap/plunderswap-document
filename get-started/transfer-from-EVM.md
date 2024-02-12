@@ -4,9 +4,7 @@
 
 Unfortunately we havent yet gotten around to building the nice transfer tool to be able to transfer from Zil EVM back to any native scilla Wallet as yet.  But dont dispair, we can give you the instructions of how to do it!
 
-1. Firstly, you will need to know the 0x underlying address for your Zilpay/Torch wallet.  To get this, you can use the devex explorer!
-
-[!button target="blank" text="**Dev Ex Website**"](https://devex.zilliqa.com/?network=https%3A%2F%2Fapi.zilliqa.com)
+1. Firstly, you will need to know the 0x underlying address for your Zilpay/Torch wallet.  To get this, you can use the devex explorer! [**HERE**](https://devex.zilliqa.com/?network=https%3A%2F%2Fapi.zilliqa.com)
 
 2. Search for your zil1 wallet address in the "search for a transaction or an address" box, and click search.
 

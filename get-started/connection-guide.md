@@ -20,19 +20,19 @@ To connect MetaMask to PlunderSwap follow the steps below.
 
 ![](<../../.gitbook/assets/image (72) (1).png>)
 
-1. Tap **Settings** in the menu.
+2. Tap **Settings** in the menu.
 
 ![](<../../.gitbook/assets/image (73).png>)
 
-1. In the Settings menu, tap on **Network**.
+3. In the Settings menu, tap on **Network**.
 
 ![](<../../.gitbook/assets/image (74).png>)
 
-1. Tap on the **Add Network** button at the bottom.
+4. Tap on the **Add Network** button at the bottom.
 
 ![](<../../.gitbook/assets/image (75).png>)
 
-1. On the page that opens, type in the following details:
+5. On the page that opens, type in the following details:
 
 **Mainnet**\
 **Network Name:** Zilliqa EVM\
@@ -48,12 +48,12 @@ To connect MetaMask to PlunderSwap follow the steps below.
 **Symbol:** ZIL\
 **Block Explorer URL:** [https://evmx-dev.zilliqa.com](https://evmx-dev.zilliqa.com)
 
-1. Once you've confirmed entry of the new network, go back to the burger menu and tap **Browser**.
+6. Once you've confirmed entry of the new network, go back to the burger menu and tap **Browser**.
 
 ![](<../../.gitbook/assets/image (76).png>)
 
-1. Type "PlunderSwap" into the search field and start the search. The top result will be the PlunderSwap exchange. Tap to enter it.
-2. Your wallet will ask you to connect. Tap **Connect** to connect to PlunderSwap.
+7. Type "PlunderSwap" into the search field and start the search. The top result will be the PlunderSwap exchange. Tap to enter it.
+8. Your wallet will ask you to connect. Tap **Connect** to connect to PlunderSwap.
 
 ![](<../../.gitbook/assets/image1.png>)
 
@@ -82,7 +82,7 @@ To connect MetaMask to PlunderSwap follow the steps below.
 
 ![](<../../.gitbook/assets/image (84).png>)
 
-1. A window will open. Type in the details below.
+2. A window will open. Type in the details below.
 
 **Mainnet**\
 **Network Name:** Zilliqa EVM\
@@ -102,15 +102,15 @@ To connect MetaMask to PlunderSwap follow the steps below.
 
 ![](<../../.gitbook/assets/image3.png>)
 
-1. Make sure you've typed everything in correctly and click **Save**. Ziliqa EVM will now be one of your network options.
+3. Make sure you've typed everything in correctly and click **Save**. Ziliqa EVM will now be one of your network options.
 
 ![](<../../.gitbook/assets/image (86).png>)
 
-1. Visit the [PlunderSwap website](https://plunderswap.com). In the top right corner you'll see the **Connect** button. Click it.
+4. Visit the [PlunderSwap website](https://plunderswap.com). In the top right corner you'll see the **Connect** button. Click it.
 
 ![](<../../.gitbook/assets/image4.png>)
 
-1. A window will appear asking you to choose a wallet to connect to. Click **MetaMask** (it's the top option on the list).
+5. A window will appear asking you to choose a wallet to connect to. Click **MetaMask** (it's the top option on the list).
 
 ![](<../../.gitbook/assets/image5.png>)
 

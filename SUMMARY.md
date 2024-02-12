@@ -5,6 +5,8 @@
   * [Create a Wallet](get-started/wallet-guide.md)
   * [Get ZIL Tokens](get-started/token-guide.md)
   * [Connect Your Wallet to PlunderSwap](get-started/connection-guide.md)
+  * [Transfer Tokens to Zil EVM](get-started/transfer-to-EVM.md)
+  * [Transfer Tokend from Zil EVM](get-started/transfer-from-EVM.md)
 * [Exchange](products/plunderswap-exchange/README.md)
   * [Token Swaps](products/plunderswap-exchange/trade.md)
   * [How to Trade](products/plunderswap-exchange/trade-guide.md)

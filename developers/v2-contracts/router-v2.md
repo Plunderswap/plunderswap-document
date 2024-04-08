@@ -13,7 +13,7 @@ View [PlunderSwapRouter.sol on GitHub](https://github.com/Plunderswap/plunderswa
 All contracts are verified on [https://sourcify.dev/#/lookup](https://sourcify.dev/#/lookup).  Ziliqas new block explorer (Otterscan, coming soon to mainnet), will also take data from sourcify.
 
 **Zilliqa EVM Mainnet**\
-* [Router](https://evmx.zilliqa.com/contract/0x1562efbB92BEAb2720105D14569E6bad5E764aea?tab=transactions)
+* [Router](https://evmx.zilliqa.com/contract/0x33C6a20D2a605da9Fd1F506ddEd449355f0564fe?tab=transactions)
 
 
 ## Read functions

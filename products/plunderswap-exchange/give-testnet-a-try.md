@@ -16,7 +16,9 @@ There are a few things you will need to do to test us out!
 ### Then, onto the plundering!!
 - Click Here to give it a test! [!button target="blank" text="**Plunderswap TestNet**"](https://plunderswap.com/?chainId=33101)
 
-- Made sure in the top right, the dropdown is selected for Zilliqa Testnet, then click 'Connect Wallet'
+- Made sure in the top right, the dropdown is selected for Zilliqa Testnet, then click 'Connect Wallet'.  If Zilliqa Testnet doesnt show - click the configuration cog, and click "Show Testnet"
+
+![](../../.gitbook/assets/image25.png)
 
 ![](../../.gitbook/assets/connect_testnet.png)
 

@@ -1,6 +1,6 @@
 # Liquidity Pools
 
-![](../../.gitbook/assets/PS_Liquidity.png)
+![](<../../.gitbook/assets/V3_is_here_RC.png>)
 
 PlunderSwap is launching v3, implementing the Concentrated Liquidity Automated Market Maker model pioneered by Uniswap. This iteration of PlunderSwap incorporates on-chain liquidity farming within the v3 framework, resolving the difficulties of profitable liquidity provisioning by providing token incentive to the in-range liquidity positions. This model greatly improves liquidity provisioning by allowing liquidity providers to supply assets within specific price ranges, thereby enhancing capital efficiency and facilitating deeper liquidity for traders.
 

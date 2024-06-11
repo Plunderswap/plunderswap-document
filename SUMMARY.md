@@ -27,6 +27,7 @@
   * [Troubleshooting Errors](help/troubleshooting.md)
   * [General FAQ](help/faq.md)
   * [Fixing Stuck Pending Transactions on MetaMask](help/unsticking-a-transaction-stuck-as-pending-with-metamask.md)
+  * [What is an approval transaction](help/what-is-an-approval-transaction.md)
 * [Contact Us](contact-us/README.md)
   * [The Team](contact-us/the-team.md)
   * [Customer Support](contact-us/customer-support.md)

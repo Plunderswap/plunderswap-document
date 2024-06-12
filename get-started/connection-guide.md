@@ -62,6 +62,23 @@ To connect MetaMask to PlunderSwap follow the steps below.
 [**Download MetaMask**](https://metamask.io/download.html) (Automatically detects device)\
 [**MetaMask Setup Guide**](https://docs.plunderswap.com/get-started/connection-guide)
 {% endtab %}
+{% tab title="Wallet Connect" %}
+To connect MetaMask to PlunderSwap follow the steps below.
+Visit the [PlunderSwap website](https://plunderswap.com). In the top right corner you'll see the **Connect** button. Click it.
+
+![](<../../.gitbook/assets/image4.png>)
+
+Select the WalletConnect Button the Connect Wallet Screen
+
+![](<../../.gitbook/assets/image5.png>)
+
+Using the Scan within your Wallet Connect wallet - scan the code - thats it!
+* Wallet Connect wallet must support custom networks/Zilliqa EVM.  Known Wallet Connect wallets are\
+** Metamask
+
+![](<../../.gitbook/assets/image24.png>)
+
+{% endtab %}
 {% endtabs %}
 
 ## **Desktop/Web Browser wallets**
@@ -117,6 +134,24 @@ To connect MetaMask to PlunderSwap follow the steps below.
 ### Resources
 
 [**Download MetaMask**](https://metamask.io/download.html) (Automatically detects browser)
+{% endtab %}
+{% tab title="Wallet Connect" %}
+To connect MetaMask to PlunderSwap follow the steps below.
+Visit the [PlunderSwap website](https://plunderswap.com). In the top right corner you'll see the **Connect** button. Click it.
+
+![](<../../.gitbook/assets/image4.png>)
+
+Select the WalletConnect Button the Connect Wallet Screen
+
+![](<../../.gitbook/assets/image5.png>)
+
+Using the Scan within your Wallet Connect wallet - scan the code - thats it!
+* Wallet Connect wallet must support custom networks/Zilliqa EVM.  Known Wallet Connect wallets are\
+** Metamask
+
+
+![](<../../.gitbook/assets/image24.png>)
+
 {% endtab %}
 {% endtabs %}
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.768354888054">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.771509649290">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -11,7 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Fees and Routes</title>
     <meta name="title" content="Fees and Routes">
-    <meta name="description" content="To check how much trading will be charged on your current swap, check out the “Fee” section in the swap detail section.">
+    <meta name="description" content="In Exchange V3, on default, PlunderSwap Smart Router will utilize liquidity from V3, V2, and StableSwap, to execute trades and find the best price...">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://docs.PlunderSwap.com/products/plunderswap-exchange/fees-and-routes/">
@@ -20,24 +20,24 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://docs.PlunderSwap.com/products/plunderswap-exchange/fees-and-routes/">
     <meta property="og:title" content="Fees and Routes">
-    <meta property="og:description" content="To check how much trading will be charged on your current swap, check out the “Fee” section in the swap detail section.">
+    <meta property="og:description" content="In Exchange V3, on default, PlunderSwap Smart Router will utilize liquidity from V3, V2, and StableSwap, to execute trades and find the best price...">
     <meta property="og:image" content="https://docs.PlunderSwap.com/.gitbook/assets/ps_ht_trade_fees_router.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://docs.PlunderSwap.com/products/plunderswap-exchange/fees-and-routes/">
     <meta property="twitter:title" content="Fees and Routes">
-    <meta property="twitter:description" content="To check how much trading will be charged on your current swap, check out the “Fee” section in the swap detail section.">
+    <meta property="twitter:description" content="In Exchange V3, on default, PlunderSwap Smart Router will utilize liquidity from V3, V2, and StableSwap, to execute trades and find the best price...">
     <meta property="twitter:image" content="https://docs.PlunderSwap.com/.gitbook/assets/ps_ht_trade_fees_router.png">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../../.gitbook/assets/favicon.png" rel="icon">
-    <link href="../../../resources/css/retype.css?v=3.5.0.768354888054" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.771509649290" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.768354888054" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.771509649290" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.768354888054" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.771509649290" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -167,6 +167,8 @@
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
+<p>In Exchange V3, on default, PlunderSwap Smart Router will utilize liquidity from V3, V2, and StableSwap, to execute trades and find the best price for traders.</p>
+<p>However, users are always able to customize their trade by choosing which liquidity sources the router shall utilize, and enable or disable multihops and split routing.</p>
 <doc-anchor-target id="check-the-fee-rate-and-fee-amount-that-is-currently-applied">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#check-the-fee-rate-and-fee-amount-that-is-currently-applied">#</doc-anchor-trigger>
@@ -202,8 +204,16 @@
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<p>At the bottom of the “Customize Routing” interface, you can customize your routing preferences by enabling or disabling multihops.</p>
+<p>At the top of the “Customize Routing” interface, you may choose which liquidity source the route shall use while routing your trade. To bring up this interface, you can:</p>
+<ul>
+<li>Click “Customize Routing” at the bottom of the trading route displays.</li>
+<li>Click the cog icon in the swap interface, and then click “Customize Routing” at the bottom.</li>
+</ul>
+<p>By default, all of the liquidity sources are enabled and Smart Router will take full advantage of all the available liquidities within PlunderSwap.</p>
+<p>You can click the “Reset” button on the top right-hand corner to reset the configurations to default.</p>
+<p>At the bottom of the “Customize Routing” interface, you can customize your routing preferences by enabling or disabling multihops and split routing.</p>
 <p>Multihops allow tokens to swap through multiple hops between serval liquidity pools to achieve the best deal. Turning it off will restrict trades to direct swaps, which may cause higher slippage or even fund loss.</p>
+<p>Split routing enables token swaps to be broken into multiple routes to achieve the best deal. Turning it off will restrict trades from being executed with a single route, which may result in low efficiency or higher slippage.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -216,7 +226,7 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>When your trade can not be executed due to a customized trading configuration, a warning will appear, you can click “Check your settings” to quickly bring up the“Customize Routing” interface. Or choose “Reset to default” to quickly reset your configurations back to default.</p>
+<p>When your trade can not be executed due to a customized trading configuration, a warning will appear, you can click “Check your settings” to quickly bring up the “Customize Routing” interface. Or choose “Reset to default” to quickly reset your configurations back to default.</p>
         </div>
     </div>
 </div>

@@ -27,26 +27,26 @@ All contracts are verified on [https://sourcify.dev/#/lookup](https://sourcify.d
 
 ### Mainnet
 
-* [PlunderV3Factory -0xD1385B9e9CCa9da9fbE829113ed3A4f6a0022923](https://otterscan.zilliqa.com/address/0xD1385B9e9CCa9da9fbE829113ed3A4f6a0022923)
-* [PlunderV3PoolDeployer - 0x01d3861f48b37eF972177676D166F1b713d85666](https://otterscan.zilliqa.com/address/0x01d3861f48b37eF972177676D166F1b713d85666)
-* [V3Migrator - 0xac8337FA1AA11fe9095901211FAf66Ba4a5D5fF3](https://otterscan.zilliqa.com/address/0xac8337FA1AA11fe9095901211FAf66Ba4a5D5fF3)
-* [NonfungiblePositionManager - 0xDFaB98e47a99EfdF5Ace20AA248E837f7bCFFD7e](https://otterscan.zilliqa.com/address/0xDFaB98e47a99EfdF5Ace20AA248E837f7bCFFD7e)
-* [QuoterV2 - 0x393a9e398a3a9127D71a2F6c999Bd42B5d294361](https://otterscan.zilliqa.com/address/0x393a9e398a3a9127D71a2F6c999Bd42B5d294361)
-* [TickLens - 0xcA8eA52202cC6eD00a366040da475421EbE3A904](https://otterscan.zilliqa.com/address/0xcA8eA52202cC6eD00a366040da475421EbE3A904)
-* [MixedRouteQuoterV1 - 0x32157371f4378Cf900e27B497a8D0990d70947f2](https://otterscan.zilliqa.com/address/0x32157371f4378Cf900e27B497a8D0990d70947f2)
-* [SmartRouter (v3, v2) - 0x63149459c093566E61422E2A272588c3B99D3512](https://otterscan.zilliqa.com/address/0x63149459c093566E61422E2A272588c3B99D3512)
-* [SwapRouter - 0x05dA6F56EC84a9A20C526505b9FC9f5222b1740E](https://otterscan.zilliqa.com/address/0x05dA6F56EC84a9A20C526505b9FC9f5222b1740E)
+* [PlunderV3Factory - 0x000A3ED861B2cC98Cc5f1C0Eb4d1B53904c0c93a](https://otterscan.zilliqa.com/address0x000A3ED861B2cC98Cc5f1C0Eb4d1B53904c0c93a)
+* [PlunderV3PoolDeployer - 0x667f17594AA1fBd4d70e5914EDF9e8ad818e4Ef3](https://otterscan.zilliqa.com/address/0x667f17594AA1fBd4d70e5914EDF9e8ad818e4Ef3)
+* [V3Migrator - 0xb72048adc590b926fA79fB3e54AAf33a39317A23](https://otterscan.zilliqa.com/address/0xb72048adc590b926fA79fB3e54AAf33a39317A23)
+* [NonfungiblePositionManager - 0x17678B52997B89b179c0a471bF8d266A4A4c6AC5](https://otterscan.zilliqa.com/address/0x17678B52997B89b179c0a471bF8d266A4A4c6AC5)
+* [QuoterV2 - 0xAE4474364B8fc6Ce0fe8F888752540C05948AD94](https://otterscan.zilliqa.com/address/0xAE4474364B8fc6Ce0fe8F888752540C05948AD94)
+* [TickLens - 0xdB9AD714409CC8Bc769d28e7181778b5B6EE5909](https://otterscan.zilliqa.com/address/0xdB9AD714409CC8Bc769d28e7181778b5B6EE5909)
+* [MixedRouteQuoterV1 - 0xF0d637e1A90AAD65DEC26f012357301370E7B1c7](https://otterscan.zilliqa.com/address/0xF0d637e1A90AAD65DEC26f012357301370E7B1c7)
+* [SmartRouter (v3, v2) - 0xe30161F32A019d876F082d9FF13ed451a03A2086](https://otterscan.zilliqa.com/address/0xe30161F32A019d876F082d9FF13ed451a03A2086)
+* [SwapRouter - 0x2D364e427a50AB49d6B98013E459872f6657Cc47](https://otterscan.zilliqa.com/address/0x2D364e427a50AB49d6B98013E459872f6657Cc47)
 
 ### Testnet
 
-* [PlunderV3Factory - 0x629371e111f7a56a73E29eCaafB49edEE47CcFf5](https://otterscan.testnet.zilliqa.com/address/0x629371e111f7a56a73E29eCaafB49edEE47CcFf5)
-* [PlunderV3PoolDeployer - 0xa7F55ebF9fcA26C5e5F90521b291AF50E3dc6e57](https://otterscan.testnet.zilliqa.com/address/0xa7F55ebF9fcA26C5e5F90521b291AF50E3dc6e57)
-* [V3Migrator - 0x4d39d2D3D9187656BbaB468C20Ea35ab49FEfcCc](https://otterscan.testnet.zilliqa.com/address/0x4d39d2D3D9187656BbaB468C20Ea35ab49FEfcCc)
-* [NonfungiblePositionManager- 0x6EBdD8Ba2380783BFC574464764dE21b1b590f51](https://otterscan.testnet.zilliqa.com/address/0x6EBdD8Ba2380783BFC574464764dE21b1b590f51)
-* [QuoterV2 - 0xedE988e27525160ccd04bA1802786884c19C131F](https://otterscan.testnet.zilliqa.com/address/0xedE988e27525160ccd04bA1802786884c19C131F)
-* [TickLens - 0x5c92804ecC9D65C7A65Fedbb61f9E3d033FEde0D](https://otterscan.testnet.zilliqa.com/address/0x5c92804ecC9D65C7A65Fedbb61f9E3d033FEde0D)
-* [MixedRouteQuoterV1 - 0x3AEAaE640C63acD101474DD52b851cdF924EAe83](https://otterscan.testnet.zilliqa.com/address/0x3AEAaE640C63acD101474DD52b851cdF924EAe83)
-* [SmartRouter (v3, v2) - 0x666a4Ad69F352f989Fb6e024B379690465ccc0A4](https://otterscan.testnet.zilliqa.com/address/0x666a4Ad69F352f989Fb6e024B379690465ccc0A4)
+* [PlunderV3Factory - 0x026d35f6e8D2a9Bb4BbC9380cDb7df20038aAaFa](https://otterscan.testnet.zilliqa.com/address/0x026d35f6e8D2a9Bb4BbC9380cDb7df20038aAaFa)
+* [PlunderV3PoolDeployer - 0x601350273D21BEF3790146c24A1364f56c6E5084](https://otterscan.testnet.zilliqa.com/address/0x601350273D21BEF3790146c24A1364f56c6E5084)
+* [V3Migrator - 0x38a30F5D0f44f8812D7FafF82655290aac6FB04B](https://otterscan.testnet.zilliqa.com/address/0x38a30F5D0f44f8812D7FafF82655290aac6FB04B)
+* [NonfungiblePositionManager- 0x3a7ef9Ad056D21E62a067619562bCdAEc8988b10](https://otterscan.testnet.zilliqa.com/address/0x3a7ef9Ad056D21E62a067619562bCdAEc8988b10)
+* [QuoterV2 - 0x5840C05c6483923a8bdD501D66bBBe226Bc07A36](https://otterscan.testnet.zilliqa.com/address/0x5840C05c6483923a8bdD501D66bBBe226Bc07A36)
+* [TickLens - 0x587c1dB78d5c6c6C8b9aD07DE1856c375f48f8FD](https://otterscan.testnet.zilliqa.com/address/0x587c1dB78d5c6c6C8b9aD07DE1856c375f48f8FD)
+* [MixedRouteQuoterV1 - 0xdC98e60A05E13C3A19045A32f8f9B33DBc538DA0](https://otterscan.testnet.zilliqa.com/address/0xdC98e60A05E13C3A19045A32f8f9B33DBc538DA0)
+* [SmartRouter (v3, v2) - 0xcd205474f63234d0fF1efE65da4438167f6Fb2c1](https://otterscan.testnet.zilliqa.com/address/0xcd205474f63234d0fF1efE65da4438167f6Fb2c1)
 
 # PlunderSwap Further Infomation on Contract Calls
 

@@ -1,5 +1,7 @@
 # PlunderSwap
 
+![](<../../.gitbook/assets/V3_is_here_RC.png>)
+
 ![](.gitbook/assets/PS_Trade_Earn_Triumph.png)
 
 {% hint style="success" %}

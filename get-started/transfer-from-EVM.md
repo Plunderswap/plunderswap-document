@@ -1,4 +1,8 @@
-# Transfer Tokens from Zil EVM to other Zil wallets!
+# Transfer ZRC Tokens from Zil EVM to other Zil wallets!
+
+!!!warning Warning
+Please ensure you only transfer ZRC2 tokens back to the scilla side of the network, any native ERC20s cannot be retreived to the other side.
+!!!
 
 ![](../../.gitbook/assets/PS_HT_ZIL_tokens.png)
 

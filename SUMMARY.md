@@ -14,6 +14,7 @@
   * [Liquidity Pools](products/plunderswap-exchange/plunderswap-pools.md)
   * [How to Add/Remove Liquidity](products/plunderswap-exchange/liquidity-guide.md)
   * [Try it out in TestNet!](products/plunderswap-exchange/give-testnet-a-try.md)
+* [Cross-Chain Swap](products/cross-chain-swap/README.md)
 * [Developers](developers/README.md)
   * [ZRC2 Proxy Contracts](developers/zrc2-proxy-contracts/README.md)
   * [Factory v2](developers/v2-contracts/factory-v2.md)

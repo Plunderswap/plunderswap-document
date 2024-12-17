@@ -20,6 +20,7 @@ Quick video overview of the process
 3. Configure your token:
    - Enter your token name
    - Enter your token symbol
+   - Enter your token initial supply
    - Select desired features (e.g., Mintable, Burnable, Pausable)
    - Leave "Access Control" as "Ownable" for simple projects
 4. Click "Open in Remix" button on the top right
@@ -30,7 +31,7 @@ Quick video overview of the process
    - Ensure your contract is selected in the file explorer
    - Go to the "Solidity Compiler" tab
    - Set compiler version to 0.8.20 or later
-   - **Important**: Set EVM Version to "London"
+   - **Important**: Under advanced configurations, set EVM Version to "London"
    - Click "Compile"
 
 2. Deploy the contract:
@@ -59,8 +60,13 @@ After deployment:
 ## Next Steps
 
 After creating your token, you might want to:
-- Add liquidity to PlunderSwap
-- Create a token pair
-- Test token transfers
-
-For more advanced features or questions, visit our [Developers section](../developers/README.md). 
+- Add liquidity to PlunderSwap [here](products/plunderswap-exchange/liquidity-guide.md)
+- Test token transfers [here](products/plunderswap-exchange/trade.md)
+- You can add a custom token to the Token List on Plunderswap by doing the following:
+  - Make sure you are connected to the Zilliqa Testnet
+  - On the swap page, use the dropdown to select a token
+  - Click Manage Tokens
+  - Click on the Tokens tab, then paste your token address in the "Custom Token" section.  It should show you the Token Name and Symbol.
+  - Click Import.
+  - You will get a warning that the token is not verified.  Click I Understand, then Import.
+  - You should now see your token in the dropdown.

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.787724247461">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.787725334724">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../.gitbook/assets/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.787724247461" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.787725334724" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.787724247461" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.787725334724" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.787724247461" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.787725334724" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -196,6 +196,7 @@
 <ul>
 <li>Enter your token name</li>
 <li>Enter your token symbol</li>
+<li>Enter your token initial supply</li>
 <li>Select desired features (e.g., Mintable, Burnable, Pausable)</li>
 <li>Leave &quot;Access Control&quot; as &quot;Ownable&quot; for simple projects</li>
 </ul>
@@ -214,7 +215,7 @@
 <li>Ensure your contract is selected in the file explorer</li>
 <li>Go to the &quot;Solidity Compiler&quot; tab</li>
 <li>Set compiler version to 0.8.20 or later</li>
-<li><strong>Important</strong>: Set EVM Version to &quot;London&quot;</li>
+<li><strong>Important</strong>: Under advanced configurations, set EVM Version to &quot;London&quot;</li>
 <li>Click &quot;Compile&quot;</li>
 </ul>
 </li>
@@ -265,11 +266,20 @@
 </doc-anchor-target>
 <p>After creating your token, you might want to:</p>
 <ul>
-<li>Add liquidity to PlunderSwap</li>
-<li>Create a token pair</li>
-<li>Test token transfers</li>
+<li>Add liquidity to PlunderSwap <a href="products/plunderswap-exchange/liquidity-guide.md">here</a></li>
+<li>Test token transfers <a href="products/plunderswap-exchange/trade.md">here</a></li>
+<li>You can add a custom token to the Token List on Plunderswap by doing the following:
+<ul>
+<li>Make sure you are connected to the Zilliqa Testnet</li>
+<li>On the swap page, use the dropdown to select a token</li>
+<li>Click Manage Tokens</li>
+<li>Click on the Tokens tab, then paste your token address in the &quot;Custom Token&quot; section.  It should show you the Token Name and Symbol.</li>
+<li>Click Import.</li>
+<li>You will get a warning that the token is not verified.  Click I Understand, then Import.</li>
+<li>You should now see your token in the dropdown.</li>
 </ul>
-<p>For more advanced features or questions, visit our <a href="../../developers/">Developers section</a>.</p>
+</li>
+</ul>
 
                                 
                                 <!-- Required only on API pages -->

@@ -60,8 +60,8 @@ After deployment:
 ## Next Steps
 
 After creating your token, you might want to:
-- Add liquidity to PlunderSwap [here](products/plunderswap-exchange/liquidity-guide.md)
-- Test token transfers [here](products/plunderswap-exchange/trade.md)
+- Add liquidity to PlunderSwap [here](https://docs.plunderswap.com/products/plunderswap-exchange/liquidity-guide/)
+- Test token transfers [here](https://docs.plunderswap.com/products/plunderswap-exchange/trade-guide/)
 - You can add a custom token to the Token List on Plunderswap by doing the following:
   - Make sure you are connected to the Zilliqa Testnet
   - On the swap page, use the dropdown to select a token

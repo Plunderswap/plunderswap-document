@@ -7,6 +7,7 @@
   * [Connect Your Wallet to PlunderSwap](get-started/connection-guide.md)
   * [Transfer Tokens to Zil EVM](get-started/transfer-to-EVM.md)
   * [Transfer Tokens from Zil EVM](get-started/transfer-from-EVM.md)
+  * [Create an ERC20 Token](get-started/create-erc20.md)
 * [Exchange](products/plunderswap-exchange/README.md)
   * [Token Swaps](products/plunderswap-exchange/trade.md)
   * [How to Trade](products/plunderswap-exchange/trade-guide.md)

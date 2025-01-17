@@ -6,7 +6,7 @@ Please ensure you only transfer ZRC2 tokens back to the scilla side of the netwo
 
 ![](../../.gitbook/assets/PS_HT_ZIL_tokens.png)
 
-Unfortunately we havent yet gotten around to building the nice transfer tool to be able to transfer from Zil EVM back to any native scilla Wallet as yet.  But dont dispair, we can give you the instructions of how to do it!
+Here are the instructions of how to transfer ZRC2 tokens from your Zil EVM wallet back to your Zilpay wallet!
 
 1. Firstly, you will need to know the 0x underlying address for your Zilpay/Torch wallet.  To get this, you can use the devex explorer! [**HERE**](https://devex.zilliqa.com/?network=https%3A%2F%2Fapi.zilliqa.com)
 

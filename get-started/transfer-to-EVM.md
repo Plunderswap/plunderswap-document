@@ -1,10 +1,10 @@
-# Transfer Tokens to Zil EVM from Zilpay!
+# Transfer Tokens to Zil EVM from the scilla (Legacy) side of Zilliqa via Zilpay!
 
 ![](../../.gitbook/assets/PS_HT_ZIL_tokens.png)
 
-We have built a nice easy, functional way to transfer ZIL and other ZRC2 tokens from your Zilpay wallet to your Zil EVM wallet!
+We have built a nice easy, functional way to transfer ZIL and other ZRC2 tokens from your Zilpay wallet (Legacy Scilla side of Zilliqa) to your Zil EVM wallet!  We are now classifying the scilla side of the network as Legacy, and the EVM side as Zilliqa when 2.0 is released.
 
-1. Go to the Plunderswap Transfer Page [**HERE**](https://plunderswap.com/transfer) and connect your Metamask Wallet (Top Right Connect Wallet Button) as well as your Zilpay Wallet (with the Connect Zilpay wallet)
+1. Go to the Plunderswap Legacy Transfer Page under Info -> Legacy Transfer [**HERE**](https://plunderswap.com/transfer) and connect your Metamask Wallet (Top Right Connect Wallet Button) as well as your Zilpay Wallet (with the Connect Zilpay wallet)
 
 ![](<../../.gitbook/assets/TTEVM1.png>)
 ![](<../../.gitbook/assets/TTEVM2.png>)

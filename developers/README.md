@@ -20,8 +20,8 @@ All contracts are verified on [https://sourcify.dev/#/lookup](https://sourcify.d
 * [Multicall 3 - 0x38899efb93d5106d3adb86662c557f237f6ecf57](https://otterscan.zilliqa.com/address/0x38899efb93d5106d3adb86662c557f237f6ecf57)
 
 ### Testnet
-* [Factory - 0xb8077386e4245835A7A26c7CaEb983f6e646d3d4](https://otterscan.testnet.zilliqa.com/address/0xb8077386e4245835A7A26c7CaEb983f6e646d3d4)
-* [Router - 0x1562efbB92BEAb2720105D14569E6bad5E764aea](https://otterscan.testnet.zilliqa.com/address/0x1562efbB92BEAb2720105D14569E6bad5E764aea)
+* [Factory - 0xd0156eFCA4D847E4c4aD3F9ECa7FA697bb105cC0](https://otterscan.testnet.zilliqa.com/address/0xd0156eFCA4D847E4c4aD3F9ECa7FA697bb105cC0)
+* [Router - 0x144e7AEee22F388350E9EAEFBb626A021fcd0250](https://otterscan.testnet.zilliqa.com/address/0x144e7AEee22F388350E9EAEFBb626A021fcd0250)
 
 ## v3 contracts
 

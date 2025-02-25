@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.793801016655">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.793802154310">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../.gitbook/assets/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.793801016655" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.793802154310" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.793801016655" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.793802154310" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.793801016655" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.793801016655" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.793802154310" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.793802154310" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -183,8 +183,51 @@
 </doc-anchor-target>
 <p>ZilNames uses L2Resolver contracts deployed at the following addresses:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">Zilliqa Mainnet: 0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F
+<pre class="language-javascript"><code v-pre class="language-javascript">Zilliqa Mainnet: 0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F
 Zilliqa Testnet: 0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="helper-functions">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#helper-functions">#</doc-anchor-trigger>
+        <span>Helper Functions</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="namehash-function">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#namehash-function">#</doc-anchor-trigger>
+        <span>Namehash Function</span>
+    </h3>
+</doc-anchor-target>
+<p>While most libraries like viem provide a namehash implementation, here&#x27;s how the namehash algorithm works:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">import { keccak256 } from &quot;viem&quot;;
+import { toUtf8Bytes } from &quot;viem/utils&quot;;
+
+// Implementation of ENS namehash algorithm
+function namehash(name) {
+  let node = '0x0000000000000000000000000000000000000000000000000000000000000000';
+  
+  if (name) {
+    const labels = name.split('.');
+    
+    for (let i = labels.length - 1; i &gt;= 0; i--) {
+      const label = labels[i];
+      const labelHash = keccak256(toUtf8Bytes(label));
+      node = keccak256(new Uint8Array([...hexToBytes(node), ...hexToBytes(labelHash)]));
+    }
+  }
+  
+  return node;
+}
+
+// Helper to convert hex string to byte array
+function hexToBytes(hex) {
+  const bytes = [];
+  for (let c = 2; c &lt; hex.length; c += 2) {
+    bytes.push(parseInt(hex.substr(c, 2), 16));
+  }
+  return bytes;
+}</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="zilnames-basic-integration">
     <h2>
@@ -250,12 +293,16 @@ async function resolveNameToAddress(name, client) {
 
 // Convert chainId to coin type for reverse resolution
 function convertChainIdToCoinType(chainId) {
-  if (chainId === 1) { // Ethereum mainnet
+  // Zilliqa mainnet
+  if (chainId === zilliqa.id) {
     return &quot;addr&quot;;
-  } else if (chainId === 33101) { // Zilliqa testnet
+  } 
+  // Zilliqa testnet
+  else if (chainId === zilliqaTestnet.id) {
     return &quot;80002105&quot;;
   }
   
+  // For other chains, apply BIP44 derivation
   const cointype = (0x80000000 | chainId) &gt;&gt;&gt; 0;
   return cointype.toString(16).toLocaleUpperCase();
 }

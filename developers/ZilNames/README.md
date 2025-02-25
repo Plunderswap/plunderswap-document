@@ -15,9 +15,46 @@ Features include:
 
 ZilNames uses L2Resolver contracts deployed at the following addresses:
 
-```
+``` javascript
 Zilliqa Mainnet: 0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F
 Zilliqa Testnet: 0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e
+```
+
+## Helper Functions
+
+### Namehash Function
+
+While most libraries like viem provide a namehash implementation, here's how the namehash algorithm works:
+
+```javascript
+import { keccak256 } from "viem";
+import { toUtf8Bytes } from "viem/utils";
+
+// Implementation of ENS namehash algorithm
+function namehash(name) {
+  let node = '0x0000000000000000000000000000000000000000000000000000000000000000';
+  
+  if (name) {
+    const labels = name.split('.');
+    
+    for (let i = labels.length - 1; i >= 0; i--) {
+      const label = labels[i];
+      const labelHash = keccak256(toUtf8Bytes(label));
+      node = keccak256(new Uint8Array([...hexToBytes(node), ...hexToBytes(labelHash)]));
+    }
+  }
+  
+  return node;
+}
+
+// Helper to convert hex string to byte array
+function hexToBytes(hex) {
+  const bytes = [];
+  for (let c = 2; c < hex.length; c += 2) {
+    bytes.push(parseInt(hex.substr(c, 2), 16));
+  }
+  return bytes;
+}
 ```
 
 ## ZilNames Basic Integration
@@ -74,12 +111,16 @@ import { encodePacked, keccak256, namehash } from "viem";
 
 // Convert chainId to coin type for reverse resolution
 function convertChainIdToCoinType(chainId) {
-  if (chainId === 1) { // Ethereum mainnet
+  // Zilliqa mainnet
+  if (chainId === zilliqa.id) {
     return "addr";
-  } else if (chainId === 33101) { // Zilliqa testnet
+  } 
+  // Zilliqa testnet
+  else if (chainId === zilliqaTestnet.id) {
     return "80002105";
   }
   
+  // For other chains, apply BIP44 derivation
   const cointype = (0x80000000 | chainId) >>> 0;
   return cointype.toString(16).toLocaleUpperCase();
 }

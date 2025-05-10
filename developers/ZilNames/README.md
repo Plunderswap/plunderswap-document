@@ -46,11 +46,11 @@ Other contracts for the full set (only need to use these if you want to setup ne
 
 Here is links to the ABIs used for Zilnames
 
-<a href="../../.gitbook/assets/BaseRegistrar.abi" download>BaseRegistrar.abi</a>
-<a href="../../.gitbook/assets/L2Resolver.abi" download>L2Resolver.abi</a>
-<a href="../../.gitbook/assets/RegistrarController.abi" download>RegistrarController.abi</a>
-<a href="../../.gitbook/assets/Registry.abi" download>Registry.abi</a>
-<a href="../../.gitbook/assets/ReverseRegistrar.abi" download>ReverseRegistrar.abi</a>
+<a href="https://static.plunderswap.com/zilnames-abis/BaseRegistrar.abi" download>BaseRegistrar.abi</a> \
+<a href="https://static.plunderswap.com/zilnames-abis/L2Resolver.abi" download>L2Resolver.abi</a> \
+<a href="https://static.plunderswap.com/zilnames-abis/RegistrarController.abi" download>RegistrarController.abi</a> \
+<a href="https://static.plunderswap.com/zilnames-abis/Registry.abi" download>Registry.abi</a> \
+<a href="https://static.plunderswap.com/zilnames-abis/ReverseRegistrar.abi" download>ReverseRegistrar.abi</a> \
 
 ## Helper Functions
 

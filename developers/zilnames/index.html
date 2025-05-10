@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.793802154310">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.8.1.800230985639">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.6.0">
+    <meta name="generator" content="Retype 3.8.1">
 
     <!-- Primary Meta Tags -->
     <title>ZilNames: Zilliqa Name Service Documentation</title>
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../.gitbook/assets/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.6.0.793802154310" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.8.1.800230985639" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.793802154310" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.793802154310" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.793802154310" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.8.1.800230985639" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.8.1" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.8.1.800230985639" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.8.1.800230985639" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -56,7 +56,7 @@
                                 <img class="max-h-10 dark:hidden md:inline-block" src="../../.gitbook/assets/plunder_logo_1.svg">
                                 <img class="max-h-10 hidden dark:inline-block" src="../../.gitbook/assets/plunder_logo_1.svg">
                             </span>
-                            <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">PlunderSwap</span>
+                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">PlunderSwap</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
                     </div>
         
@@ -109,9 +109,8 @@
     
         <div class="container relative flex bg-white">
             <!-- Sidebar Skeleton -->
-            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-white border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
             
-                <!-- Render this div, if config.showSidebarFilter is `true` -->
                 <div class="flex items-center h-16 px-6">
                     <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
                 </div>
@@ -186,6 +185,95 @@
 <pre class="language-javascript"><code v-pre class="language-javascript">Zilliqa Mainnet: 0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F
 Zilliqa Testnet: 0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e</code></pre>
 </doc-codeblock></div>
+<p>Other contracts for the full set (only need to use these if you want to setup new addresses)  Alternatively you can direct users to <a href="https://zilnames.com/">https://zilnames.com/</a></p>
+<doc-anchor-target id="testnet-contracts">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#testnet-contracts">#</doc-anchor-trigger>
+        <span>Testnet contracts</span>
+    </h2>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Contract</th>
+<th>EVM Proxy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BaseRegistrar</td>
+<td><a href="https://otterscan.testnet.zilliqa.com/address/0x6d6999EB499E7A4aaD0B462045CaE82907A1D30A">0x6d6999EB499E7A4aaD0B462045CaE82907A1D30A</a></td>
+</tr>
+<tr>
+<td>L2Resolver</td>
+<td><a href="https://otterscan.testnet.zilliqa.com/address/0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e">0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e</a></td>
+</tr>
+<tr>
+<td>RegistrarController</td>
+<td><a href="https://otterscan.testnet.zilliqa.com/address/0xC228acc2f1B177a486abd5be0FA513Dc96F14A6f">0xC228acc2f1B177a486abd5be0FA513Dc96F14A6f</a></td>
+</tr>
+<tr>
+<td>Registry</td>
+<td><a href="https://otterscan.testnet.zilliqa.com/address/0x716c7e7dC02f7E0FD44343C720233DB57896Fb1b">0x716c7e7dC02f7E0FD44343C720233DB57896Fb1b</a></td>
+</tr>
+<tr>
+<td>ReverseRegistrar</td>
+<td><a href="https://otterscan.testnet.zilliqa.com/address/0xBA0478582F6B119c8F9EB71b28927467E5e75357">0xBA0478582F6B119c8F9EB71b28927467E5e75357</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="mainnet-contracts">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mainnet-contracts">#</doc-anchor-trigger>
+        <span>Mainnet contracts</span>
+    </h2>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Contract</th>
+<th>EVM Proxy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BaseRegistrar</td>
+<td><a href="https://otterscan.testnet.zilliqa.com/address/0x34f1A58c54B543D6cb82FC63fBc2D39F749099Df">0x34f1A58c54B543D6cb82FC63fBc2D39F749099Df</a></td>
+</tr>
+<tr>
+<td>L2Resolver</td>
+<td><a href="https://otterscan.testnet.zilliqa.com/address/0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F">0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F</a></td>
+</tr>
+<tr>
+<td>RegistrarController</td>
+<td><a href="https://otterscan.testnet.zilliqa.com/address/0x7c588d2128B8A68DDDEf59fF6E4EdEE5435371EF">0x7c588d2128B8A68DDDEf59fF6E4EdEE5435371EF</a></td>
+</tr>
+<tr>
+<td>Registry</td>
+<td><a href="https://otterscan.testnet.zilliqa.com/address/0x2196b67Ca97bBcA07C01c7Bdf4f35209CC615389">0x2196b67Ca97bBcA07C01c7Bdf4f35209CC615389</a></td>
+</tr>
+<tr>
+<td>ReverseRegistrar</td>
+<td><a href="https://otterscan.testnet.zilliqa.com/address/0x228242c33D0D0825a3B31B2f4c2f10b7Cb64B788">0x228242c33D0D0825a3B31B2f4c2f10b7Cb64B788</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="abis">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#abis">#</doc-anchor-trigger>
+        <span>ABIs</span>
+    </h2>
+</doc-anchor-target>
+<p>Here is links to the ABIs used for Zilnames</p>
+<p><a href="../../.gitbook/assets/BaseRegistrar.abi" download>BaseRegistrar.abi</a>
+<a href="../../.gitbook/assets/L2Resolver.abi" download>L2Resolver.abi</a>
+<a href="../../.gitbook/assets/RegistrarController.abi" download>RegistrarController.abi</a>
+<a href="../../.gitbook/assets/Registry.abi" download>Registry.abi</a>
+<a href="../../.gitbook/assets/ReverseRegistrar.abi" download>ReverseRegistrar.abi</a></p>
 <doc-anchor-target id="helper-functions">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#helper-functions">#</doc-anchor-trigger>
@@ -492,7 +580,8 @@ function UserDisplay({ address, chainId }) {
     </h2>
 </doc-anchor-target>
 <p>ZilNames provides a user-friendly naming system for the Zilliqa ecosystem. By integrating ZilNames into your application, you can offer users a more intuitive experience when interacting with blockchain addresses.</p>
-<p>For more information, visit <a href="https://zilnames.com/">zilnames.com</a>.</p>
+<p>For more information, visit <a href="https://zilnames.com/">zilnames.com</a>.
+For more information on ENS Contracts, visit <a href="https://docs.ens.domains/contracts">docs.ens.domains/contracts</a>.</p>
 
                                 
                                 <!-- Required only on API pages -->

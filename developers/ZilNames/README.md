@@ -20,6 +20,38 @@ Zilliqa Mainnet: 0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F
 Zilliqa Testnet: 0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e
 ```
 
+Other contracts for the full set (only need to use these if you want to setup new addresses)  Alternatively you can direct users to https://zilnames.com/
+
+## Testnet contracts
+
+| Contract            | EVM Proxy                                                                                                             |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| BaseRegistrar       | [0x6d6999EB499E7A4aaD0B462045CaE82907A1D30A](https://otterscan.testnet.zilliqa.com/address/0x6d6999EB499E7A4aaD0B462045CaE82907A1D30A) |
+| L2Resolver          | [0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e](https://otterscan.testnet.zilliqa.com/address/0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e) |
+| RegistrarController | [0xC228acc2f1B177a486abd5be0FA513Dc96F14A6f](https://otterscan.testnet.zilliqa.com/address/0xC228acc2f1B177a486abd5be0FA513Dc96F14A6f) |
+| Registry            | [0x716c7e7dC02f7E0FD44343C720233DB57896Fb1b](https://otterscan.testnet.zilliqa.com/address/0x716c7e7dC02f7E0FD44343C720233DB57896Fb1b) |
+| ReverseRegistrar    | [0xBA0478582F6B119c8F9EB71b28927467E5e75357](https://otterscan.testnet.zilliqa.com/address/0xBA0478582F6B119c8F9EB71b28927467E5e75357) |
+
+## Mainnet contracts
+
+| Contract            | EVM Proxy                                                                                                             |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| BaseRegistrar       | [0x34f1A58c54B543D6cb82FC63fBc2D39F749099Df](https://otterscan.testnet.zilliqa.com/address/0x34f1A58c54B543D6cb82FC63fBc2D39F749099Df) |
+| L2Resolver          | [0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F](https://otterscan.testnet.zilliqa.com/address/0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F) |
+| RegistrarController | [0x7c588d2128B8A68DDDEf59fF6E4EdEE5435371EF](https://otterscan.testnet.zilliqa.com/address/0x7c588d2128B8A68DDDEf59fF6E4EdEE5435371EF) |
+| Registry            | [0x2196b67Ca97bBcA07C01c7Bdf4f35209CC615389](https://otterscan.testnet.zilliqa.com/address/0x2196b67Ca97bBcA07C01c7Bdf4f35209CC615389) |
+| ReverseRegistrar    | [0x228242c33D0D0825a3B31B2f4c2f10b7Cb64B788](https://otterscan.testnet.zilliqa.com/address/0x228242c33D0D0825a3B31B2f4c2f10b7Cb64B788) |
+
+## ABIs
+
+Here is links to the ABIs used for Zilnames
+
+<a href="../../.gitbook/assets/BaseRegistrar.abi" download>BaseRegistrar.abi</a>
+<a href="../../.gitbook/assets/L2Resolver.abi" download>L2Resolver.abi</a>
+<a href="../../.gitbook/assets/RegistrarController.abi" download>RegistrarController.abi</a>
+<a href="../../.gitbook/assets/Registry.abi" download>Registry.abi</a>
+<a href="../../.gitbook/assets/ReverseRegistrar.abi" download>ReverseRegistrar.abi</a>
+
 ## Helper Functions
 
 ### Namehash Function
@@ -300,3 +332,4 @@ function getChainForZilname(username) {
 ZilNames provides a user-friendly naming system for the Zilliqa ecosystem. By integrating ZilNames into your application, you can offer users a more intuitive experience when interacting with blockchain addresses.
 
 For more information, visit [zilnames.com](https://zilnames.com/).
+For more information on ENS Contracts, visit [docs.ens.domains/contracts](https://docs.ens.domains/contracts).

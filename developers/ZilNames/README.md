@@ -41,6 +41,7 @@ Other contracts for the full set (only need to use these if you want to setup ne
 | RegistrarController | [0x7c588d2128B8A68DDDEf59fF6E4EdEE5435371EF](https://otterscan.testnet.zilliqa.com/address/0x7c588d2128B8A68DDDEf59fF6E4EdEE5435371EF) |
 | Registry            | [0x2196b67Ca97bBcA07C01c7Bdf4f35209CC615389](https://otterscan.testnet.zilliqa.com/address/0x2196b67Ca97bBcA07C01c7Bdf4f35209CC615389) |
 | ReverseRegistrar    | [0x228242c33D0D0825a3B31B2f4c2f10b7Cb64B788](https://otterscan.testnet.zilliqa.com/address/0x228242c33D0D0825a3B31B2f4c2f10b7Cb64B788) |
+| UniversalResolver   | [0xe32A0F3e3787B535719e8949Eb065F675eB96D25](https://otterscan.testnet.zilliqa.com/address/0xe32A0F3e3787B535719e8949Eb065F675eB96D25) |
 
 ## ABIs
 
@@ -51,6 +52,7 @@ Here is links to the ABIs used for Zilnames
 <a href="https://static.plunderswap.com/zilnames-abis/RegistrarController.abi" download>RegistrarController.abi</a> \
 <a href="https://static.plunderswap.com/zilnames-abis/Registry.abi" download>Registry.abi</a> \
 <a href="https://static.plunderswap.com/zilnames-abis/ReverseRegistrar.abi" download>ReverseRegistrar.abi</a> \
+<a href="https://static.plunderswap.com/zilnames-abis/UniversalResolver.abi" download>UniversalResolver.abi</a> 
 
 ## Helper Functions
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.8.1.800233627806">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.8.1.800251204554">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.8.1">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../.gitbook/assets/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.8.1.800233627806" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.8.1.800251204554" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.8.1.800233627806" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.8.1.800251204554" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.8.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.8.1.800233627806" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.8.1.800233627806" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.8.1.800251204554" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.8.1.800251204554" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -548,6 +548,434 @@ function UserDisplay({ address, chainId }) {
   );
 }</code></pre>
 </doc-codeblock></div>
+<doc-anchor-target id="advanced-react-integration-example">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-react-integration-example">#</doc-anchor-trigger>
+        <span>Advanced React Integration Example</span>
+    </h2>
+</doc-anchor-target>
+<p>The following example demonstrates a more complete implementation based on the <a href="https://github.com/Plunderswap/sample-next-js">sample-next-js</a> repository, which provides a live demo at <a href="https://sample-next-js-gray.vercel.app/">sample-next-js-gray.vercel.app</a>.</p>
+<doc-anchor-target id="1-setting-up-the-hooks">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-setting-up-the-hooks">#</doc-anchor-trigger>
+        <span>1. Setting up the hooks</span>
+    </h3>
+</doc-anchor-target>
+<p>First, create three custom hooks to handle different aspects of ZilNames resolution:</p>
+<p><strong>useZilliqaEnsName.ts</strong> - for resolving addresses to names (reverse resolution):</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-typescript"><code v-pre class="language-typescript">import { Address, isAddress } from &quot;viem&quot;;
+import { useQuery } from &quot;@tanstack/react-query&quot;;
+import { convertReverseNodeToBytes } from &quot;../utils/convertReverseNodeToBytes&quot;;
+import { getChainPublicClient } from &quot;../utils/getChainPublicClient&quot;;
+import L2ResolverAbi from &quot;../abis/L2ResolverAbi&quot;;
+import { zilliqa, zilliqaTestnet } from &quot;../../config/chains&quot;;
+
+export type UseZilliqaEnsNameProps = {
+  address?: Address;
+  chainId?: number;
+};
+
+export type ZilliqaEnsNameData = {
+  name: string | null;
+  isLoading: boolean;
+  isFetching: boolean;
+};
+
+export default function useZilliqaEnsName({ address, chainId }: UseZilliqaEnsNameProps): ZilliqaEnsNameData {
+  const { data, isLoading, isFetching } = useQuery({
+    queryKey: ['zilname', address, chainId],
+    queryFn: async () =&gt; {
+      if (!address || !chainId) return null;
+      
+      // Get the appropriate chain configuration
+      const chain = chainId === zilliqa.id ? zilliqa : 
+                   chainId === zilliqaTestnet.id ? zilliqaTestnet : 
+                   null;
+      
+      if (!chain) {
+        console.log('Chain not supported:', chainId);
+        return null;
+      }
+      
+      const client = getChainPublicClient(chain);
+      
+      const addressReverseNode = convertReverseNodeToBytes(address, chainId);
+
+      try {
+        const contractAddress = chainId === zilliqa.id 
+          ? &quot;0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F&quot; 
+          : &quot;0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e&quot;;
+
+        const zilname = await client.readContract({
+          abi: L2ResolverAbi,
+          address: contractAddress,
+          functionName: &quot;name&quot;,
+          args: [addressReverseNode],
+        }) as string;
+
+        if (zilname &amp;&amp; zilname.length &gt; 0) {
+          return zilname;
+        }
+
+        return null;
+      } catch (error) {
+        console.error('Error fetching Zilname:', error);
+        return null;
+      }
+    },
+    enabled: !!address &amp;&amp; !!chainId &amp;&amp; isAddress(address),
+  });
+
+  return {
+    name: data ?? null,
+    isLoading,
+    isFetching,
+  };
+}</code></pre>
+</doc-codeblock></div>
+<p><strong>useZilliqaEnsAddress.ts</strong> - for resolving names to addresses (forward resolution):</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-typescript"><code v-pre class="language-typescript">import { Address } from &quot;viem&quot;;
+import { useQuery } from &quot;@tanstack/react-query&quot;;
+import { getChainPublicClient } from &quot;../utils/getChainPublicClient&quot;;
+import L2ResolverAbi from &quot;../abis/L2ResolverAbi&quot;;
+import { zilliqa, zilliqaTestnet } from &quot;../../config/chains&quot;;
+import { namehash } from &quot;viem/ens&quot;;
+
+export type UseZilliqaEnsAddressProps = {
+  name?: string;
+  chainId?: number;
+};
+
+export type ZilliqaEnsAddressData = {
+  address: string | null;
+  isLoading: boolean;
+  isFetching: boolean;
+  error: Error | null;
+};
+
+export default function useZilliqaEnsAddress({ name, chainId }: UseZilliqaEnsAddressProps): ZilliqaEnsAddressData {
+  const { data, isLoading, isFetching, error } = useQuery({
+    queryKey: ['ziladdress', name, chainId],
+    queryFn: async () =&gt; {
+      if (!name || !chainId) return null;
+      
+      // Get the appropriate chain configuration
+      const chain = chainId === zilliqa.id ? zilliqa : 
+                   chainId === zilliqaTestnet.id ? zilliqaTestnet : 
+                   null;
+      
+      if (!chain) {
+        console.log('Chain not supported:', chainId);
+        return null;
+      }
+      
+      const client = getChainPublicClient(chain);
+      
+      try {
+        const contractAddress = chainId === zilliqa.id 
+          ? &quot;0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F&quot; 
+          : &quot;0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e&quot;;
+
+        // Use namehash to convert the name to the node format expected by the contract
+        const nameNode = namehash(name);
+
+        // Call the addr function of the L2 resolver contract
+        const address = await client.readContract({
+          abi: L2ResolverAbi,
+          address: contractAddress,
+          functionName: &quot;addr&quot;,
+          args: [nameNode],
+        }) as Address;
+        
+        if (address) {
+          return address;
+        }
+
+        return null;
+      } catch (error) {
+        console.error('Error fetching address:', error);
+        throw error; // Let the error be caught by the error handler
+      }
+    },
+    enabled: !!name &amp;&amp; !!chainId &amp;&amp; name.trim().length &gt; 0,
+  });
+
+  return {
+    address: data ?? null,
+    isLoading,
+    isFetching,
+    error: error as Error | null,
+  };
+}</code></pre>
+</doc-codeblock></div>
+<p><strong>useZilEnsAvatar.ts</strong> - for fetching avatar images:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-typescript"><code v-pre class="language-typescript">import { useQuery } from &quot;@tanstack/react-query&quot;;
+import { getChainPublicClient } from &quot;../utils/getChainPublicClient&quot;;
+import { zilliqa, zilliqaTestnet } from &quot;../../config/chains&quot;;
+import L2ResolverAbi from &quot;../abis/L2ResolverAbi&quot;;
+import { Address } from &quot;viem&quot;;
+import useZilliqaEnsName from &quot;./useZilliqaEnsName&quot;;
+import { namehash } from &quot;viem/ens&quot;;
+
+export type UseZilEnsAvatarProps = {
+  address?: Address;
+  chainId?: number;
+};
+
+export type ZilEnsAvatarData = {
+  avatar: string | null;
+  isLoading: boolean;
+  isFetching: boolean;
+};
+
+export default function useZilEnsAvatar({ address, chainId }: UseZilEnsAvatarProps): ZilEnsAvatarData {
+  // First get the name associated with this address
+  const { name, isLoading: isNameLoading } = useZilliqaEnsName({ address, chainId });
+
+  const { data, isLoading, isFetching } = useQuery({
+    queryKey: ['zilavatar', name, chainId],
+    queryFn: async () =&gt; {
+      if (!name || !chainId) return null;
+      
+      // Get the appropriate chain configuration
+      const chain = chainId === zilliqa.id ? zilliqa : 
+                   chainId === zilliqaTestnet.id ? zilliqaTestnet : 
+                   null;
+      
+      if (!chain) {
+        console.log('Chain not supported:', chainId);
+        return null;
+      }
+      
+      const client = getChainPublicClient(chain);
+      
+      try {
+        const contractAddress = chainId === zilliqa.id 
+          ? &quot;0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F&quot; 
+          : &quot;0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e&quot;;
+        
+        // Get the avatar text record using the name's namehash
+        const avatar = await client.readContract({
+          abi: L2ResolverAbi,
+          address: contractAddress,
+          functionName: &quot;text&quot;,
+          args: [namehash(name), &quot;avatar&quot;],
+        }) as string;
+
+        if (!avatar) {
+          return null;
+        }
+
+        // Handle IPFS URLs
+        if (avatar.startsWith('ipfs://')) {
+          const ipfsGateway = &quot;https://ipfs.io/ipfs/&quot;;
+          const ipfsPath = avatar.replace('ipfs://', '');
+          return `${ipfsGateway}${ipfsPath}`;
+        }
+
+        // Return the avatar URL directly if it's not IPFS
+        return avatar;
+      } catch (error) {
+        console.error('Error fetching avatar:', error);
+        return null;
+      }
+    },
+    enabled: !!name &amp;&amp; !isNameLoading &amp;&amp; !!chainId,
+  });
+
+  return {
+    avatar: data ?? null,
+    isLoading: isLoading || isNameLoading,
+    isFetching,
+  };
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="2-utility-functions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-utility-functions">#</doc-anchor-trigger>
+        <span>2. Utility functions</span>
+    </h3>
+</doc-anchor-target>
+<p>You&#x27;ll need some utility functions referenced in the hooks:</p>
+<p><strong>convertReverseNodeToBytes.ts</strong>:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-typescript"><code v-pre class="language-typescript">import { Address, encodePacked, keccak256, namehash } from &quot;viem&quot;;
+import { zilliqa, zilliqaTestnet } from &quot;../../config/chains&quot;;
+
+// Convert chainId to coin type for reverse resolution
+export function convertChainIdToCoinType(chainId: number): string {
+  // Zilliqa mainnet
+  if (chainId === zilliqa.id) {
+    return &quot;addr&quot;;
+  } 
+  // Zilliqa testnet
+  else if (chainId === zilliqaTestnet.id) {
+    return &quot;80002105&quot;;
+  }
+  
+  // For other chains, apply BIP44 derivation
+  const cointype = (0x80000000 | chainId) &gt;&gt;&gt; 0;
+  return cointype.toString(16).toLocaleUpperCase();
+}
+
+// Convert address to reverse node
+export function convertReverseNodeToBytes(address: Address, chainId: number): `0x${string}` {
+  const addressFormatted = address.toLowerCase();
+  const addressNode = keccak256(addressFormatted.substring(2));
+  
+  const chainCoinType = convertChainIdToCoinType(chainId);
+  const baseReverseNode = namehash(`${chainCoinType.toLocaleUpperCase()}.reverse`);
+  
+  const addressReverseNode = keccak256(
+    encodePacked([&quot;bytes32&quot;, &quot;bytes32&quot;], [baseReverseNode, addressNode])
+  );
+  
+  return addressReverseNode;
+}</code></pre>
+</doc-codeblock></div>
+<p><strong>getChainPublicClient.ts</strong>:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-typescript"><code v-pre class="language-typescript">import { Chain, createPublicClient, http } from &quot;viem&quot;;
+
+export function getChainPublicClient(chain: Chain) {
+  return createPublicClient({
+    chain,
+    transport: http(),
+  });
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="3-example-implementation-in-a-react-component">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-example-implementation-in-a-react-component">#</doc-anchor-trigger>
+        <span>3. Example implementation in a React component</span>
+    </h3>
+</doc-anchor-target>
+<p>Here&#x27;s how you can use these hooks in a React component:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-tsx"><code v-pre class="language-tsx">'use client';
+
+import { useState } from 'react';
+import { isAddress } from 'viem';
+import { zilliqa } from '@/config/chains';
+import useZilliqaEnsName from '@/lib/hooks/useZilliqaEnsName';
+import useZilEnsAvatar from '@/lib/hooks/useZilEnsAvatar';
+import useZilliqaEnsAddress from '@/lib/hooks/useZilliqaEnsAddress';
+
+export default function ZilNamesResolver() {
+  // Name to Address state
+  const [nameInput, setNameInput] = useState('');
+  const [shouldResolveAddress, setShouldResolveAddress] = useState(false);
+  
+  // Address to Name state
+  const [addressInput, setAddressInput] = useState('');
+  const [shouldResolveName, setShouldResolveName] = useState(false);
+
+  // ENS name to address resolution
+  const { 
+    address: resolvedAddress, 
+    isLoading: isLoadingAddress, 
+    error: addressError 
+  } = useZilliqaEnsAddress({
+    name: shouldResolveAddress ? nameInput.trim() : undefined,
+    chainId: zilliqa.id,
+  });
+
+  // Address to ENS name resolution
+  const { 
+    name: resolvedName, 
+    isLoading: isLoadingName 
+  } = useZilliqaEnsName({
+    address: shouldResolveName &amp;&amp; isAddress(addressInput.trim()) 
+      ? addressInput.trim() as `0x${string}` 
+      : undefined,
+    chainId: zilliqa.id,
+  });
+
+  // Get avatar for the resolved name
+  const {
+    avatar: nameAvatar,
+    isLoading: isLoadingAvatar
+  } = useZilEnsAvatar({
+    address: resolvedAddress as `0x${string}`,
+    chainId: zilliqa.id
+  });
+
+  // Handle name to address resolution
+  const handleResolveAddress = () =&gt; {
+    setShouldResolveAddress(true);
+  };
+
+  // Handle address to name resolution
+  const handleResolveName = () =&gt; {
+    setShouldResolveName(true);
+  };
+
+  return (
+    &lt;div className=&quot;container mx-auto p-4&quot;&gt;
+      &lt;h1 className=&quot;text-2xl font-bold mb-6&quot;&gt;ZilNames Resolver&lt;/h1&gt;
+      
+      &lt;div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;&gt;
+        {/* Name to Address Section */}
+        &lt;div className=&quot;border p-4 rounded&quot;&gt;
+          &lt;h2 className=&quot;text-xl mb-4&quot;&gt;Resolve Name to Address&lt;/h2&gt;
+          &lt;input
+            type=&quot;text&quot;
+            value={nameInput}
+            onChange={(e) =&gt; setNameInput(e.target.value)}
+            placeholder=&quot;Enter a .zil name&quot;
+            className=&quot;border p-2 w-full mb-2&quot;
+          /&gt;
+          &lt;button 
+            onClick={handleResolveAddress}
+            className=&quot;bg-blue-500 text-white px-4 py-2 rounded&quot;
+            disabled={isLoadingAddress}
+          &gt;
+            {isLoadingAddress ? 'Loading...' : 'Resolve'}
+          &lt;/button&gt;
+          
+          {resolvedAddress &amp;&amp; (
+            &lt;div className=&quot;mt-4&quot;&gt;
+              &lt;p&gt;&lt;strong&gt;Address:&lt;/strong&gt; {resolvedAddress}&lt;/p&gt;
+              {nameAvatar &amp;&amp; &lt;img src={nameAvatar} alt=&quot;Avatar&quot; className=&quot;w-12 h-12 rounded-full mt-2&quot; /&gt;}
+            &lt;/div&gt;
+          )}
+          
+          {addressError &amp;&amp; &lt;p className=&quot;text-red-500 mt-2&quot;&gt;{addressError.message}&lt;/p&gt;}
+        &lt;/div&gt;
+        
+        {/* Address to Name Section */}
+        &lt;div className=&quot;border p-4 rounded&quot;&gt;
+          &lt;h2 className=&quot;text-xl mb-4&quot;&gt;Resolve Address to Name&lt;/h2&gt;
+          &lt;input
+            type=&quot;text&quot;
+            value={addressInput}
+            onChange={(e) =&gt; setAddressInput(e.target.value)}
+            placeholder=&quot;Enter an EVM 0x address&quot;
+            className=&quot;border p-2 w-full mb-2&quot;
+          /&gt;
+          &lt;button 
+            onClick={handleResolveName}
+            className=&quot;bg-blue-500 text-white px-4 py-2 rounded&quot;
+            disabled={isLoadingName}
+          &gt;
+            {isLoadingName ? 'Loading...' : 'Resolve'}
+          &lt;/button&gt;
+          
+          {resolvedName &amp;&amp; (
+            &lt;div className=&quot;mt-4&quot;&gt;
+              &lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; {resolvedName}&lt;/p&gt;
+            &lt;/div&gt;
+          )}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+</doc-codeblock></div>
+<p>This example demonstrates a complete workflow for resolving ZilNames, including both forward and reverse resolution, and avatar fetching. For a working example, visit <a href="https://sample-next-js-gray.vercel.app/">sample-next-js-gray.vercel.app</a> or fork the <a href="https://github.com/Plunderswap/sample-next-js">sample-next-js</a> repository to see this in action.</p>
 <doc-anchor-target id="full-l2resolver-contract-interface">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#full-l2resolver-contract-interface">#</doc-anchor-trigger>

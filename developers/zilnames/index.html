@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.8.1.800251204554">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.8.1.800324043027">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.8.1">
@@ -31,12 +31,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../.gitbook/assets/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.8.1.800251204554" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.8.1.800324043027" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.8.1.800251204554" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.8.1.800324043027" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.8.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.8.1.800251204554" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.8.1.800251204554" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.8.1.800324043027" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.8.1.800324043027" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -180,12 +180,9 @@
         <span>Contract Details</span>
     </h2>
 </doc-anchor-target>
-<p>ZilNames uses L2Resolver contracts deployed at the following addresses:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">Zilliqa Mainnet: 0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F
-Zilliqa Testnet: 0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e</code></pre>
-</doc-codeblock></div>
-<p>Other contracts for the full set (only need to use these if you want to setup new addresses)  Alternatively you can direct users to <a href="https://zilnames.com/">https://zilnames.com/</a></p>
+<p>The main contract used for Zilnames resolution is the UniversalResolver.  This is the most simplistic and also works out of the box with Viem.</p>
+<p>The other advanced option is using the L2Resolver contract but this is more advanced and manual.</p>
+<p>Contracts for the full set (only need to use these if you want to setup new addresses)  Alternatively you can direct users to <a href="https://zilnames.com/">https://zilnames.com/</a></p>
 <doc-anchor-target id="testnet-contracts">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#testnet-contracts">#</doc-anchor-trigger>
@@ -261,7 +258,7 @@ Zilliqa Testnet: 0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e</code></pre>
 </tr>
 <tr>
 <td>UniversalResolver</td>
-<td><a href="https://otterscan.testnet.zilliqa.com/address/0xe32A0F3e3787B535719e8949Eb065F675eB96D25">0xe32A0F3e3787B535719e8949Eb065F675eB96D25</a></td>
+<td><a href="https://otterscan.testnet.zilliqa.com/address/0x2b6a7953c510392aE88c7C302a984460Daa8AF24">0x2b6a7953c510392aE88c7C302a984460Daa8AF24</a></td>
 </tr>
 </tbody>
 </table>
@@ -279,59 +276,457 @@ Zilliqa Testnet: 0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e</code></pre>
 <a href="https://static.plunderswap.com/zilnames-abis/Registry.abi" download>Registry.abi</a> <br />
 <a href="https://static.plunderswap.com/zilnames-abis/ReverseRegistrar.abi" download>ReverseRegistrar.abi</a> <br />
 <a href="https://static.plunderswap.com/zilnames-abis/UniversalResolver.abi" download>UniversalResolver.abi</a></p>
-<doc-anchor-target id="helper-functions">
+<doc-anchor-target id="option-1---zilnames-integration-using-viem">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#helper-functions">#</doc-anchor-trigger>
-        <span>Helper Functions</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#option-1---zilnames-integration-using-viem">#</doc-anchor-trigger>
+        <span>OPTION 1 - ZilNames Integration using Viem</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="namehash-function">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#namehash-function">#</doc-anchor-trigger>
-        <span>Namehash Function</span>
-    </h3>
-</doc-anchor-target>
-<p>While most libraries like viem provide a namehash implementation, here&#x27;s how the namehash algorithm works:</p>
+<p>Viem.sh now supports ZilNames out-of-the-box thanks to the UniversalResolver contract. This is the simplest way to integrate ZilNames into your dApp.</p>
+<p>First, define the Zilliqa chain configuration in your Viem setup:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">import { keccak256 } from &quot;viem&quot;;
-import { toUtf8Bytes } from &quot;viem/utils&quot;;
+<pre class="language-typescript"><code v-pre class="language-typescript">import { defineChain } from 'viem'
 
-// Implementation of ENS namehash algorithm
-function namehash(name) {
-  let node = '0x0000000000000000000000000000000000000000000000000000000000000000';
-  
-  if (name) {
-    const labels = name.split('.');
-    
-    for (let i = labels.length - 1; i &gt;= 0; i--) {
-      const label = labels[i];
-      const labelHash = keccak256(toUtf8Bytes(label));
-      node = keccak256(new Uint8Array([...hexToBytes(node), ...hexToBytes(labelHash)]));
-    }
-  }
-  
-  return node;
-}
-
-// Helper to convert hex string to byte array
-function hexToBytes(hex) {
-  const bytes = [];
-  for (let c = 2; c &lt; hex.length; c += 2) {
-    bytes.push(parseInt(hex.substr(c, 2), 16));
-  }
-  return bytes;
-}</code></pre>
+export const zilliqa = defineChain({
+  id: 32769,
+  name: &quot;Zilliqa&quot;,
+  iconUrl: &quot;https://plunderswap.com/images/chains/33101.png&quot;,
+  nativeCurrency: { name: &quot;Zilliqa&quot;, symbol: &quot;ZIL&quot;, decimals: 18 },
+  rpcUrls: {
+    default: { http: [&quot;https://api.zilliqa.com/&quot;] },
+  },
+  blockExplorers: {
+    default: { name: &quot;Otterscan&quot;, url: &quot;https://otterscan.zilliqa.com&quot; },
+  },
+  contracts: {
+    ensUniversalResolver: {
+      address: &quot;0x2b6a7953c510392aE88c7C302a984460Daa8AF24&quot;,
+    },
+    ensRegistry: {
+      address: &quot;0x2196b67Ca97bBcA07C01c7Bdf4f35209CC615389&quot;,
+    },
+    multicall3: {
+      address: &quot;0x38899efb93d5106d3adb86662c557f237f6ecf57&quot;,
+      blockCreated: 5313022,
+    },
+  },
+});</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="zilnames-basic-integration">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#zilnames-basic-integration">#</doc-anchor-trigger>
-        <span>ZilNames Basic Integration</span>
-    </h2>
-</doc-anchor-target>
+<p>Once your client is configured with the Zilliqa chain, you can use Viem&#x27;s ENS actions. Remember to normalize ENS names using <code v-pre>normalize</code> from <code v-pre>viem/ens</code> before passing them to these functions.</p>
 <doc-anchor-target id="1-forward-resolution-name--address">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#1-forward-resolution-name--address">#</doc-anchor-trigger>
         <span>1. Forward Resolution (Name → Address)</span>
+    </h3>
+</doc-anchor-target>
+<p>Use <code v-pre>getEnsAddress</code> to resolve a <code v-pre>.zil</code> name to an address.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-typescript"><code v-pre class="language-typescript">import { normalize } from 'viem/ens'
+import { createPublicClient, http } from 'viem'
+import { zilliqa } from './chains' // Assuming your chain definition is in chains.ts
+
+const publicClient = createPublicClient({
+  chain: zilliqa,
+  transport: http(),
+})
+
+async function resolveZilNameToAddress(name: string) {
+  const ensAddress = await publicClient.getEnsAddress({
+    name: normalize(name), // e.g., normalize('example.zil')
+  });
+  return ensAddress;
+}</code></pre>
+</doc-codeblock></div>
+<p>For more details, see the <a href="https://viem.sh/docs/ens/actions/getEnsAddress">Viem getEnsAddress documentation</a>.</p>
+<doc-anchor-target id="2-reverse-resolution-address--name">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-reverse-resolution-address--name">#</doc-anchor-trigger>
+        <span>2. Reverse Resolution (Address → Name)</span>
+    </h3>
+</doc-anchor-target>
+<p>Use <code v-pre>getEnsName</code> to resolve an address to its primary <code v-pre>.zil</code> name.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-typescript"><code v-pre class="language-typescript">import { createPublicClient, http } from 'viem'
+import { zilliqa } from './chains'
+
+const publicClient = createPublicClient({
+  chain: zilliqa,
+  transport: http(),
+})
+
+async function resolveAddressToZilName(address: `0x${string}`) {
+  const ensName = await publicClient.getEnsName({
+    address: address,
+  });
+  return ensName;
+}</code></pre>
+</doc-codeblock></div>
+<p>For more details, see the <a href="https://viem.sh/docs/ens/actions/getEnsName">Viem getEnsName documentation</a>.</p>
+<doc-anchor-target id="3-avatar-resolution">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-avatar-resolution">#</doc-anchor-trigger>
+        <span>3. Avatar Resolution</span>
+    </h3>
+</doc-anchor-target>
+<p>Use <code v-pre>getEnsAvatar</code> to get the avatar URL for a <code v-pre>.zil</code> name.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-typescript"><code v-pre class="language-typescript">import { normalize } from 'viem/ens'
+import { createPublicClient, http } from 'viem'
+import { zilliqa } from './chains'
+
+const publicClient = createPublicClient({
+  chain: zilliqa,
+  transport: http(),
+})
+
+async function getZilNameAvatar(name: string) {
+  const avatarUrl = await publicClient.getEnsAvatar({
+    name: normalize(name),
+  });
+  return avatarUrl;
+}</code></pre>
+</doc-codeblock></div>
+<p>For more details, see the <a href="https://viem.sh/docs/ens/actions/getEnsAvatar">Viem getEnsAvatar documentation</a>.</p>
+<doc-anchor-target id="4-resolver-address">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-resolver-address">#</doc-anchor-trigger>
+        <span>4. Resolver Address</span>
+    </h3>
+</doc-anchor-target>
+<p>Use <code v-pre>getEnsResolver</code> to get the resolver address for a <code v-pre>.zil</code> name.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-typescript"><code v-pre class="language-typescript">import { normalize } from 'viem/ens'
+import { createPublicClient, http } from 'viem'
+import { zilliqa } from './chains'
+
+const publicClient = createPublicClient({
+  chain: zilliqa,
+  transport: http(),
+})
+
+async function getZilNameResolver(name: string) {
+  const resolverAddress = await publicClient.getEnsResolver({
+    name: normalize(name),
+  });
+  return resolverAddress;
+}</code></pre>
+</doc-codeblock></div>
+<p>For more details, see the <a href="https://viem.sh/docs/ens/actions/getEnsResolver">Viem getEnsResolver documentation</a>.</p>
+<doc-anchor-target id="5-text-records">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#5-text-records">#</doc-anchor-trigger>
+        <span>5. Text Records</span>
+    </h3>
+</doc-anchor-target>
+<p>Use <code v-pre>getEnsText</code> to retrieve arbitrary text records associated with a <code v-pre>.zil</code> name.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-typescript"><code v-pre class="language-typescript">import { normalize } from 'viem/ens'
+import { createPublicClient, http } from 'viem'
+import { zilliqa } from './chains'
+
+const publicClient = createPublicClient({
+  chain: zilliqa,
+  transport: http(),
+})
+
+async function getZilNameTextRecord(name: string, key: string) {
+  const textRecord = await publicClient.getEnsText({
+    name: normalize(name),
+    key: key,
+  });
+  return textRecord;
+}</code></pre>
+</doc-codeblock></div>
+<p>For more details, see the <a href="https://viem.sh/docs/ens/actions/getEnsText">Viem getEnsText documentation</a>.</p>
+<doc-anchor-target id="option-2---zilnames-integration-using-universalresolver-contract">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#option-2---zilnames-integration-using-universalresolver-contract">#</doc-anchor-trigger>
+        <span>OPTION 2 - ZilNames Integration using UniversalResolver Contract</span>
+    </h2>
+</doc-anchor-target>
+<p>This option demonstrates how to directly interact with the <code v-pre>UniversalResolver</code> contract for more fine-grained control or when not using Viem&#x27;s built-in ENS functions. You will need the ABI for the <code v-pre>UniversalResolver</code> contract. (Linked above)</p>
+<p>Refer to the <a href="https://docs.ens.domains/resolvers/universal">ENS Universal Resolver Documentation</a> for detailed information on the contract&#x27;s functions and how to encode data.</p>
+<p>The <code v-pre>UniversalResolver</code> contract address on Zilliqa Mainnet is <code v-pre>0x2b6a7953c510392aE88c7C302a984460Daa8AF24</code>. You can find the ABI linked in the <doc-anchor-trigger to="#abis">ABIs section</doc-anchor-trigger>.</p>
+<p>Here&#x27;s a conceptual Next.js example using <code v-pre>wagmi</code> and <code v-pre>viem</code> for contract interaction:</p>
+<doc-anchor-target id="1-setup">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-setup">#</doc-anchor-trigger>
+        <span>1. Setup</span>
+    </h3>
+</doc-anchor-target>
+<p>Ensure you have <code v-pre>wagmi</code> and <code v-pre>viem</code> installed. You&#x27;ll also need the <code v-pre>UniversalResolver.abi</code>.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-typescript"><code v-pre class="language-typescript">// lib/universalResolver.ts
+import { Address, encodeFunctionData, parseAbi, toHex } from 'viem';
+import { namehash, normalize, packetToBytes } from 'viem/ens'; // For name normalization, hashing, and DNS encoding
+// Assuming UniversalResolver.abi is available in your project
+// You'll need to load the ABI content, e.g., by importing it as a JSON module or reading the file content.
+// const UniversalResolverABI = await import('../abis/UniversalResolver.abi.json'); // Example if using JSON module
+// For this example, we'll assume the ABI string is loaded into a variable.
+// The actual ABI content should be sourced from the 'UniversalResolver.abi' file linked in the 'ABIs' section of this document.
+const UNIVERSAL_RESOLVER_ABI_JSON_STRING = '[...]'; // Placeholder: Replace with actual JSON string content of UniversalResolver.abi
+
+const universalResolverAddress = &quot;0x2b6a7953c510392aE88c7C302a984460Daa8AF24&quot; as Address;
+const universalResolverAbi = parseAbi(UNIVERSAL_RESOLVER_ABI_JSON_STRING);
+
+// Viem client (example setup)
+// import { createPublicClient, http } from 'viem';
+// import { zilliqa } from './chains'; // Your chain definition
+// const client = createPublicClient({ chain: zilliqa, transport: http() });
+
+// Helper function to interact with the UniversalResolver
+async function callUniversalResolver(client: any, functionName: string, args: any[]) {
+  try {
+    const data = await client.readContract({
+      address: universalResolverAddress,
+      abi: universalResolverAbi,
+      functionName,
+      args,
+    });
+    return data;
+  } catch (error) {
+    console.error(`Error calling ${functionName}:`, error);
+    throw error; // Re-throw to allow caller to handle
+  }
+}
+
+export async function resolveNameWithUniversalResolver(client: any, name: string): Promise&lt;[`0x${string}`, Address] | null&gt; {
+  const normalizedName = normalize(name); // UTS-46 normalization
+  const dnsEncodedName = toHex(packetToBytes(normalizedName)); // DNS encode the name
+
+  // Construct the call data for the target resolver's `addr(bytes32)` function.
+  // This is what we want the UniversalResolver to call on the actual resolver for the name.
+  const node = namehash(normalizedName);
+  const addrFunctionSignature = 'addr(bytes32)'; // Standard ENS resolver function
+  // For simplicity, assuming a basic ABI for the target resolver's addr function.
+  // In a real scenario, you might need a more complete resolver ABI if dealing with various resolver types.
+  const targetResolverAddrAbi = parseAbi([`function ${addrFunctionSignature} view returns (address)`]);
+  
+  const callDataToForward = encodeFunctionData({
+    abi: targetResolverAddrAbi,
+    functionName: 'addr',
+    args: [node]
+  });
+
+  try {
+    // Call the `resolve` function on the UniversalResolver
+    const result = await callUniversalResolver(client, 'resolve', [dnsEncodedName, callDataToForward]) as [`0x${string}`, Address];
+    // result[0] is the ABI-encoded address from the target resolver
+    // result[1] is the address of the target resolver
+    return result;
+  } catch (e) {
+    console.error(`Error in resolveNameWithUniversalResolver for ${name}:`, e);
+    return null;
+  }
+}
+
+
+export async function reverseResolveAddressWithUniversalResolver(client: any, address: Address): Promise&lt;[`0x${string}`, Address] | null&gt; {
+  // Construct the reverse node string, e.g., &quot;d2135cfb216b74109775236e36d4b433f1df507b.addr.reverse&quot;
+  const reverseNodeString = `${address.slice(2).toLowerCase()}.addr.reverse`;
+  const dnsEncodedReverseNode = toHex(packetToBytes(reverseNodeString)); // DNS encode the reverse node string
+
+  // Construct the call data for the target resolver's `name(bytes32)` function.
+  const node = namehash(reverseNodeString);
+  const nameFunctionSignature = 'name(bytes32)'; // Standard ENS resolver function
+  const targetResolverNameAbi = parseAbi([`function ${nameFunctionSignature} view returns (string)`]);
+
+  const callDataToForward = encodeFunctionData({
+    abi: targetResolverNameAbi,
+    functionName: 'name',
+    args: [node]
+  });
+  
+  try {
+    // Call the `resolve` function on the UniversalResolver
+    const result = await callUniversalResolver(client, 'resolve', [dnsEncodedReverseNode, callDataToForward]) as [`0x${string}`, Address];
+    // result[0] is the ABI-encoded name string from the target resolver
+    // result[1] is the address of the target resolver
+    return result;
+  } catch (e) {
+    console.error(`Error in reverseResolveAddressWithUniversalResolver for ${address}:`, e);
+    return null;
+  }
+}
+
+// Note on UNIVERSAL_RESOLVER_ABI_JSON_STRING:
+// This placeholder should be replaced with the actual JSON string content of the UniversalResolver.abi file.
+// You can typically achieve this by importing the .abi file as a JSON module if your bundler supports it,
+// or by reading the file content and parsing it.
+// Example (conceptual, depends on your environment):
+// import abiFileContent from '../abis/UniversalResolver.abi.json';
+// const UNIVERSAL_RESOLVER_ABI_JSON_STRING = JSON.stringify(abiFileContent);</code></pre>
+</doc-codeblock></div>
+<p><em>Important Note on <code v-pre>callDataToForward</code></em>: The <code v-pre>data</code> parameter (which we&#x27;ve named <code v-pre>callDataToForward</code> for clarity) for the Universal Resolver&#x27;s <code v-pre>resolve</code> function is crucial. It is the ABI-encoded function call that you intend to execute on the <em>actual name&#x27;s resolver contract</em>, not on the Universal Resolver itself. The Universal Resolver acts as a gateway, forwarding this call to the appropriate resolver for the given name.</p>
+<ul>
+<li>For forward resolution (name to address), this is typically an encoded call to <code v-pre>addr(bytes32 node)</code> or <code v-pre>addr(bytes32 node, uint256 coinType)</code>.</li>
+<li>For reverse resolution (address to name), this is typically an encoded call to <code v-pre>name(bytes32 node)</code>.</li>
+<li>The Universal Resolver&#x27;s <code v-pre>resolve</code> function returns <code v-pre>(bytes result, address resolverAddress)</code>. You will then need to decode <code v-pre>result</code> using the ABI of the function you originally encoded into <code v-pre>callDataToForward</code> (e.g., decode <code v-pre>result</code> as an <code v-pre>address</code> if you called <code v-pre>addr</code>, or as a <code v-pre>string</code> if you called <code v-pre>name</code>).</li>
+</ul>
+<doc-anchor-target id="2-react-component-example">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-react-component-example">#</doc-anchor-trigger>
+        <span>2. React Component Example</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-tsx"><code v-pre class="language-tsx">// components/ZilNamesUniversalResolver.tsx
+import { useState } from 'react';
+import { usePublicClient } from 'wagmi';
+import { zilliqa } from '@/lib/chains'; // Your chain definition
+import { resolveNameWithUniversalResolver, reverseResolveAddressWithUniversalResolver } from '@/lib/universalResolver'; // Adjust path
+import { Address, isAddress, decodeAbiParameters, parseAbiParameters } from 'viem';
+
+export default function ZilNamesUniversalResolver() {
+  const publicClient = usePublicClient({ chainId: zilliqa.id }); // Ensure this client is configured for Zilliqa
+  const [nameInput, setNameInput] = useState('');
+  const [addressInput, setAddressInput] = useState('');
+  
+  const [resolvedForwardAddress, setResolvedForwardAddress] = useState&lt;Address | null&gt;(null);
+  const [forwardResolverAddress, setForwardResolverAddress] = useState&lt;Address | null&gt;(null);
+  const [forwardError, setForwardError] = useState&lt;string | null&gt;(null);
+
+  const [resolvedReverseName, setResolvedReverseName] = useState&lt;string | null&gt;(null);
+  const [reverseResolverAddress, setReverseResolverAddress] = useState&lt;Address | null&gt;(null);
+  const [reverseError, setReverseError] = useState&lt;string | null&gt;(null);
+  
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleResolveName = async () =&gt; {
+    if (!publicClient || !nameInput) {
+      setForwardError(&quot;Please connect wallet and enter a name.&quot;);
+      return;
+    }
+    setIsLoading(true);
+    setResolvedForwardAddress(null);
+    setForwardResolverAddress(null);
+    setForwardError(null);
+    try {
+      const result = await resolveNameWithUniversalResolver(publicClient, nameInput);
+      if (result) {
+        const [encodedAddressBytes, resolverAddr] = result;
+        // Decode the address from the bytes returned by the target resolver
+        const decodedAddress = decodeAbiParameters(
+          parseAbiParameters('address'),
+          encodedAddressBytes
+        )[0];
+        setResolvedForwardAddress(decodedAddress);
+        setForwardResolverAddress(resolverAddr);
+      } else {
+        setForwardError(&quot;Could not resolve name or an error occurred.&quot;);
+      }
+    } catch (e: any) {
+      console.error(&quot;handleResolveName error:&quot;, e);
+      setForwardError(e.message || &quot;Failed to resolve name.&quot;);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  
+  const handleReverseResolveAddress = async () =&gt; {
+    if (!publicClient || !isAddress(addressInput)) {
+      setReverseError(&quot;Please connect wallet and enter a valid address.&quot;);
+      return;
+    }
+    setIsLoading(true);
+    setResolvedReverseName(null);
+    setReverseResolverAddress(null);
+    setReverseError(null);
+    try {
+      const result = await reverseResolveAddressWithUniversalResolver(publicClient, addressInput as Address);
+      if (result) {
+        const [encodedNameBytes, resolverAddr] = result;
+        // Decode the name string from the bytes returned by the target resolver
+        const decodedName = decodeAbiParameters(
+          parseAbiParameters('string'),
+          encodedNameBytes
+        )[0];
+        setResolvedReverseName(decodedName);
+        setReverseResolverAddress(resolverAddr);
+      } else {
+        setReverseError(&quot;Could not resolve address or an error occurred.&quot;);
+      }
+    } catch (e: any) {
+      console.error(&quot;handleReverseResolveAddress error:&quot;, e);
+      setReverseError(e.message || &quot;Failed to resolve address to name.&quot;);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;Resolve via UniversalResolver (Direct Call - Advanced)&lt;/h2&gt;
+      &lt;p className=&quot;text-sm text-gray-600 mb-2&quot;&gt;
+        This section demonstrates direct calls to the UniversalResolver. 
+        Ensure your client is connected to Zilliqa network.
+      &lt;/p&gt;
+      
+      {/* Name to Address */}
+      &lt;div className=&quot;my-4 p-4 border rounded&quot;&gt;
+        &lt;h3 className=&quot;font-semibold&quot;&gt;Name to Address (Forward Resolution)&lt;/h3&gt;
+        &lt;input
+          type=&quot;text&quot;
+          value={nameInput}
+          onChange={(e) =&gt; setNameInput(e.target.value)}
+          placeholder=&quot;Enter .zil name (e.g., example.zil)&quot;
+          className=&quot;border p-1 mr-2 my-1&quot;
+        /&gt;
+        &lt;button onClick={handleResolveName} disabled={isLoading} className=&quot;bg-blue-500 text-white p-1 rounded disabled:opacity-50&quot;&gt;
+          {isLoading ? 'Resolving...' : 'Resolve Name'}
+        &lt;/button&gt;
+        {resolvedForwardAddress &amp;&amp; (
+          &lt;div className=&quot;mt-2 text-green-700&quot;&gt;
+            &lt;p&gt;Resolved Address: {resolvedForwardAddress}&lt;/p&gt;
+            &lt;p className=&quot;text-xs&quot;&gt;Resolver Used: {forwardResolverAddress}&lt;/p&gt;
+          &lt;/div&gt;
+        )}
+        {forwardError &amp;&amp; &lt;p className=&quot;mt-2 text-red-500&quot;&gt;{forwardError}&lt;/p&gt;}
+      &lt;/div&gt;
+      
+      {/* Address to Name */}
+      &lt;div className=&quot;my-4 p-4 border rounded&quot;&gt;
+        &lt;h3 className=&quot;font-semibold&quot;&gt;Address to Name (Reverse Resolution)&lt;/h3&gt;
+        &lt;input
+          type=&quot;text&quot;
+          value={addressInput}
+          onChange={(e) =&gt; setAddressInput(e.target.value)}
+          placeholder=&quot;Enter 0x address&quot;
+          className=&quot;border p-1 mr-2 my-1&quot;
+        /&gt;
+        &lt;button onClick={handleReverseResolveAddress} disabled={isLoading} className=&quot;bg-blue-500 text-white p-1 rounded disabled:opacity-50&quot;&gt;
+          {isLoading ? 'Resolving...' : 'Reverse Resolve Address'}
+        &lt;/button&gt;
+        {resolvedReverseName &amp;&amp; (
+          &lt;div className=&quot;mt-2 text-green-700&quot;&gt;
+            &lt;p&gt;Resolved Name: {resolvedReverseName}&lt;/p&gt;
+            &lt;p className=&quot;text-xs&quot;&gt;Resolver Used: {reverseResolverAddress}&lt;/p&gt;
+          &lt;/div&gt;
+        )}
+        {reverseError &amp;&amp; &lt;p className=&quot;mt-2 text-red-500&quot;&gt;{reverseError}&lt;/p&gt;}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+</doc-codeblock></div>
+<p><strong>Key considerations for direct UniversalResolver interaction:</strong></p>
+<ul>
+<li><strong>DNS Encoding:</strong> Names need to be DNS-encoded into bytes. This is a non-trivial step. Viem handles this internally for its ENS functions, but for direct calls, you&#x27;ll need to implement or find a library for this.</li>
+<li><strong>Call Data Construction:</strong> The <code v-pre>data</code> argument for the <code v-pre>resolve</code> function must be the ABI-encoded call to the specific function on the underlying resolver (e.g., <code v-pre>addr(bytes32)</code> for resolving an address, or <code v-pre>text(bytes32, string)</code> for a text record).</li>
+<li><strong>ABI:</strong> You need the ABI for <code v-pre>UniversalResolver.sol</code>. The <code v-pre>resolve</code> function returns <code v-pre>(bytes, address)</code> where the first component is the result of the call to the underlying resolver, and the second is the address of that resolver. You&#x27;ll need to decode the <code v-pre>bytes</code> result using the ABI of the function you called on the underlying resolver.</li>
+</ul>
+<p>For most use cases, <strong>OPTION 1 (using Viem&#x27;s built-in ENS functions)</strong> is highly recommended due to its simplicity and abstraction over these complexities. Option 2 provides an avenue for advanced scenarios or environments where Viem&#x27;s abstractions are not directly used.</p>
+<doc-anchor-target id="option-3---zilnames-manual-integration-using-l2resolver">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#option-3---zilnames-manual-integration-using-l2resolver">#</doc-anchor-trigger>
+        <span>OPTION 3 - ZilNames Manual Integration using L2Resolver</span>
+    </h2>
+</doc-anchor-target>
+<p>You can also use the L2Resolver using the following functions/examples.</p>
+<doc-anchor-target id="1-forward-resolution-name--address-using-l2resolver">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-forward-resolution-name--address-using-l2resolver">#</doc-anchor-trigger>
+        <span>1. Forward Resolution (Name → Address) using L2Resolver</span>
     </h3>
 </doc-anchor-target>
 <p>To resolve a <code v-pre>.zil</code> name to an address, you&#x27;ll need to:</p>
@@ -374,9 +769,46 @@ async function resolveNameToAddress(name, client) {
   }
 }</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="2-reverse-resolution-address--name">
+<doc-anchor-target id="namehash-function">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2-reverse-resolution-address--name">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#namehash-function">#</doc-anchor-trigger>
+        <span>Namehash Function</span>
+    </h3>
+</doc-anchor-target>
+<p>While most libraries like viem provide a namehash implementation, here&#x27;s how the namehash algorithm works:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">import { keccak256 } from &quot;viem&quot;;
+import { toUtf8Bytes } from &quot;viem/utils&quot;;
+
+// Implementation of ENS namehash algorithm
+function namehash(name) {
+  let node = '0x0000000000000000000000000000000000000000000000000000000000000000';
+  
+  if (name) {
+    const labels = name.split('.');
+    
+    for (let i = labels.length - 1; i &gt;= 0; i--) {
+      const label = labels[i];
+      const labelHash = keccak256(toUtf8Bytes(label));
+      node = keccak256(new Uint8Array([...hexToBytes(node), ...hexToBytes(labelHash)]));
+    }
+  }
+  
+  return node;
+}
+
+// Helper to convert hex string to byte array
+function hexToBytes(hex) {
+  const bytes = [];
+  for (let c = 2; c &lt; hex.length; c += 2) {
+    bytes.push(parseInt(hex.substr(c, 2), 16));
+  }
+  return bytes;
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="2-reverse-resolution-address--name-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-reverse-resolution-address--name-1">#</doc-anchor-trigger>
         <span>2. Reverse Resolution (Address → Name)</span>
     </h3>
 </doc-anchor-target>
@@ -441,9 +873,9 @@ async function resolveAddressToName(address, chainId, client) {
   }
 }</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="3-avatar-resolution">
+<doc-anchor-target id="3-avatar-resolution-1">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#3-avatar-resolution">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-avatar-resolution-1">#</doc-anchor-trigger>
         <span>3. Avatar Resolution</span>
     </h3>
 </doc-anchor-target>
@@ -492,7 +924,7 @@ async function getAvatar(name, client) {
         <span>React Integration Example</span>
     </h2>
 </doc-anchor-target>
-<p>For React applications, here&#x27;s how you might implement hooks to use ZilNames:</p>
+<p>For React applications, here&#x27;s how you might implement hooks to use ZilNames manually:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-jsx"><code v-pre class="language-jsx">import { useQuery } from '@tanstack/react-query';
 import { namehash } from 'viem/ens';
@@ -509,9 +941,9 @@ function useZilliqaEnsName({ address, chainId }) {
       const addressReverseNode = convertReverseNodeToBytes(address, chainId);
       
       try {
-        const contractAddress = chainId === 33101 
-          ? &quot;0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e&quot; 
-          : &quot;0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F&quot;;
+        const contractAddress = chainId === zilliqa.id 
+          ? &quot;0x5c0c7BFd25efCAE366fE62219fD5558305Ffc46F&quot; 
+          : &quot;0x579C72c5377a5a4A8Ce6d43A1701F389c8FDFC8e&quot;;
         
         const zilname = await client.readContract({
           abi: L2ResolverAbi,
@@ -554,7 +986,6 @@ function UserDisplay({ address, chainId }) {
         <span>Advanced React Integration Example</span>
     </h2>
 </doc-anchor-target>
-<p>The following example demonstrates a more complete implementation based on the <a href="https://github.com/Plunderswap/sample-next-js">sample-next-js</a> repository, which provides a live demo at <a href="https://sample-next-js-gray.vercel.app/">sample-next-js-gray.vercel.app</a>.</p>
 <doc-anchor-target id="1-setting-up-the-hooks">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#1-setting-up-the-hooks">#</doc-anchor-trigger>
@@ -975,7 +1406,7 @@ export default function ZilNamesResolver() {
   );
 }</code></pre>
 </doc-codeblock></div>
-<p>This example demonstrates a complete workflow for resolving ZilNames, including both forward and reverse resolution, and avatar fetching. For a working example, visit <a href="https://sample-next-js-gray.vercel.app/">sample-next-js-gray.vercel.app</a> or fork the <a href="https://github.com/Plunderswap/sample-next-js">sample-next-js</a> repository to see this in action.</p>
+<p>This example demonstrates a complete workflow for resolving ZilNames, including both forward and reverse resolution, and avatar fetching.</p>
 <doc-anchor-target id="full-l2resolver-contract-interface">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#full-l2resolver-contract-interface">#</doc-anchor-trigger>

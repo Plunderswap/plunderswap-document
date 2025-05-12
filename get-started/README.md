@@ -10,7 +10,8 @@ Refer to these guides to establish all the necessary configurations for utilizin
 
 [Create a Wallet](https://docs.plunderswap.com/get-started/wallet-guide)\
 [Get ERC-20/ZRC-2 Tokens](https://docs.plunderswap.com/get-started/token-guide)\
-[Connect Your Wallet to PlunderSwap](https://docs.plunderswap.com/get-started/connection-guide)
+[Connect Your Wallet to PlunderSwap](https://docs.plunderswap.com/get-started/connection-guide)\
+[Understanding Scilla vs EVM Addresses](scilla-vs-evm-wallet-address-guide.md)
 
 ## PlunderSwap Feature Guides
 

@@ -5,6 +5,7 @@
   * [Create a Wallet](get-started/wallet-guide.md)
   * [Get ZIL Tokens](get-started/token-guide.md)
   * [Connect Your Wallet to PlunderSwap](get-started/connection-guide.md)
+  * [Understanding Scilla vs EVM Addresses](get-started/scilla-vs-evm-wallet-address-guide.md)
   * [Transfer Tokens to Zil EVM](get-started/transfer-to-EVM.md)
   * [Transfer Tokens from Zil EVM](get-started/transfer-from-EVM.md)
   * [Create an ERC20 Token](get-started/create-erc20.md)

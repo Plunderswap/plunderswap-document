@@ -1,4 +1,4 @@
-# 🔄 Cross-Chain Swap
+# 🔄 Cross-Chain Swap (StealthEx)
 
 ![](../../.gitbook/assets/PS_CrossChainSwap.jpg)
 

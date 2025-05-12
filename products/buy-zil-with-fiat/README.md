@@ -1,4 +1,4 @@
-# 💰 Buy ZIL with Fiat
+# 💰 Transak - Buy ZIL with Fiat
 
 ![](../../.gitbook/assets/PS_BuyZIL.png)
 

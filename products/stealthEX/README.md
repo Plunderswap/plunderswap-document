@@ -1,8 +1,8 @@
-# 🔄 Cross-Chain Swap (StealthEx)
+# 🔄 StealthEx Swap (Cross Chain)
 
 ![](../../.gitbook/assets/PS_CrossChainSwap.jpg)
 
-PlunderSwap Cross-Chain Swap is a feature that allows users to swap tokens between different chains. Powered by StealthEx, it enables seamless cross-chain transactions.  Below is a guide on how to use the feature.
+PlunderSwap Cross-Chain Swap (Powered by StealthEX) is a feature that allows users to swap tokens between different chains. It enables seamless cross-chain transactions.  Below is a guide on how to use the feature.
 
 ### Swapping/Trading
 

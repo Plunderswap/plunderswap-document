@@ -17,7 +17,7 @@
   * [How to Add/Remove Liquidity](products/plunderswap-exchange/liquidity-guide.md)
   * [Try it out in TestNet!](products/plunderswap-exchange/give-testnet-a-try.md)
 * [deBridge Swap](products/deBridge/README.md)
-* [StealthEX Swap)](products/stealthEX/README.md)
+* [StealthEX Swap](products/stealthEX/README.md)
 * [Transak - Buy ZIL with Fiat](products/buy-zil-with-fiat/README.md)
 * [Developers](developers/README.md)
   * [ZRC2 Proxy Contracts](developers/zrc2-proxy-contracts/README.md)

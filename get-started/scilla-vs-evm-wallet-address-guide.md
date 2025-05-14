@@ -1,5 +1,7 @@
 # Understanding Your Zilliqa Addresses: Scilla (zil1) vs. EVM (0x)
 
+![](../../.gitbook/assets/Scilla_vs_EVM_plunderswap_documentation_.png)
+
 Zilliqa operates with two distinct environments, or "sides," and understanding how your wallet addresses work across them is key to managing your assets smoothly. This guide will explain the differences between `zil1` (Scilla) and `0x` (EVM) addresses and how they interact.
 
 ## 1. Zilliqa's Two Worlds: Scilla & EVM

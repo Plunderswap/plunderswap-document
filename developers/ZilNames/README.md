@@ -1,5 +1,7 @@
 # ZilNames: Zilliqa Name Service Documentation
 
+![](<../../.gitbook/assets/Zilliqa_name_service_banner.png>)
+
 ## Introduction to ZilNames
 
 ZilNames is Zilliqa's domain name service, offering human-readable names with the `.zil` extension. Similar to Ethereum's ENS, ZilNames allows users to replace complex wallet addresses with memorable names, making transactions and identification within the Zilliqa ecosystem simpler and less error-prone.

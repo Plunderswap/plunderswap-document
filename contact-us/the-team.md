@@ -9,18 +9,15 @@
 - X (Twitter) (https://twitter.com/ZillaQuest)
 
 ### Patriot76
-- Telegram (https://t.me/westbound519)
+- Telegram (https://t.me/Piratelife1)
 
 ### CJ McG
 - Telegram (https://t.me/CJ_McG) 
 - X (Twitter) (https://twitter.com/CJ__McG)
-
-### Captain Schooner
 
 ### Darthgus (Gary)
 - Telegram (https://t.me/DarthGus) 
 - X (Twitter) (https://twitter.com/GusSnail)
 
 ### Melvin
-- Telegram (https://t.me/melvinbeemer)
-- X (Twitter) (https://twitter.com/melvinbeemer)
+- Telegram (https://t.me/melvin_1010)
